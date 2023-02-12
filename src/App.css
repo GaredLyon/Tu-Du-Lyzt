@@ -28,12 +28,14 @@
   --gray3: #E2E2E5;
   --gray4: #EEEEEE;
   --white: #fff;
+  
   /* tamaños de fuente */
   --xs: 12px;
   --sm: 14px;
   --md: 16px;
   --lg: 18px;
   --xl: 24px;
+  
   /* tamaños de redondeado */
   --r-sm: 5px;
   --r-md: 7px;
