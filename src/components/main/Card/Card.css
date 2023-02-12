@@ -24,28 +24,30 @@
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
   padding: .9rem;
+
+  padding: .7rem;
 }
 
 .card__title{
   text-align: center;
-  font-size: var(--lg);
   font-weight: bold;
   color: var(--gray1);
   background: transparent;
   width: 100%;
-  height: 30px;
+
   border: none;
   border-bottom: 2px dashed var(--gray1);
   outline: none;
   resize: none;
+  height: 35px;
+  font-size: var(--xl);
+  /* background: green; */
 }
 .card__title:disabled{
   border-bottom: 2px solid var(--gray1);
 }
 
 .card__container{
-  padding: .8rem;
-  font-size: var(--md);
   font-weight: bold;
   color: var(--gray2);
   background: transparent;
@@ -54,6 +56,8 @@
   height: calc(100% - 20px);
   resize: none;
   outline: none;
+  font-size: var(--lg);
+  padding: .4rem .8rem;
 }
 
 /* CARD ASIDE ///////////////////// */
