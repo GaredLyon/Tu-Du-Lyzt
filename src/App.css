@@ -1,0 +1,28 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+:root{
+  /* colores */
+  --blue: #57A8EB;
+  --red: #FC7575;
+  --yellow: #F4DB54;
+  --green: #5CCD87;
+  --purple: #AE87F3;
+  --gray: #8A8D96;
+  --bg: #e2e2e5;
+  --white: #fff;
+  /* tamaños de fuente */
+  --xs: 12px;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --xl: 24px;
+  /* tamaños de redondeado */
+  --r-sm: 5px;
+  --r-md: 7px;
+  --r-lg: 10px;
+  --r-xl: 20px;
+}
