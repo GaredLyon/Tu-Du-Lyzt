@@ -42,8 +42,7 @@
 }
 
 .card__container{
-  font-weight: bold;
-  color: var(--gray2);
+  color: var(--gray1);
   background: transparent;
   border: none;
   width: 100%;
@@ -91,3 +90,34 @@
   color: var(--green);
 }
 
+/* ICONO INDIVIDUAL */
+.caja__icon{
+  position: relative;
+}
+
+.caja__icon:hover .card__aviso{
+  display: flex;
+}
+.card__aviso{
+  position: absolute;
+  background: var(--purple);
+  color: white;
+  padding: 0.1rem .4rem;
+  border-radius: .3rem;
+  left: 25px;
+  left: 35px;
+  width: max-content;
+  top: 0;
+  display: none;
+}
+
+.card__aviso:before{
+  content: '';
+  background: var(--purple);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: -15px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  transform: rotateZ(-90deg) scale(0.6);
+}
