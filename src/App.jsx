@@ -1,5 +1,3 @@
-// import { Main } from './components/Main2/Main'
-
 import { Main } from "./components/Main2/Main"
 
 function App() {
