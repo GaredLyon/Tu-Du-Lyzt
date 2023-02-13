@@ -1,9 +1,9 @@
-.aside{
+.aside {
   /* background: blue; */
   display: flex;
   flex-direction: column;
 }
-.aside__title{
+.aside__title {
   font-size: 3.5rem;
   text-align: center;
   color: var(--white);
@@ -14,9 +14,10 @@
   align-items: center;
 }
 
-.aside__form{
+.aside__form {
   width: 100%;
-  min-height: 400px;
+  min-width: 272px;
+  min-height: 486px;
   background: var(--white);
   /* background-color: red; */
   border-radius: var(--r-lg);
