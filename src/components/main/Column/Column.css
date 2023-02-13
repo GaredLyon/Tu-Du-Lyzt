@@ -1,7 +1,6 @@
 .column{
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
   width: max-content;
   padding: .8rem;
   border-radius: var(--r-xl);
@@ -20,7 +19,7 @@
 }
 
 .column__title--gray{
-  background: var(--gray);
+  background: var(--gray2);
 }
 .column__title--purple{
   background: var(--purple);
