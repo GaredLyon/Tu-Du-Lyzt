@@ -2,7 +2,6 @@
 .container-columns{
   display: flex;
   justify-content: center;
-  gap: 2.5rem;
+  gap: 3rem;
   padding: 3rem;
-  background-color: var(--gray3);
 }

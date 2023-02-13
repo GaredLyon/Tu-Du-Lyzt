@@ -2,11 +2,11 @@
 .card{
   border-radius: 1.5rem;
   display: flex;
-  padding: .5rem 0 .5rem .5rem;
+  padding: .9rem 0 .9rem .9rem;
   background: var(--red);
-  width: 320px;
-  height: 200px;
-  height: 190px;
+  width: 32rem;
+  height: 20rem;
+  width: 100%;
 }
 .card--yellow{
   background: var(--yellow);
@@ -21,7 +21,7 @@
   border-radius: .5rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
-  padding: .5rem;
+  padding: .7rem;
 }
 
 .card__title{
@@ -32,15 +32,14 @@
   width: 100%;
 
   border: none;
-  border-bottom: 2px dashed var(--gray1);
+  border-bottom: 0.2rem dashed var(--gray1);
   outline: none;
   resize: none;
-  height: 31px;
+  height: 3.1rem;
   font-size: var(--xl);
-  font-size: 1.35rem;
 }
 .card__title:disabled{
-  border-bottom: 2px solid var(--gray1);
+  border-bottom: 0.2rem solid var(--gray1);
 }
 
 .card__title::-webkit-scrollbar{
@@ -52,12 +51,12 @@
   background: transparent;
   border: none;
   width: 100%;
-  height: calc(100% - 50px);
+  height: calc(100% - 5rem);
   resize: none;
   outline: none;
-  /* font-size: var(--lg); */
-  font-size: var(--md);
+  font-size: var(--lg);
   padding: .3rem .8rem;
+
 }
 
 .card__container::-webkit-scrollbar{
@@ -69,19 +68,22 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 .2rem;
+  padding: 0 .6rem;
+  /* background: green; */
 }
 .card__icon-container{
+  min-width: 20%;
   display: flex;
   flex-direction: column;
+  gap: .5rem;
   /* background: red; */
 }
 .card__icon{
-  border-radius: .2rem;
+  border-radius: .5rem;
   font-size: 1rem;
   color: var(--white);
-  font-size: .89rem;
-  padding: .28rem;
+  font-size: 1.65rem;
+  padding: .35rem;
   margin: 0.1rem;
   /* background: blue; */
 }
@@ -112,8 +114,8 @@
   color: white;
   padding: 0.1rem .4rem;
   border-radius: .3rem;
-  left: 25px;
-  left: 35px;
+  left: 2.5rem;
+  left: 3.5rem;
   width: max-content;
   top: 0;
   display: none;
@@ -123,9 +125,9 @@
   content: '';
   background: var(--purple);
   position: absolute;
-  width: 20px;
-  height: 20px;
-  left: -15px;
+  width: 2rem;
+  height: 2rem;
+  left: -1.5rem;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotateZ(-90deg) scale(0.6);
 }

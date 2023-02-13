@@ -1,9 +1,19 @@
-*{
-  margin: 0px;
-  padding: 0px;
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6rem;
   font-family: 'Nunito', sans-serif;
 }
+html {
+  font-size: 62.5%;
+}
+ul,
+ol {
+  list-style: none;
+}
+
+
 :root{
   /* colores */
   --blue: #57A8EB;
@@ -30,15 +40,15 @@
   --white: #fff;
   
   /* tamaños de fuente */
-  --xs: 12px;
-  --sm: 14px;
-  --md: 16px;
-  --lg: 18px;
-  --xl: 24px;
+  --xs: 1.2rem;
+  --sm: 1.4rem;
+  --md: 1.6rem;
+  --lg: 1.8rem;
+  --xl: 2.4rem;
   
   /* tamaños de redondeado */
-  --r-sm: 5px;
-  --r-md: 7px;
-  --r-lg: 10px;
-  --r-xl: 20px;
+  --r-sm: 0.5rem;
+  --r-md: 0.7rem;
+  --r-lg: 1rem;
+  --r-xl: 2rem;
 }

@@ -2,16 +2,19 @@
   display: flex;
   flex-direction: column;
   width: max-content;
-  padding: .8rem;
+  padding: 1.5rem;
   border-radius: var(--r-xl);
-  gap: 2rem;
+  gap: 3.5rem;
   background: var(--white);
   min-height: 150vh;
+  width: calc(100% / 3);
+
+  min-width: 300px;
 }
 
 .column__title{
   color: var(--white);
-  padding: .5rem;
+  padding: 1rem .5rem;
   border-radius: var(--r-lg);
   background: var(--gray);
   text-align: center;
@@ -29,8 +32,7 @@
 }
 
 .column__container-cards{
-  /* background-color: blue; */
   display: flex;
   flex-direction: column;
-  gap: .8rem;
+  gap: 1.5rem;
 }

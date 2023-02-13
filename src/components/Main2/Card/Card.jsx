@@ -10,8 +10,8 @@ export const Card = ({color}) => {
       
       {/* CARD MAIN */}
       <main className='card__main'>
-        <textarea className='card__title' disabled={editable} maxLength={20} value={'#Lorem...'}/>
-        <textarea className='card__container' disabled={editable} value={'Lorem impun dolor...'}/>
+        <textarea className='card__title' disabled={editable} maxLength={20} defaultValue={'#Lorem...'}/>
+        <textarea className='card__container' disabled={editable} defaultValue={'Lorem impun dolor...'}/>
       </main>
 
       {/* CARD ASIDE */}
