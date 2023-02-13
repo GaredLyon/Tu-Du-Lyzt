@@ -1,16 +1,18 @@
-import './App.css'
-import { Main } from './components/Main2/Main'
+// import { Main } from './components/Main2/Main'
+
+import { Main } from "./components/Main2/Main"
 
 function App() {
 
   return (
     <div className="App">
-      {/* HEADER */}
-
-      {/* MAIN */}
-      <Main/>
-      
-      {/* ASIDE */}
+      <div className="App__aside"></div>
+      <div className="App__container">
+        <div className="App__header"></div>
+        <div className="App__main">
+          <Main/>
+        </div>
+      </div>
     </div>
   )
 }

@@ -43,6 +43,10 @@
   border-bottom: 2px solid var(--gray1);
 }
 
+.card__title::-webkit-scrollbar{
+  display: none;
+}
+
 .card__container{
   color: var(--gray1);
   background: transparent;
