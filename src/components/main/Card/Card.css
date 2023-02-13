@@ -6,6 +6,7 @@
   background: var(--red);
   width: 320px;
   height: 200px;
+  height: 190px;
 }
 .card--yellow{
   background: var(--yellow);
@@ -20,7 +21,7 @@
   border-radius: .5rem;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
-  padding: .7rem;
+  padding: .5rem;
 }
 
 .card__title{
@@ -34,8 +35,9 @@
   border-bottom: 2px dashed var(--gray1);
   outline: none;
   resize: none;
-  height: 35px;
+  height: 31px;
   font-size: var(--xl);
+  font-size: 1.35rem;
 }
 .card__title:disabled{
   border-bottom: 2px solid var(--gray1);
@@ -49,8 +51,9 @@
   height: calc(100% - 50px);
   resize: none;
   outline: none;
-  font-size: var(--lg);
-  padding: .4rem .8rem;
+  /* font-size: var(--lg); */
+  font-size: var(--md);
+  padding: .3rem .8rem;
 }
 
 .card__container::-webkit-scrollbar{
@@ -67,15 +70,16 @@
 .card__icon-container{
   display: flex;
   flex-direction: column;
-  gap: 0rem;
+  /* background: red; */
 }
 .card__icon{
   border-radius: .2rem;
   font-size: 1rem;
   color: var(--white);
-  font-size: .9rem;
-  padding: .3rem;
+  font-size: .89rem;
+  padding: .28rem;
   margin: 0.1rem;
+  /* background: blue; */
 }
 .card__icon:hover{
   background: rgba(255, 255, 255, 0.2);

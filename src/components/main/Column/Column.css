@@ -1,0 +1,36 @@
+.column{
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: .8rem;
+  border-radius: var(--r-xl);
+  gap: 2rem;
+  background: var(--white);
+  min-height: 150vh;
+}
+
+.column__title{
+  color: var(--white);
+  padding: .5rem;
+  border-radius: var(--r-lg);
+  background: var(--gray);
+  text-align: center;
+  font-size: var(--xl);
+}
+
+.column__title--gray{
+  background: var(--gray2);
+}
+.column__title--purple{
+  background: var(--purple);
+}
+.column__title--green{
+  background: var(--green);
+}
+
+.column__container-cards{
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
