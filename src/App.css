@@ -1,44 +1,33 @@
-*{
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
-  font-family: 'Nunito', sans-serif;
+.App{
+  /* background-color: red; */
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
 }
-:root{
-  /* colores */
-  --blue: #57A8EB;
-  --blue-light: #70B5EE;
 
-  --red: #FC7575;
-  --red-light: #FC8A8A;
+.App__aside{
+  /* background-color: blue; */
+  width: 300px;
+  background: var(--gray2);
+}
 
-  --yellow: #F4DB54;
-  --yellow-light: #F6E06D;
+.App__container{
+  /* background-color: green; */
+  flex-grow: 1;
 
-  --green: #5CCD87;
-  --green-light: #85DAA5;
-  
-  --turquesa: #47C9BE;
-  --turquesa-light: #62D1C7;
+  display: flex;
+  flex-direction: column;
+}
 
-  --purple: #AE87F3;
+.App__header{
+  /* background-color: violet; */
+  height: 150px;
+  border: 1px solid black;
+  background: var(--gray3);
+}
 
-  --gray1: #4F4E4E;
-  --gray2: #8A8D96;
-  --gray3: #E2E2E5;
-  --gray4: #EEEEEE;
-  --white: #fff;
-  
-  /* tamaños de fuente */
-  --xs: 12px;
-  --sm: 14px;
-  --md: 16px;
-  --lg: 18px;
-  --xl: 24px;
-  
-  /* tamaños de redondeado */
-  --r-sm: 5px;
-  --r-md: 7px;
-  --r-lg: 10px;
-  --r-xl: 20px;
+.App__main{
+  background-color: yellow;
+  flex-grow: 1;
 }

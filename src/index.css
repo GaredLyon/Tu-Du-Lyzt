@@ -1,0 +1,44 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+:root{
+  /* colores */
+  --blue: #57A8EB;
+  --blue-light: #70B5EE;
+
+  --red: #FC7575;
+  --red-light: #FC8A8A;
+
+  --yellow: #F4DB54;
+  --yellow-light: #F6E06D;
+
+  --green: #5CCD87;
+  --green-light: #85DAA5;
+  
+  --turquesa: #47C9BE;
+  --turquesa-light: #62D1C7;
+
+  --purple: #AE87F3;
+
+  --gray1: #4F4E4E;
+  --gray2: #8A8D96;
+  --gray3: #E2E2E5;
+  --gray4: #EEEEEE;
+  --white: #fff;
+  
+  /* tamaños de fuente */
+  --xs: 12px;
+  --sm: 14px;
+  --md: 16px;
+  --lg: 18px;
+  --xl: 24px;
+  
+  /* tamaños de redondeado */
+  --r-sm: 5px;
+  --r-md: 7px;
+  --r-lg: 10px;
+  --r-xl: 20px;
+}
