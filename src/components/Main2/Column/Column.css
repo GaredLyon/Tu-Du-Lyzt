@@ -7,8 +7,7 @@
   gap: 36px;
   background: var(--white);
   height: 776px;
-  width: calc(100% / 3);
-  min-width: 296px;
+  width: 296px;
   overflow: scroll;
 }
 
