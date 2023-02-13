@@ -1,17 +1,17 @@
 import React from 'react'
-import { Columna } from './Columna/Columna'
+import { Column } from './Column/Column'
 import './Main.css'
 
 export const Main = () => {
   return (
     <>
-      
+      {/* HEADER DEL MAIN */}
 
       {/* CONTENEDOR DE COLUMNAS */}
       <div className='container-columns'>
-        <Columna titleColor={'gray'} titleText={'Todo'}/>
-        <Columna titleColor={'purple'} titleText={'Progress'}/>
-        <Columna titleColor={'green'} titleText={'Completed'}/>
+        <Column titleColor={'gray'} titleText={'Todo'}/>
+        <Column titleColor={'purple'} titleText={'Progress'}/>
+        <Column titleColor={'green'} titleText={'Completed'}/>
       </div>
     </>
   )
