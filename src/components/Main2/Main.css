@@ -1,9 +1,9 @@
 /* CONTENEDOR DE COLUMNAS */
-.container-columns{
+.container-columns {
   display: flex;
   justify-content: center;
+
   gap: 2.5rem;
   padding: 3rem;
   background-color: var(--gray3);
 }
-
