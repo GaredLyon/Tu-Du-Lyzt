@@ -1,7 +1,7 @@
 /* CONTENEDOR DE COLUMNAS */
 .container-columns {
-  display: flex;
-  justify-content: center;
-  gap: 48px;
-  padding: 44px;
+	display: flex;
+	justify-content: center;
+	gap: 48px;
+	padding: 44px;
 }
