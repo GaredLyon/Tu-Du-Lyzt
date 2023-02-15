@@ -1,23 +1,23 @@
 .aside {
+  width: 90%;
+  height: 85%;
   /* background: blue; */
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .aside__title {
   font-size: 3.5rem;
   text-align: center;
   color: var(--white);
-  /* background: green; */
-  height: 160px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .aside__form {
   width: 100%;
-  min-width: 272px;
-  min-height: 486px;
+  height: 85%;
+  /* min-width: 272px; */
+  /* min-height: 486px; */
   background: var(--white);
   /* background-color: red; */
   border-radius: var(--r-lg);
