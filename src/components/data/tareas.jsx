@@ -1,5 +1,6 @@
 export let tareas = [
   {
+    id: 1,
     titulo: 'Todo',
     color: 'gray',
     tareas: [
@@ -62,6 +63,7 @@ export let tareas = [
     ]
   },
   {
+    id: 2,
     titulo: 'Progress',
     color: 'purple',
     tareas: [
@@ -124,6 +126,7 @@ export let tareas = [
     ]
   },
   {
+    id: 3,
     titulo: 'Completed',
     color: 'green',
     tareas: [
