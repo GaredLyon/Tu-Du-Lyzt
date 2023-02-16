@@ -1,4 +1,4 @@
-// import { peticiones } from "./peticiones"
+import { peticiones } from "./peticiones"
 
 export const agregarTarea = async (idGrupo, dificultad, cuerpo) => {
 

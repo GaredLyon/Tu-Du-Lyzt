@@ -1,10 +1,10 @@
 import { peticiones } from "./peticiones"
 
-export const eliminartarea = (idGrupo, idTarea) => {
+export const eliminartarea = async (idGrupo, idTarea) => {
 
   //COMENTADO LAS LINEAS DE ABAJO PORQUE AUN NO TENEMOS SERVIDOR
 
-  // return peticiones('DELETE', {
+  // return await peticiones('DELETE', {
   //   idGrupo,
   //   idTarea
   // })
