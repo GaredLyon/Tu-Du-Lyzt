@@ -29,14 +29,14 @@ function App() {
         <div className="App__header">
           <Header/>
 
-          <button className="Header__boton-abrir" onClick={() => alternarAside(!asideVisible)}>
+          {/* <button className="Header__boton-abrir" onClick={() => alternarAside(!asideVisible)}>
             <i className="fa-solid fa-bars"></i>
-          </button>
+          </button> */}
         </div>
 
         {/* MAIN */}
         <div className="App__main">
-          <Main/>
+          <Main asideVisible={asideVisible} alternarAside={alternarAside}/>
 
           {/* xsxsxs */}
         </div>
