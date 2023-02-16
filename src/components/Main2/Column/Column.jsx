@@ -4,7 +4,23 @@ import "./Column.css";
 
 export const Column = ({ grupo }) => {
 
-	const [{color, titulo, tareas}, setColumna] = useState(grupo)
+	const {color, titulo} = grupo
+	const [columna, setColumna] = useState(grupo.tareas)
+
+
+	const modificarColumna = (idTarea) => {
+
+		setColumna(estadoAnterior => {
+
+			let estadoActualizado = estadoAnterior.filter(x => x.id !== idTarea)
+
+			console.log(estadoActualizado)
+
+			return [...estadoActualizado]
+		})
+
+		console.log(`se modifico la columna y se elimino la tarea ${idTarea}`)
+	}
 
 	/////////////////////////////
 	return (
@@ -16,8 +32,8 @@ export const Column = ({ grupo }) => {
 
 	      {/* RENDERIZADO DE LAS TAREAS */}
 				{
-					tareas.length >= 1 && tareas.map((tarea, index) => (
-						<Card idGrupo={grupo.id} tarea={tarea}  key={index}/>
+					columna && columna.map((tarea) => (
+						<Card idGrupo={grupo.id} tarea={tarea}  key={`tarea${tarea.id}`} modificarColumna={modificarColumna}/>
 					))
 				}
 			</div>

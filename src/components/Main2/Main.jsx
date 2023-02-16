@@ -16,8 +16,8 @@ export const Main = ({asideVisible, alternarAside}) => {
     <div className='container-columns'>
       {/* RENDERIZADO DE LOS GRUPOS */}
       {
-        grupos && grupos.length >= 1 && grupos.map((grupo, index) => (
-          <Column grupo={grupo} key={index}/>
+        grupos && grupos.length >= 1 && grupos.map((grupo) => (
+          <Column grupo={grupo} key={`columna${grupo.id}`}/>
         ))
       }
 

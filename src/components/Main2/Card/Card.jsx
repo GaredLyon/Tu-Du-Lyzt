@@ -13,7 +13,7 @@ const obtenerColor = (nivel) => {
 }
 
 ///////////////////////////////////////////////////
-export const Card = ({idGrupo , tarea }) => {
+export const Card = ({idGrupo , tarea , modificarColumna}) => {
 
   const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
 
@@ -50,7 +50,7 @@ export const Card = ({idGrupo , tarea }) => {
     })
 
     //ELIMINAR LA TAREA VISUALMENTE
-
+    modificarColumna(idTarea)
 
   }
 
