@@ -1,15 +1,19 @@
-import React, { useEffect, useState } from 'react'
-import { tareas } from '../data/tareas'
+// import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext} from 'react'
+import { AppContext } from '../../context/appContext'
+// import { tareas } from '../data/tareas'
 import { Column } from './Column/Column'
 import './Main.css'
 
 export const Main = ({asideVisible, alternarAside}) => {
 
-  const [grupos, setGrupos] = useState([])
 
-  useEffect(()=> {
-    setGrupos(tareas)
-  }, [])
+  const grupos = useContext(AppContext)
+  // const [grupos, setGrupos] = useState([])
+
+  // useEffect(()=> {
+  //   setGrupos(tareas)
+  // }, [])
 
   //////////////////////////////////////
   return (

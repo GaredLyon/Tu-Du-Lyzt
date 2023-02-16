@@ -7,13 +7,7 @@ import { tareas } from './components/data/tareas'
 
 export const App = () => {
 
-  let [estadoGlobal, setEstadoGlobal] = useState([])
-
-  useEffect(() => {
-
-    setEstadoGlobal = tareas
-
-  } , [])
+  let estadoGlobal = tareas
 
   /////////////////////////
   return (
