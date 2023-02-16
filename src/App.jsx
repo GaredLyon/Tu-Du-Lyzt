@@ -36,7 +36,7 @@ function App() {
 
         {/* MAIN */}
         <div className="App__main">
-          <Main alternarAside={alternarAside}/>
+          <Main asideVisible={asideVisible} alternarAside={alternarAside}/>
 
           {/* xsxsxs */}
         </div>

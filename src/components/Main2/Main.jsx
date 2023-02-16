@@ -2,11 +2,16 @@ import React from 'react'
 import { Column } from './Column/Column'
 import './Main.css'
 
-export const Main = ({alternarAside}) => {
+export const Main = ({asideVisible, alternarAside}) => {
   return (
     <div className='container-columns'>
-
-      <button className='main__boton-new' onClick={()=>alternarAside(x => !x)}>New</button>
+      {
+        !asideVisible && (
+          <button className='main__boton-new' onClick={()=>alternarAside(x => !x)}>
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        )
+      }
 
       <Column titleColor={'gray'} titleText={'Todo'}/>
       <Column titleColor={'purple'} titleText={'Progress'}/>
