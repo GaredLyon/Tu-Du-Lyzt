@@ -1,27 +1,38 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { eliminartarea } from '../../../helpers/eliminarTarea'
 import './Card.css'
 
-export const Card = ({idGrupo , tarea }) => {
 
-  const { nivel, contenido} = tarea
+const obtenerColor = (nivel) => {
+  switch (nivel) {
+    case 'High': return 'red'
+    case 'Middle': return 'yellow'
+    default: return 'blue'
+  }
+}
+
+///////////////////////////////////////////////////
+export const Card = ({idGrupo , tarea }) => {
 
   const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
 
-  const obtenerColor = (nivel) => {
-		switch (nivel) {
-			case 'High': return 'red'
-			case 'Middle': return 'yellow'
-			default: return 'blue'
-		}
-	}
-
+  const [{nivel, contenido}, setTareaActual] = useState(tarea)
 
 
   //EDITAR TAREA *******************
+  const editarTareaActual = ( idGrupo, idTarea) => {
+
+    const inputTitulo = document.getElementById(`input1-tarea${tarea.id}`).textContent
+    const inputTexto = document.getElementById(`input2-tarea${tarea.id}`).textContent
+    
+    console.log(`se edito la tarea que tiene titulo: "${inputTitulo}" y de descripcion: "${inputTexto}", que esta en el grupo: ${idGrupo}, y tiene el id: ${idTarea}`)
+  }
 
   //ELIMINAR TAREA ****************
+  const eliminarTareaActual = (idGrupo, idTarea) => {
 
+    console.log(`se elimino la tarea: ${idTarea} del grupo: ${idGrupo}`)
+  }
 
   //////////////////////////////////
   return (
@@ -29,16 +40,46 @@ export const Card = ({idGrupo , tarea }) => {
       
       {/* CARD MAIN */}
       <main className='card__main'>
-        <textarea className='card__title' disabled={editable} maxLength={20} defaultValue={contenido.titulo}/>
-        <textarea className='card__container' disabled={editable} defaultValue={contenido.descripcion}/>
+        <textarea
+          className='card__title'
+          disabled={editable}
+          maxLength={20}
+          defaultValue={contenido.titulo}
+
+          id={`input1-tarea${tarea.id}`}
+          />
+        <textarea
+          className='card__container'
+          disabled={editable}
+          defaultValue={contenido.descripcion}
+
+          id={`input2-tarea${tarea.id}`}
+          />
       </main>
 
       {/* CARD ASIDE */}
       <aside className='card__aside'>
         <section className='card__icon-container'>
-          <i className="fa-sharp fa-solid fa-trash card__icon" onCanPlay={() => eliminartarea(idGrupo, tareaQueLlega.id)}></i> 
-          <i className="fa-solid fa-pencil card__icon" onClick={()=>setEditable(!editable)}></i>
-
+          <i
+            className="fa-sharp fa-solid fa-trash card__icon"
+            onClick={() => eliminarTareaActual(idGrupo, tarea.id)}></i>
+          {
+            editable ? (
+              <i
+                className="fa-solid fa-pencil card__icon"
+                onClick={()=>setEditable(!editable)}>
+              </i>
+            ): (
+              <i
+                className="fa-solid fa-floppy-disk card__icon"
+                onClick={()=>{
+                  editarTareaActual(idGrupo, tarea.id)
+                  setEditable(!editable)
+                }}>
+              </i>
+            )
+          }
+ 
           <div className='caja__icon'>
             <i className={`fa-solid fa-clock card__icon`}></i>
             <div className='card__aviso'>Hace 1 hora</div>

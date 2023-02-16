@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "../Card/Card";
 import "./Column.css";
 
 export const Column = ({ grupo }) => {
 
-	const {color, titulo, tareas} = grupo
+	const [{color, titulo, tareas}, setColumna] = useState(grupo)
 
 	/////////////////////////////
 	return (
