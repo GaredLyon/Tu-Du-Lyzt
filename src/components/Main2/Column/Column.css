@@ -87,8 +87,9 @@
 /* @media (min-width: 1400px) { */
 	@media (min-width: 1325px) {
 	.column{
-		max-width: 30rem;
 		align-items: initial; /* PROV */
+		/* background: red; */
+		max-width: calc(100% / 3.2);
 	}
 
 	.column__container-cards {
