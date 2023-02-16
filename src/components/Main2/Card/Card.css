@@ -4,8 +4,15 @@
   display: flex;
   padding: 0.9rem 0 0.9rem 0.9rem;
   background: var(--red);
-  width: 272px;
-  height: 168px;
+  width: 27.2rem;
+  height: 16.8rem;
+
+  width: 100%;
+  /* min-width: 250px; */
+  /* max-width: 300px; */
+  /* flex-grow: 1; */
+
+  width: 100%;
 }
 .card--yellow {
   background: var(--yellow);
@@ -66,7 +73,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 6px;
+  gap: 0.6rem;
   /*   padding: 0 0.6rem; */
   /* background: green; */
 }
@@ -78,11 +85,11 @@
 }
 .card__icon {
   border-radius: 0.5rem;
-  font-size: 12px !important;
+  font-size: 1.2rem !important;
   color: var(--white);
-  font-size: 16px;
-  padding: 4px;
-  margin: 0 4px;
+  font-size: 1.6rem;
+  padding: 0.4rem;
+  margin: 0 0.4rem;
   /* background: blue; */
 }
 .card__icon:hover {
@@ -103,9 +110,9 @@
   position: relative;
 }
 
-.caja__icon:hover .card__aviso {
+/* .caja__icon:hover .card__aviso {
   display: flex;
-}
+} */
 .card__aviso {
   position: absolute;
   background: var(--purple);
@@ -129,3 +136,4 @@
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotateZ(-90deg) scale(0.6);
 }
+

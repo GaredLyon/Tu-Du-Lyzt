@@ -1,44 +1,44 @@
 .column {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    padding: 12px;
-    border-bottom-left-radius: var(--r-xl);
-    border-bottom-right-radius: var(--r-xl);
-    gap: 36px;
-    background: var(--white);
-    height: 550px;
-    width: 296px;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    position: relative;
+
+	display: flex;
+	flex-direction: column;
+	width: max-content;
+	padding: 1.2rem;
+	border-bottom-left-radius: var(--r-xl);
+	border-bottom-right-radius: var(--r-xl);
+	gap: 2.4rem;
+	background: var(--white);
+	/* background: rgb(0, 255, 21); */
+	height: max-content;
+	/* border: 1px solid black; */
+	border-radius: 1rem;
+
+  width: 100%;
+	justify-content: center;
+	align-items: center; /* PROV */
+	box-shadow: 0 0 0.5rem rgba(128, 128, 128, 0.4);
+	min-width: 27rem;
 }
 
 .column::-webkit-scrollbar {
-	width: 0px;
+	width: 0rem;
 }
 
 .column::-webkit-scrollbar-thumb {
 }
 
 .column__container__title {
-	margin: auto;
-	height: 70px;
-	padding: 12px;
-	margin-bottom: 12px;
 }
 
 .column__title {
 	color: var(--white);
-	padding: 1rem 0.5rem;
+	padding: .7rem 0.5rem;
 	border-radius: var(--r-lg);
 	background: var(--gray);
 	text-align: center;
 	font-size: var(--xl);
-
-	width: 270px;
-	height: 48px;
 	z-index: 100;
+	padding: .7rem 8rem;
 }
 
 .column__title--gray {
@@ -52,10 +52,24 @@
 }
 
 .column__container-cards {
-	display: flex;
-	flex-direction: column;
-	gap: 12px;
+	/* display: flex; */
+	gap: 1.2rem;
+	/* background: red; */
+	flex-wrap: wrap;
+
+	display: grid;
+	grid-template-columns: 1fr;
+	width: 100%;
+
+
+	/* height: calc(100vh - 21rem);
+	overflow-y: scroll; */
 }
+
+/* 
+.column__container-cards::-webkit-scrollbar{
+	display: none;
+} */
 
 .stack {
 	display: flex;
@@ -63,4 +77,42 @@
     background-color: var(--white);
     border-radius: var(--xl);
     height: 95%;
+}
+
+
+@media (min-width: 650px) {
+	.column__container-cards {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+/* @media (min-width: 1400px) { */
+	@media (min-width: 1325px) {
+	.column{
+		align-items: initial; /* PROV */
+		/* background: red; */
+		max-width: calc(100% / 3.2);
+	}
+
+	.column__container-cards {
+		grid-template-columns: 1fr;
+	}
+
+	.column{
+		width: 35rem;
+	}
+
+	
+	.column__container-cards {
+		height: calc(100vh - 21rem);
+		overflow-y: scroll;
+	}
+
+	.column__container-cards::-webkit-scrollbar{
+		display: none;
+	}
+
+	.main__boton-new{
+		display: none;
+	}
 }
