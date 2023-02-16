@@ -27,6 +27,7 @@
 }
 
 .column__container__title {
+	position: relative;
 }
 
 .column__title {
@@ -77,6 +78,23 @@
 
 }
 
+
+.column__contador{
+	width: max-content;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: gray;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	/* background-color: red; */
+	background: white;
+}
 
 @media (min-width: 650px) {
 	.column__container-cards {

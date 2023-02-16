@@ -27,6 +27,7 @@ export const Column = ({ grupo }) => {
 		<div className="column">
 			<div className="column__container__title">
 				<h5 className={`column__title ${`column__title--${color}`}`}>{titulo}</h5>
+				<h3 className="column__contador">{columna.length}</h3>
 			</div>
 			<div className="column__container-cards">
 
