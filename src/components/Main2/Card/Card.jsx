@@ -3,7 +3,7 @@ import './Card.css'
 
 export const Card = ({tarea}) => {
 
-  const { nivel, titulo, descripcion} = tarea
+  const { nivel, contenido, descripcion} = tarea
 
   const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
 
@@ -22,8 +22,8 @@ export const Card = ({tarea}) => {
       
       {/* CARD MAIN */}
       <main className='card__main'>
-        <textarea className='card__title' disabled={editable} maxLength={20} defaultValue={titulo}/>
-        <textarea className='card__container' disabled={editable} defaultValue={descripcion}/>
+        <textarea className='card__title' disabled={editable} maxLength={20} defaultValue={contenido.titulo}/>
+        <textarea className='card__container' disabled={editable} defaultValue={contenido.descripcion}/>
       </main>
 
       {/* CARD ASIDE */}

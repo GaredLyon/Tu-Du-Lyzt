@@ -28,10 +28,10 @@ export const Aside = () => {
 
           <div>
             <button className='aside__contenedor-iconos'>
-              <i class="fa-regular fa-calendar"></i>
+              <i className="fa-regular fa-calendar"></i>
             </button>
             <button className='aside__contenedor-iconos'>
-              <i class="fa-sharp fa-solid fa-trash"></i>
+              <i className="fa-sharp fa-solid fa-trash"></i>
             </button>
           </div>
 

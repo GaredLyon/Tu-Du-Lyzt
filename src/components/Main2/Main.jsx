@@ -25,7 +25,7 @@ export const Main = ({asideVisible, alternarAside}) => {
       {
         !asideVisible && (
           <button className='main__boton-new' onClick={()=>alternarAside(x => !x)}>
-            <i class="fa-solid fa-plus"></i>
+            <i className="fa-solid fa-plus"></i>
           </button>
         )
       }
