@@ -27,12 +27,11 @@
 }
 .App__aside::-webkit-scrollbar {
   background: transparent;
-  width: .6rem;
+  width: .5rem;
 }
 .App__aside::-webkit-scrollbar-thumb {
   /* background: rgb(0, 247, 255); */
-  background: #33333371;
-  border-radius: 1rem;
+  background: #33333335;
 }
 
 .App__aside--visible{

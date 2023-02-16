@@ -47,9 +47,6 @@ const Header = () => {
 							<option value="month">month</option>
 						{/* </optgroup> */}
 					</select>
-
-					{/* CALENDARIO */}
-					{/* <i className={`fa-solid fa-calendar header__icono-calendario`}></i> */}
 				</section>
 
 				{/* BUSCADOR */}

@@ -19,7 +19,8 @@
 	padding: .5rem;
 	padding: .8rem;
 	
-	gap: 1rem;
+	/* gap: 1rem; */
+	gap: 1.5rem;
 }
 
 
@@ -40,6 +41,10 @@
 	/* height: 28px; */
 	border-radius: var(--r-sm);
 	padding: .2rem 0 ;
+
+
+
+	flex-grow: 1;
 }
 
 /* .header__selector option[value="todo"] {
@@ -97,19 +102,19 @@
 @media (min-width: 700px) {
 	.header__contenedor {
 		flex-direction: row;
+		/* background: red; */
+	}
+	.header__contenedor-selectores {
+		/* background-color: aqua; */
+		padding: 1rem;
 	}
 }
 
 /* @media (min-width: 1024px) { */
-	@media (min-width: 1070px) {
+	@media (min-width: 1078px) {
 
 	.header__selector{
 		padding: .5rem;
-	}
-
-	.header__contenedor-selectores {
-		/* background-color: aqua; */
-		padding: 1rem;
 	}
 
 	/* CONTENEDOR ///////////////////////////////*/
