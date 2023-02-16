@@ -1,4 +1,5 @@
 .column {
+
 	display: flex;
 	flex-direction: column;
 	width: max-content;
@@ -72,9 +73,10 @@
 
 .stack {
 	display: flex;
-	flex-direction: column;
-	background-color: var(--white);
-	border-radius: var(--xl);
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: var(--xl);
+    height: 95%;
 }
 
 
