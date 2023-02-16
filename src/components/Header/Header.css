@@ -78,10 +78,10 @@
 	align-items: center;
 }
 .header__buscador input {
-	height: 32px;
-	border: 1px solid var(--gray1);
+	height: 3.2rem;
+	border: 0.1rem solid var(--gray1);
 	border-radius: var(--r-md);
-	padding: 10px;
+	padding: 1rem;
 	width: 100%;
 }
 /* 
@@ -90,7 +90,7 @@
 
 .header__buscador i {
 	position: absolute;
-	right: 10px;
+	right: 1rem;
   color: var(--gray1);
 }
 
