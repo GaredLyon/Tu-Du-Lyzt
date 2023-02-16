@@ -24,7 +24,7 @@ export const peticiones = async( tipoMetodo, cuerpo) => {
   }
 
   ///////////////////////////////////
-  let url = `${global.url}/tareas`
+  let url = `${global.url}tareas`
 
   const peticion =  await fetch(url)
   const data = peticion.json()

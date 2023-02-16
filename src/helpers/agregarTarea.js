@@ -1,6 +1,13 @@
-import { peticiones } from "./peticiones"
+// import { peticiones } from "./peticiones"
 
-export const agregarTarea = async (idGrupo, nivel, contenido) => {
+export const agregarTarea = (idGrupo, dificultad, cuerpo) => {
 
-  return peticiones('GET', {idGrupo, nivel, contenido})
+  console.log(idGrupo, dificultad, cuerpo)
+
+  //FINALMENTE HACER LA PETICION AL SERVIDOR
+  //(COMENTADO ESTA LINEA DE ABAJO POR AHORA , PORQUE NO AUN NO TENEMOS SERVIDOR)
+
+  // return await peticiones('GET', {idGrupo, dificultad, cuerpo})
+
+  return 'se agrego nueva tarea'
 }

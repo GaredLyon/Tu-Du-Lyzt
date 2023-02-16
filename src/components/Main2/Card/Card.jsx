@@ -26,12 +26,23 @@ export const Card = ({idGrupo , tarea }) => {
     const inputTexto = document.getElementById(`input2-tarea${tarea.id}`).textContent
     
     console.log(`se edito la tarea que tiene titulo: "${inputTitulo}" y de descripcion: "${inputTexto}", que esta en el grupo: ${idGrupo}, y tiene el id: ${idTarea}`)
+    
+    //EJECUTAR LA PETICION AL SERVIDOR
+
+
+
   }
 
   //ELIMINAR TAREA ****************
   const eliminarTareaActual = (idGrupo, idTarea) => {
 
     console.log(`se elimino la tarea: ${idTarea} del grupo: ${idGrupo}`)
+
+    //EJECUTAR LA PETICION AL SERVIDOR
+
+
+
+    
   }
 
   //////////////////////////////////
