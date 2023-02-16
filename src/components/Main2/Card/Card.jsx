@@ -1,17 +1,29 @@
 import React, { useState } from 'react'
 import './Card.css'
 
-export const Card = ({color}) => {
+export const Card = ({tarea}) => {
+
+  const { nivel, titulo, descripcion} = tarea
 
   const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
 
+  const obtenerColor = (nivel) => {
+		switch (nivel) {
+			case 'High': return 'red'
+			case 'Middle': return 'yellow'
+			default: return 'blue'
+		}
+	}
+
+
+  //////////////////////////////////
   return (
-    <article className={`card ${color && `card--${color}`}`} draggable>
+    <article className={`card ${`card--${obtenerColor(nivel)}`}`} draggable>
       
       {/* CARD MAIN */}
       <main className='card__main'>
-        <textarea className='card__title' disabled={editable} maxLength={20} defaultValue={'#Lorem...'}/>
-        <textarea className='card__container' disabled={editable} defaultValue={'Lorem impun dolor...'}/>
+        <textarea className='card__title' disabled={editable} maxLength={20} defaultValue={titulo}/>
+        <textarea className='card__container' disabled={editable} defaultValue={descripcion}/>
       </main>
 
       {/* CARD ASIDE */}

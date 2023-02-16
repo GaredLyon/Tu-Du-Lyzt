@@ -1,121 +1,145 @@
 export let tareas = [
   {
-    grupo: 'Todo',
+    titulo: 'Todo',
+    color: 'gray',
     tareas: [
       {
         id: 1,
         nivel: 'High',
-        texto: 'Tarea 1'
+        titulo: 'Tarea 1',
+        descripcion: 'Contenido de tarea 1'
       },
       {
         id: 2,
         nivel: 'Middle',
-        texto: 'Tarea 2'
+        titulo: 'Tarea 2',
+        descripcion: 'Contenido de tarea 2'
       },
       {
         id: 3,
         nivel: 'Middle',
-        texto: 'Tarea 3'
+        titulo: 'Tarea 3',
+        descripcion: 'Contenido de tarea 3'
       },
       {
         id: 4,
         nivel: 'Low',
-        texto: 'Tarea 4'
+        titulo: 'Tarea 4',
+        descripcion: 'Contenido de tarea 4'
       },
       {
         id: 5,
         nivel: 'Low',
-        texto: 'Tarea 5'
+        titulo: 'Tarea 5',
+        descripcion: 'Contenido de tarea 5'
       },
       {
         id: 6,
         nivel: 'Low',
-        texto: 'Tarea 6'
+        titulo: 'Tarea 6',
+        descripcion: 'Contenido de tarea 6'
       },
       {
         id: 7,
         nivel: 'Low',
-        texto: 'Tarea 7'
+        titulo: 'Tarea 7',
+        descripcion: 'Contenido de tarea 7'
       },
     ]
   },
   {
-    grupo: 'Progress',
+    titulo: 'Progress',
+    color: 'purple',
     tareas: [
       {
         id: 10,
         nivel: 'High',
-        texto: 'Tarea 10'
+        titulo: 'Tarea 10',
+        descripcion: 'Contenido de tarea 10'
       },
       {
         id: 20,
         nivel: 'Middle',
-        texto: 'Tarea 20'
+        titulo: 'Tarea 20',
+        descripcion: 'Contenido de tarea 20'
       },
       {
         id: 30,
         nivel: 'Middle',
-        texto: 'Tarea 30'
+        titulo: 'Tarea 30',
+        descripcion: 'Contenido de tarea 30'
       },
       {
         id: 40,
         nivel: 'Low',
-        texto: 'Tarea 40'
+        titulo: 'Tarea 40',
+        descripcion: 'Contenido de tarea 40'
       },
       {
         id: 50,
         nivel: 'Low',
-        texto: 'Tarea 50'
+        titulo: 'Tarea 50',
+        descripcion: 'Contenido de tarea 50'
       },
       {
         id: 60,
         nivel: 'Low',
-        texto: 'Tarea 60'
+        titulo: 'Tarea 60',
+        descripcion: 'Contenido de tarea 60'
       },
       {
         id: 70,
         nivel: 'Low',
-        texto: 'Tarea 70'
+        titulo: 'Tarea 70',
+        descripcion: 'Contenido de tarea 70'
       },
     ]
   },
   {
-    grupo: 'Completed',
+    titulo: 'Completed',
+    color: 'green',
     tareas: [
       {
         id: 100,
         nivel: 'High',
-        texto: 'Tarea 100'
+        titulo: 'Tarea 100',
+        descripcion: 'Contenido de tarea 100'
       },
       {
         id: 200,
         nivel: 'Middle',
-        texto: 'Tarea 200'
+        titulo: 'Tarea 200',
+        descripcion: 'Contenido de tarea 200'
       },
       {
         id: 300,
         nivel: 'Middle',
-        texto: 'Tarea 300'
+        titulo: 'Tarea 300',
+        descripcion: 'Contenido de tarea 300'
       },
       {
         id: 400,
         nivel: 'Low',
-        texto: 'Tarea 400'
+        titulo: 'Tarea 400',
+        descripcion: 'Contenido de tarea 400'
       },
       {
         id: 500,
         nivel: 'Low',
-        texto: 'Tarea 500'
+        titulo: 'Tarea 500',
+        descripcion: 'Contenido de tarea 500'
       },
       {
         id: 600,
         nivel: 'Low',
-        texto: 'Tarea 600'
+        titulo: 'Tarea 600',
+        descripcion: 'Contenido de tarea 600'
       },
       {
         id: 700,
         nivel: 'Low',
-        texto: 'Tarea 700'
+        titulo: 'Tarea 700',
+        descripcion: 'Contenido de tarea 700'
       },
     ]
   },
