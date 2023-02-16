@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { editarTarea } from '../../../helpers/editarTarea'
 import { eliminartarea } from '../../../helpers/eliminarTarea'
 import './Card.css'
@@ -20,14 +20,13 @@ export const Card = ({idGrupo , tarea }) => {
   const [{nivel, contenido}, setTareaActual] = useState(tarea)
 
 
-  //EDITAR TAREA *******************
+  //EDITAR TAREA ******************************************************
   const editarTareaActual = ( idGrupo, idTarea) => {
 
     const titulo = document.getElementById(`input1-tarea${tarea.id}`).textContent
     const descripcion = document.getElementById(`input2-tarea${tarea.id}`).textContent
     
     //EJECUTAR LA PETICION AL SERVIDOR
-
     editarTarea({
       idGrupo,
       idTarea,
@@ -39,7 +38,7 @@ export const Card = ({idGrupo , tarea }) => {
 
   }
 
-  //ELIMINAR TAREA ****************
+  //ELIMINAR TAREA ****************************************************
   const eliminarTareaActual = (idGrupo, idTarea) => {
 
     // console.log(`se elimino la tarea: ${idTarea} del grupo: ${idGrupo}`)
@@ -49,6 +48,10 @@ export const Card = ({idGrupo , tarea }) => {
       idGrupo,
       idTarea
     })
+
+    //ELIMINAR LA TAREA VISUALMENTE
+
+
   }
 
   //////////////////////////////////
