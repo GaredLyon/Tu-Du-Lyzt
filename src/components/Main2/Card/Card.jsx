@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import { editarTarea } from '../../../helpers/editarTarea'
 import { eliminartarea } from '../../../helpers/eliminarTarea'
 import './Card.css'
 
@@ -22,27 +23,32 @@ export const Card = ({idGrupo , tarea }) => {
   //EDITAR TAREA *******************
   const editarTareaActual = ( idGrupo, idTarea) => {
 
-    const inputTitulo = document.getElementById(`input1-tarea${tarea.id}`).textContent
-    const inputTexto = document.getElementById(`input2-tarea${tarea.id}`).textContent
-    
-    console.log(`se edito la tarea que tiene titulo: "${inputTitulo}" y de descripcion: "${inputTexto}", que esta en el grupo: ${idGrupo}, y tiene el id: ${idTarea}`)
+    const titulo = document.getElementById(`input1-tarea${tarea.id}`).textContent
+    const descripcion = document.getElementById(`input2-tarea${tarea.id}`).textContent
     
     //EJECUTAR LA PETICION AL SERVIDOR
 
-
+    editarTarea({
+      idGrupo,
+      idTarea,
+      nuevoContenido: {
+        titulo,
+        descripcion
+      }
+    })
 
   }
 
   //ELIMINAR TAREA ****************
   const eliminarTareaActual = (idGrupo, idTarea) => {
 
-    console.log(`se elimino la tarea: ${idTarea} del grupo: ${idGrupo}`)
+    // console.log(`se elimino la tarea: ${idTarea} del grupo: ${idGrupo}`)
 
     //EJECUTAR LA PETICION AL SERVIDOR
-
-
-
-    
+    eliminartarea({
+      idGrupo,
+      idTarea
+    })
   }
 
   //////////////////////////////////
