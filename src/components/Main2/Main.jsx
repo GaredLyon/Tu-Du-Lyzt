@@ -3,6 +3,7 @@ import { Column } from './Column/Column'
 import './Main.css'
 
 export const Main = ({asideVisible, alternarAside}) => {
+
   return (
     <div className='container-columns'>
       {

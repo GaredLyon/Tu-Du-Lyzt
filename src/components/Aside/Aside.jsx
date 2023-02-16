@@ -12,13 +12,17 @@ export const Aside = () => {
           <div>
             <select>
               <option>opcion1</option>
-              <option>opcion1</option>
-              <option>opcion1</option>
+              <option>opcion2</option>
+              <option>opcion3</option>
+              <option>opcion4</option>
+              <option>opcion5</option>
             </select>
             <select>
               <option>opcion1</option>
-              <option>opcion1</option>
-              <option>opcion1</option>
+              <option>opcion2</option>
+              <option>opcion3</option>
+              <option>opcion4</option>
+              <option>opcion5</option>
             </select>
           </div>
 
