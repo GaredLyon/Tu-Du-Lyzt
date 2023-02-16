@@ -1,49 +1,24 @@
-import { Main } from "./components/Main2/Main"
-import './App.css'
-import { Aside } from "./components/Aside/Aside"
-import Header  from "./components/Header/Header"
-import { useState } from "react"
+import React, { useEffect, useState } from 'react'
+import Inicio from './Inicio'
 
-function App() {
+//IMPORTAMOS NUESTRO CONTEXTO
+import { AppContext } from './context/appContext'
+import { tareas } from './components/data/tareas'
 
-  const [asideVisible, setAsideVisible] = useState(false)
+export const App = () => {
 
-  const alternarAside = (valor) =>{
-    setAsideVisible(valor)
-  }
+  let [estadoGlobal, setEstadoGlobal] = useState([])
 
+  useEffect(() => {
+
+    setEstadoGlobal = tareas
+
+  } , [])
+
+  /////////////////////////
   return (
-    <main className="App">
-      {/* ASIDE */}
-      <section className={`App__aside ${asideVisible && 'App__aside--visible'}`}>
-        
-        <button className="Aside__boton-cerrar" onClick={ () => alternarAside(false)}>
-          <i className="fa-solid fa-x"></i>
-        </button>
-        <Aside/>
-      </section>
-
-      <section className="App__container">
-
-        {/* HEADER */}
-        <div className="App__header">
-          <Header/>
-
-          {/* <button className="Header__boton-abrir" onClick={() => alternarAside(!asideVisible)}>
-            <i className="fa-solid fa-bars"></i>
-          </button> */}
-        </div>
-
-        {/* MAIN */}
-        <div className="App__main">
-          <Main asideVisible={asideVisible} alternarAside={alternarAside}/>
-
-          {/* xsxsxs */}
-        </div>
-
-      </section>
-    </main>
+    <AppContext.Provider value={estadoGlobal}>
+      <Inicio/>
+    </AppContext.Provider>
   )
 }
-
-export default App
