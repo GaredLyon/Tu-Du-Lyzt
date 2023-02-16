@@ -101,11 +101,15 @@
 
 	
 	.column__container-cards {
-		height: calc(100vh - 19.5rem);
+		height: calc(100vh - 20.5rem);
 		overflow-y: scroll;
 	}
 
 	.column__container-cards::-webkit-scrollbar{
+		display: none;
+	}
+
+	.main__boton-new{
 		display: none;
 	}
 }

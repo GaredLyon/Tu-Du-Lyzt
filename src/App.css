@@ -2,6 +2,9 @@
   display: flex;
   max-height: 100vh;
   overflow: hidden;
+
+   /* min-width: 326px;PROV */
+  min-width: 332px; /* PROV */
 }
 
 /* ASIDE //////////////////////////////////////////// */
@@ -12,7 +15,7 @@
   padding: 12px;
 
   width: 320px;
-  min-width: 300px;
+  min-width: 320px;
   position: fixed;
   height: 100vh;
   top: 0;
@@ -45,6 +48,7 @@
   top: 10px;
   cursor: pointer;
   z-index: 1;
+  cursor: pointer;
 }
 
 /* CONTENEDOR DE HEADER Y MAIN ///////////////////// */
@@ -72,6 +76,7 @@
   position: absolute;
   right: 5px;
   top: 5px;
+  cursor: pointer;
 }
 
 /* MAIN */

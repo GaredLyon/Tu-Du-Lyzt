@@ -12,6 +12,8 @@ export const Column = ({ titleColor, titleText }) => {
 			<div className="column__container-cards">
 				<Card color={"red"} />
 				<Card color={"yellow"} />
+				<Card color={"yellow"} />
+				<Card color={"blue"} />
 				<Card color={"blue"} />
 				<Card color={"blue"} />
 				<Card color={"blue"} />

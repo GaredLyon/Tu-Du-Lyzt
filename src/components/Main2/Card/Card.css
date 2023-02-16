@@ -110,9 +110,9 @@
   position: relative;
 }
 
-.caja__icon:hover .card__aviso {
+/* .caja__icon:hover .card__aviso {
   display: flex;
-}
+} */
 .card__aviso {
   position: absolute;
   background: var(--purple);
