@@ -3,52 +3,63 @@ import "./Header.css";
 
 const Header = () => {
 	return (
-		<div className="container__search">
-			<div className="search">
-				<div className="search__selects">
-					<select name="priority" id="priority">
-						<optgroup label="priority">
+		<header className="header">
+
+			{/* CONTENEDOR */}
+			<div className="header__contenedor">
+
+				{/* CAJA DE SELECTORESS */}
+				<section className="header__contenedor-selectores">
+
+					{/* SELECTOR 1 */}
+					<select className="header__selector" name="priority" id="priority" >
+						{/* <optgroup label="priority"> */}
 							<option value="">all</option>
 							<option value="high">High</option>
 							<option value="middle">Middle</option>
 							<option value="low">Low</option>
-						</optgroup>
+						{/* </optgroup> */}
 					</select>
 
-					<select name="column" id="column">
-						<optgroup label="column">
+					{/* SELECTOR 2 */}
+					<select className="header__selector" name="column" id="column">
+						{/* <optgroup label="column"> */}
 							<option value="all">all</option>
 							<option value="todo">Todo</option>
 							<option value="progress">Progress</option>
 							<option value="completed">completed</option>
-						</optgroup>
+						{/* </optgroup> */}
 					</select>
 
-					<select name="tag" id="tag">
-						<optgroup label="tag">
+					{/* SELECTOR 3 */}
+					<select className="header__selector" name="tag" id="tag">
+						{/* <optgroup label="tag"> */}
 							<option value="">all</option>
-							{/* todos.map(e => <option value={e.tag}>{e.tag}</option>)<option value="">tag</option> */}
-						</optgroup>
+						{/* </optgroup> */}
 					</select>
 
-					<select name="time" id="time">
-						<optgroup label="time">
+					{/* SELECTOR 4 */}
+					<select className="header__selector" name="time" id="time">
+						{/* <optgroup label="time"> */}
 							<option value="all">all</option>
 							<option value="day">last day</option>
 							<option value="week">last week</option>
 							<option value="month">last month</option>
-						</optgroup>
+						{/* </optgroup> */}
 					</select>
 
-					<i className={`fa-solid fa-calendar header__icon`}></i>
-				</div>
+					{/* CALENDARIO */}
+					{/* <i className={`fa-solid fa-calendar header__icono-calendario`}></i> */}
+				</section>
 
-				<div className="search__input">
-					<input type="text" placeholder="search by importance" />
+				{/* BUSCADOR */}
+				<div className="header__buscador">
+					<input type="text" placeholder="search by importance" className="buscador"></input>
 					<i className="fa-solid fa-magnifying-glass"></i>
 				</div>
 			</div>
-		</div>
+
+		</header>
 	);
 };
 

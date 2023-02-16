@@ -6,6 +6,13 @@
   background: var(--red);
   width: 272px;
   height: 168px;
+
+  width: 100%;
+  /* min-width: 250px; */
+  /* max-width: 300px; */
+  /* flex-grow: 1; */
+
+  width: 100%;
 }
 .card--yellow {
   background: var(--yellow);
@@ -129,3 +136,4 @@
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotateZ(-90deg) scale(0.6);
 }
+

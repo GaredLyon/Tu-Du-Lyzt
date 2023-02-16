@@ -3,20 +3,19 @@ import { Card } from "../Card/Card";
 import "./Column.css";
 
 export const Column = ({ titleColor, titleText }) => {
+
 	return (
-		<div className="stack">
+		<div className="column">
 			<div className="column__container__title">
 				<h5 className={`column__title ${`column__title--${titleColor}`}`}>{titleText}</h5>
 			</div>
-			<article className={`column`}>
-				<div className="column__container-cards">
-					<Card color={"red"} />
-					<Card color={"yellow"} />
-					<Card color={"blue"} />
-					<Card color={"blue"} />
-					<Card color={"blue"} />
-				</div>
-			</article>
+			<div className="column__container-cards">
+				<Card color={"red"} />
+				<Card color={"yellow"} />
+				<Card color={"blue"} />
+				<Card color={"blue"} />
+				<Card color={"blue"} />
+			</div>
 		</div>
 	);
 };

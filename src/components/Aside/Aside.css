@@ -8,7 +8,8 @@
   text-align: center;
   color: var(--white);
   /* background: green; */
-  height: 160px;
+  /* height: 160px; */
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;

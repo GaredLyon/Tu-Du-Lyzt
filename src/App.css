@@ -1,32 +1,96 @@
 .App {
-  width: 100%;
   display: flex;
-  height: max-content;
-  height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
 }
 
+/* ASIDE //////////////////////////////////////////// */
 .App__aside {
-  width: 296px;
   background: var(--gray2);
   display: flex;
   flex-direction: column;
   padding: 12px;
+
+  width: 320px;
+  min-width: 300px;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: 3;
+  /* background: rgb(0, 0, 255); */
+  overflow-y: scroll;
+
+  border-right: 1px solid #33333388;
+}
+.App__aside::-webkit-scrollbar {
+  background: transparent;
+  width: .6rem;
+}
+.App__aside::-webkit-scrollbar-thumb {
+  /* background: rgb(0, 247, 255); */
+  background: #33333371;
+  border-radius: 1rem;
 }
 
+.App__aside--visible{
+  transform: translateX(0);
+}
+
+.Aside__boton-cerrar{
+  position: absolute;
+  padding: 5px 10px;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/* CONTENEDOR DE HEADER Y MAIN ///////////////////// */
 .App__container {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
+
+/* HEADER*/
 .App__header {
-  height: 92px;
-  border: 0.1rem solid black;
-  background: var(--gray3);
+  /* background: red; */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.321);
+  box-shadow: 0 5px 5px rgba(128, 128, 128, 0.134);
 }
 
+.Header__boton-abrir{
+  padding: 5px 10px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+/* MAIN */
 .App__main {
+  background-color: var(--gray4);
+  /* background: green; */
   flex-grow: 1;
-  background-color: var(--gray3);
+}
+
+
+@media (min-width: 1024px) {
+  /* @media (min-width: 900px) { */
+  .App__aside{
+    /* background-color: rgb(238, 130, 238); */
+    transform: translateX(0px);
+    position: relative;
+  }
+  .Aside__boton-cerrar,
+  .Header__boton-abrir{
+    display: none;
+  }
 }
