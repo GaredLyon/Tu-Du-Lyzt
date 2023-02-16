@@ -17,7 +17,7 @@ export const Column = ({ grupo }) => {
 	      {/* RENDERIZADO DE LAS TAREAS */}
 				{
 					tareas.length >= 1 && tareas.map((tarea, index) => (
-						<Card tarea={tarea} key={index}/>
+						<Card idGrupo={grupo.id} tarea={tarea}  key={index}/>
 					))
 				}
 			</div>

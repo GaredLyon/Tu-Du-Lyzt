@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import { eliminartarea } from '../../../helpers/eliminarTarea'
 import './Card.css'
 
-export const Card = ({tarea}) => {
+export const Card = ({idGrupo , tarea }) => {
 
-  const { nivel, contenido, descripcion} = tarea
+  const { nivel, contenido} = tarea
 
   const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
 
@@ -14,6 +15,12 @@ export const Card = ({tarea}) => {
 			default: return 'blue'
 		}
 	}
+
+
+
+  //EDITAR TAREA *******************
+
+  //ELIMINAR TAREA ****************
 
 
   //////////////////////////////////
@@ -29,7 +36,7 @@ export const Card = ({tarea}) => {
       {/* CARD ASIDE */}
       <aside className='card__aside'>
         <section className='card__icon-container'>
-          <i className="fa-sharp fa-solid fa-trash card__icon"></i> 
+          <i className="fa-sharp fa-solid fa-trash card__icon" onCanPlay={() => eliminartarea(idGrupo, tareaQueLlega.id)}></i> 
           <i className="fa-solid fa-pencil card__icon" onClick={()=>setEditable(!editable)}></i>
 
           <div className='caja__icon'>
