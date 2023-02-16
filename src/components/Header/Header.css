@@ -24,9 +24,10 @@
 .header__contenedor-selectores {
 	/* background: blue; */
 	display: flex;
+	flex-wrap: wrap;
 	width: 100%;
 	padding: .5rem;
-	gap: 1rem;
+	gap: .5rem;
 }
 
 /* SELECTOR ///////////////////////////////*/

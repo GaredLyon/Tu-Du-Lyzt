@@ -42,9 +42,9 @@ const Header = () => {
 					<select className="header__selector" name="time" id="time">
 						{/* <optgroup label="time"> */}
 							<option value="all">all</option>
-							<option value="day">last day</option>
-							<option value="week">last week</option>
-							<option value="month">last month</option>
+							<option value="day">day</option>
+							<option value="week">week</option>
+							<option value="month">month</option>
 						{/* </optgroup> */}
 					</select>
 
