@@ -5,18 +5,14 @@ import "./Header.css";
 
 ///////////////////////////////////////////
 const Header = () => { 
-
-  const {grupos, setGrupos} = useContext(AppContext)  
-
+  const {grupos} = useContext(AppContext)  
 
 	const [tags, setTags] = useState([]);
-
 
 	useEffect(() => {
 		let valores = traerTags(grupos)
 		setTags(valores)
 	},[grupos])
-
 
 	///////////////////////////////////////////
 	return (
@@ -52,8 +48,8 @@ const Header = () => {
 					<select className="header__selector" name="tag" id="tag">
 						{/* <optgroup label="tag"> */}
 						<option value="">Todos</option>
-						{tags.map((e, i) => (
-							<option key={i} value={e}> {e}</option>
+						{tags.map((tag, index) => (
+							<option key={index} value={tag}> {tag}</option>
 						))}
 						{/*</optgroup> */}
 					</select>

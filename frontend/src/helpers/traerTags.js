@@ -13,6 +13,9 @@ export const traerTags = (grupos) => {
   //ELIMINAR ELEMENTOS REPETIDOS
   let titulosSinRepetir = [...new Set(titulos)];
 
-  return titulosSinRepetir
+  //ORDENARLOS ALFABATECAMENTE
+  let ordenados = titulosSinRepetir.sort()
+
+  return ordenados
   // return ["design", "code", "managment", "slicing"];
 } 
