@@ -1,19 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../context/AppContext";
 import { traerTags } from "../../helpers/traerTags";
 import "./Header.css";
 
-
-
+///////////////////////////////////////////
 const Header = () => { 
+  const {grupos} = useContext(AppContext)  
 
-	/* const tags = ["design", "code", "managment", "slicing"]; */
 	const [tags, setTags] = useState([]);
+
 	useEffect(() => {
-		let valores = traerTags()
+		let valores = traerTags(grupos)
 		setTags(valores)
-	},[])
+	},[grupos])
 
-
+	///////////////////////////////////////////
 	return (
 		<header className="header">
 
@@ -26,7 +27,7 @@ const Header = () => {
 					{/* SELECTOR 1 */}
 					<select className="header__selector" name="priority" id="priority" >
 						{/* <optgroup label="priority"> */}
-							<option value="">all</option>
+							<option value="">Todos</option>
 							<option value="high">High</option>
 							<option value="middle">Middle</option>
 							<option value="low">Low</option>
@@ -36,7 +37,7 @@ const Header = () => {
 					{/* SELECTOR 2 */}
 					<select className="header__selector" name="column" id="column">
 						{/* <optgroup label="column"> */}
-							<option value="all">all</option>
+							<option value="all">Todos</option>
 							<option value="todo">Todo</option>
 							<option value="progress">Progress</option>
 							<option value="completed">completed</option>
@@ -46,9 +47,9 @@ const Header = () => {
 					{/* SELECTOR 3 */}
 					<select className="header__selector" name="tag" id="tag">
 						{/* <optgroup label="tag"> */}
-						<option value="">all</option>
-						{tags.map((e, i) => (
-							<option key={i} value={e}> {e}</option>
+						<option value="">Todos</option>
+						{tags.map((tag, index) => (
+							<option key={index} value={tag}> {tag}</option>
 						))}
 						{/*</optgroup> */}
 					</select>
@@ -56,10 +57,33 @@ const Header = () => {
 					{/* SELECTOR 4 */}
 					<select className="header__selector" name="time" id="time">
 						{/* <optgroup label="time"> */}
-							<option value="all">all</option>
-							<option value="day">day</option>
-							<option value="week">week</option>
-							<option value="month">month</option>
+							<option value="all">Todos</option>
+							<option value="day">1 hora</option>
+							<option value="day">2 horas</option>
+							<option value="day">4 horas</option>
+							<option value="day">8 horas</option>
+							<option value="day">12 horas</option>
+							<option value="day">1 dia</option>
+							<option value="day">2 dias</option>
+							<option value="day">3 dias</option>
+							<option value="day">4 dias</option>
+							<option value="day">5 dias</option>
+							<option value="day">6 dias</option>
+							<option value="week">1 semana</option>
+							<option value="week">2 semanas</option>
+							<option value="week">3 semanas</option>
+							<option value="month">1 mes</option>
+							<option value="month">2 meses</option>
+							<option value="month">3 meses</option>
+							<option value="month">4 meses</option>
+							<option value="month">5 meses</option>
+							<option value="month">6 meses</option>
+							<option value="month">7 meses</option>
+							<option value="month">8 meses</option>
+							<option value="month">9 meses</option>
+							<option value="month">10 meses</option>
+							<option value="month">11 meses</option>
+							<option value="month">12 meses</option>
 						{/* </optgroup> */}
 					</select>
 				</section>
