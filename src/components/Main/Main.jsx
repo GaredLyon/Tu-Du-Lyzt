@@ -1,7 +1,7 @@
 import React, { useContext} from 'react'
 import './Main.css'
 import { Column } from './Column/Column'
-import { AppContext } from '../../context/appContext'
+import { AppContext } from '../../context/AppContext'
 
 export const Main = ({asideVisible, alternarAside}) => {
 

@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react'
 import './Card.css'
-import { editarTarea } from '../../../helpers/editarTarea'
-import { eliminartarea } from '../../../helpers/eliminarTarea'
-import { AppContext } from '../../../context/appContext'
+/* import { editarTarea } from '../../../helpers/editarTarea'
+import { eliminartarea } from '../../../helpers/eliminarTarea' */
+import { AppContext } from '../../../context/AppContext'
 import { formatearFecha } from '../../../helpers/formatearFecha'
 import { formatearHora } from '../../../helpers/formatearHora'
 

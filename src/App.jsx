@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Inicio from './components/pages/Inicio'
 //IMPORTAMOS NUESTRO CONTEXTO
-import { AppContext } from './context/appContext'
+import { AppContext } from './context/AppContext'
 import { tareas } from './components/data/tareas'
 
 export const App = () => {

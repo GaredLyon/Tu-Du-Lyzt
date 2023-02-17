@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
-import { AppContext } from '../../context/appContext'
-import { formatearFecha } from '../../helpers/formatearFecha'
+import { AppContext } from '../../context/AppContext'
+/* import { formatearFecha } from '../../helpers/formatearFecha' */
 // import { agregarTarea } from '../../helpers/agregartarea'
 import './Aside.css'
 
@@ -62,7 +62,7 @@ export const Aside = () => {
 
 
       //LIMPIAR EL FORMULARIO
-      // evento.target.reset()
+      evento.target.reset()
 
       //AGREGAR UNA NUEVA TAREA AL SERVIDOR, USANDO EL HELPER
       // agregarTarea({
