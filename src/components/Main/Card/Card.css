@@ -91,6 +91,8 @@
   padding: 0.4rem;
   margin: 0 0.4rem;
   /* background: blue; */
+  cursor: pointer;
+
 }
 .card__icon:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -110,17 +112,16 @@
   position: relative;
 }
 
-/* .caja__icon:hover .card__aviso {
+.caja__icon:hover .card__aviso {
   display: flex;
-} */
+}
 .card__aviso {
   position: absolute;
   background: var(--purple);
   color: white;
-  padding: 0.1rem 0.4rem;
+  padding: 0.3rem 1rem;
   border-radius: 0.3rem;
-  left: 2.5rem;
-  left: 3.5rem;
+  right: 4rem;
   width: max-content;
   top: 0;
   display: none;
@@ -132,8 +133,8 @@
   position: absolute;
   width: 2rem;
   height: 2rem;
-  left: -1.5rem;
+  right: -1.5rem;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-  transform: rotateZ(-90deg) scale(0.6);
+  transform: rotateZ(-270deg) scale(0.6);
 }
 

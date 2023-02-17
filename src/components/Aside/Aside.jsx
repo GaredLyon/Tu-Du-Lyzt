@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../context/appContext'
+import { formatearFecha } from '../../helpers/formatearFecha'
 // import { agregarTarea } from '../../helpers/agregartarea'
 import './Aside.css'
 
@@ -13,7 +14,7 @@ const obtenerIdGrupo = (columna) => {
 ////////////////////////////////////
 export const Aside = () => {
 
-  const {setGrupos} = useContext(AppContext)
+  const { setGrupos } = useContext(AppContext)
 
   //AGREGAR TAREA *******************
   const agregarNuevaTarea = (evento) => {
@@ -26,7 +27,11 @@ export const Aside = () => {
     let idGrupo = obtenerIdGrupo(columna)
 
     if (inputTitulo && inputDescripcion) {
-      
+
+      // const fecha = new Date();
+      // const opciones = { day: 'numeric', month: 'long', year: 'numeric' };
+      // const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
       /* CREANDO AL ESTRCUTURA DE LA NUEVA TAREA */
       const nuevaTarea = {
         id: Math.floor(Math.random() * 100000),
@@ -34,9 +39,11 @@ export const Aside = () => {
         contenido: {
           titulo: inputTitulo,
           descripcion: inputDescripcion
-        }
+        },
+        // fechayhora: formatearFecha(Date.now()),
+        fechayhora: Date.now(),
       }
-  
+
       //AGREGAR LA TAREA VISUALMENTE A LA COLUMNA QUE CORRESPONDE
       setGrupos(estadoActual => {
         const gruposActualizados = estadoActual.map(grupo => {
@@ -48,12 +55,15 @@ export const Aside = () => {
           }
           return grupo
         })
-  
+
         // console.log(gruposActualizados[idGrupo].tareas)
         return gruposActualizados
       })
-  
-      
+
+
+      //LIMPIAR EL FORMULARIO
+      // evento.target.reset()
+
       //AGREGAR UNA NUEVA TAREA AL SERVIDOR, USANDO EL HELPER
       // agregarTarea({
       //   idGrupo,
@@ -90,10 +100,10 @@ export const Aside = () => {
           </div>
 
           <div>
-            <button className='aside__contenedor-iconos'>
+            {/* <button type='button' className='aside__contenedor-iconos'>
               <i className="fa-regular fa-calendar"></i>
-            </button>
-            <button className='aside__contenedor-iconos'>
+            </button> */}
+            <button type='reset'  className='aside__contenedor-iconos' >
               <i className="fa-sharp fa-solid fa-trash"></i>
             </button>
           </div>
@@ -106,16 +116,16 @@ export const Aside = () => {
             className='header__input1'
             rows="1"
             placeholder='Titulo...'
-            name='inputTitulo'/>
-          <hr/>
+            name='inputTitulo' />
+          <hr />
           <textarea
             className='header__input2'
             rows="9"
             placeholder='Descripcion...'
-            name='inputDescripcion'/>
+            name='inputDescripcion' />
         </div>
 
-        <button className='aside__boton-crear'>Create</button>
+        <button type='submit' className='aside__boton-crear'>Create</button>
       </form>
     </aside>
   )

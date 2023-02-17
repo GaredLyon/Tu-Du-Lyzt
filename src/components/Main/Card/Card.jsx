@@ -3,6 +3,8 @@ import './Card.css'
 import { editarTarea } from '../../../helpers/editarTarea'
 import { eliminartarea } from '../../../helpers/eliminarTarea'
 import { AppContext } from '../../../context/appContext'
+import { formatearFecha } from '../../../helpers/formatearFecha'
+import { formatearHora } from '../../../helpers/formatearHora'
 
 const obtenerColor = (nivel) => {
   switch (nivel) {
@@ -19,6 +21,15 @@ export const Card = ({idGrupo , tarea}) => {
 
   const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
   
+  //PARA MOSTARA EL TIEMPO TRANSCURRIDO
+  const [tiempoTranscurrido, setTiempoTranscurrido] = useState()
+
+  setTimeout(() => {
+    let respuesta = formatearHora(tarea.fechayhora)
+    setTiempoTranscurrido(respuesta)
+  }, 1000);
+
+
   //EDITAR TAREA ******************************************************
   const editarTareaActual = ( idGrupo) => {
 
@@ -141,15 +152,16 @@ export const Card = ({idGrupo , tarea}) => {
           }
 
           <div className='caja__icon'>
-            {/* ICONO RELOJ */}
+            {/* ICONO DE RELOJ */}
             <i className={`fa-solid fa-clock card__icon`}></i>
-            <div className='card__aviso'>Hace 1 hora</div>
+            <div className='card__aviso'>{tiempoTranscurrido}</div>
+            <div className='card__aviso'>{}</div>
           </div>
 
           <div className='caja__icon'>
-            {/* ICONO CALENDARIO */}
+            {/* ICONO DE CALENDARIO */}
             <i className={`fa-solid fa-calendar card__icon`}></i>
-            <div className='card__aviso'>24 de Enero</div>
+            <div className='card__aviso'>{formatearFecha(tarea.fechayhora)}</div>
           </div>
 
         </section>
