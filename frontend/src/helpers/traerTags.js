@@ -13,7 +13,7 @@ export const traerTags = (grupos) => {
   //ELIMINAR ELEMENTOS REPETIDOS
   let titulosSinRepetir = [...new Set(titulos)];
 
-  //ORDENARLOS ALFABATECAMENTE
+  //ORDENARLOS ALFABETICAMENTE
   let ordenados = titulosSinRepetir.sort()
 
   return ordenados
