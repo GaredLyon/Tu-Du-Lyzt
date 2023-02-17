@@ -28,6 +28,7 @@
 }
 
 .column__container__title {
+	position: relative;
 }
 
 .column__title {
@@ -54,7 +55,6 @@
 .column__container-cards {
 	/* display: flex; */
 	gap: 1.2rem;
-	/* background: red; */
 	flex-wrap: wrap;
 
 	display: grid;
@@ -73,12 +73,36 @@
 
 .stack {
 	display: flex;
+<<<<<<< HEAD:src/components/Main2/Column/Column.css
     flex-direction: column;
     background-color: var(--white);
     border-radius: var(--xl);
     height: 95%;
+=======
+	flex-direction: column;
+	background-color: var(--white);
+	border-radius: var(--xl);
+
+>>>>>>> implemetar-useContext:src/components/Main/Column/Column.css
 }
 
+
+.column__contador{
+	width: max-content;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2rem;
+	color: gray;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	/* background-color: red; */
+	background: white;
+}
 
 @media (min-width: 650px) {
 	.column__container-cards {
@@ -106,6 +130,7 @@
 	.column__container-cards {
 		height: calc(100vh - 21rem);
 		overflow-y: scroll;
+		align-content: start;
 	}
 
 	.column__container-cards::-webkit-scrollbar{
