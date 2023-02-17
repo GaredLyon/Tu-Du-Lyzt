@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { AppContext } from '../../context/appContext'
+import { formatearFecha } from '../../helpers/formatearFecha'
 // import { agregarTarea } from '../../helpers/agregartarea'
 import './Aside.css'
 
@@ -27,6 +28,10 @@ export const Aside = () => {
 
     if (inputTitulo && inputDescripcion) {
 
+      // const fecha = new Date();
+      // const opciones = { day: 'numeric', month: 'long', year: 'numeric' };
+      // const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+
       /* CREANDO AL ESTRCUTURA DE LA NUEVA TAREA */
       const nuevaTarea = {
         id: Math.floor(Math.random() * 100000),
@@ -34,7 +39,9 @@ export const Aside = () => {
         contenido: {
           titulo: inputTitulo,
           descripcion: inputDescripcion
-        }
+        },
+        // fechayhora: formatearFecha(Date.now()),
+        fechayhora: Date.now(),
       }
 
       //AGREGAR LA TAREA VISUALMENTE A LA COLUMNA QUE CORRESPONDE
