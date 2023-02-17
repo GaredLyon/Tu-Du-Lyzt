@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { traerTags } from "../../helpers/traerTags";
 import "./Header.css";
 
-const Header = () => {
+
+
+const Header = () => { 
+
+	/* const tags = ["design", "code", "managment", "slicing"]; */
+	const [tags, setTags] = useState([]);
+	useEffect(() => {
+		let valores = traerTags()
+		setTags(valores)
+	},[])
+
+
 	return (
 		<header className="header">
 
@@ -34,8 +46,11 @@ const Header = () => {
 					{/* SELECTOR 3 */}
 					<select className="header__selector" name="tag" id="tag">
 						{/* <optgroup label="tag"> */}
-							<option value="">all</option>
-						{/* </optgroup> */}
+						<option value="">all</option>
+						{tags.map((e, i) => (
+							<option key={i} value={e}> {e}</option>
+						))}
+						{/*</optgroup> */}
 					</select>
 
 					{/* SELECTOR 4 */}
