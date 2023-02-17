@@ -8,7 +8,7 @@ export let tareas = [
 				id: 1,
 				nivel: "High",
 				contenido: {
-					titulo: "Tarea 1",
+					titulo: "tarea 1",
 					descripcion: "Contenido de tarea 1",
 				},
 				fechayhora: Date.now()
@@ -17,7 +17,7 @@ export let tareas = [
 				id: 2,
 				nivel: "Middle",
 				contenido: {
-					titulo: "Tarea 2",
+					titulo: "tarea 2",
 					descripcion: "Contenido de tarea 2",
 				},
 				fechayhora: Date.now()
@@ -26,7 +26,7 @@ export let tareas = [
 				id: 3,
 				nivel: "Low",
 				contenido: {
-					titulo: "Tarea 3",
+					titulo: "tarea 3",
 					descripcion: "Contenido de tarea 3",
 				},
 				fechayhora: Date.now()
@@ -42,7 +42,7 @@ export let tareas = [
 				id: 10,
 				nivel: "High",
 				contenido: {
-					titulo: "Tarea 10",
+					titulo: "tarea 10",
 					descripcion: "Contenido de tarea 10",
 				},
 				fechayhora: Date.now()
@@ -51,7 +51,7 @@ export let tareas = [
 				id: 20,
 				nivel: "Middle",
 				contenido: {
-					titulo: "Tarea 20",
+					titulo: "tarea 20",
 					descripcion: "Contenido de tarea 20",
 				},
 				fechayhora: Date.now()
@@ -60,7 +60,7 @@ export let tareas = [
 				id: 30,
 				nivel: "Low",
 				contenido: {
-					titulo: "Tarea 30",
+					titulo: "tarea 30",
 					descripcion: "Contenido de tarea 30",
 				},
 				fechayhora: Date.now()
@@ -76,7 +76,7 @@ export let tareas = [
 				id: 100,
 				nivel: "High",
 				contenido: {
-					titulo: "Tarea 100",
+					titulo: "tarea 100",
 					descripcion: "Contenido de tarea 100",
 				},
 				fechayhora: Date.now()
@@ -85,7 +85,7 @@ export let tareas = [
 				id: 200,
 				nivel: "Middle",
 				contenido: {
-					titulo: "Tarea 200",
+					titulo: "tarea 200",
 					descripcion: "Contenido de tarea 200",
 				},
 				fechayhora: Date.now()
@@ -94,7 +94,7 @@ export let tareas = [
 				id: 300,
 				nivel: "Low",
 				contenido: {
-					titulo: "Tarea 300",
+					titulo: "tarea 300",
 					descripcion: "Contenido de tarea 300",
 				},
 				fechayhora: Date.now()
