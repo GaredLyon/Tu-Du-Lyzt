@@ -22,8 +22,8 @@
   z-index: 3;
   /* background: rgb(0, 0, 255); */
   overflow-y: scroll;
-
   border-right: 0.1rem solid #33333388;
+  align-items: center;
 }
 .App__aside::-webkit-scrollbar {
   background: transparent;
