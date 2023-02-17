@@ -1,8 +1,8 @@
-import { Main } from "./components/Main2/Main"
-import './App.css'
-import { Aside } from "./components/Aside/Aside"
-import Header  from "./components/Header/Header"
+import { Main } from "../Main/Main"
+import { Aside } from "../Aside/Aside"
+import Header  from "../Header/Header"
 import { useState } from "react"
+import './Inicio.css'
 
 function Inicio() {
 
@@ -16,10 +16,11 @@ function Inicio() {
     <main className="App">
       {/* ASIDE */}
       <section className={`App__aside ${asideVisible && 'App__aside--visible'}`}>
-        
+        {/* boton cerrar */}
         <button className="Aside__boton-cerrar" onClick={ () => alternarAside(false)}>
           <i className="fa-solid fa-x"></i>
         </button>
+        
         <Aside/>
       </section>
 
@@ -28,17 +29,11 @@ function Inicio() {
         {/* HEADER */}
         <div className="App__header">
           <Header/>
-
-          {/* <button className="Header__boton-abrir" onClick={() => alternarAside(!asideVisible)}>
-            <i className="fa-solid fa-bars"></i>
-          </button> */}
         </div>
 
         {/* MAIN */}
         <div className="App__main">
           <Main asideVisible={asideVisible} alternarAside={alternarAside}/>
-
-          {/* xsxsxs */}
         </div>
 
       </section>

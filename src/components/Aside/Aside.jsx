@@ -1,36 +1,68 @@
-import React from 'react'
-import { agregarTarea } from '../../helpers/agregartarea'
+import React, { useContext } from 'react'
+import { AppContext } from '../../context/appContext'
+// import { agregarTarea } from '../../helpers/agregartarea'
 import './Aside.css'
 
+const obtenerIdGrupo = (columna) => {
+  switch (columna) {
+    case 'Progress': return 2
+    default: return 1
+  }
+}
+
+////////////////////////////////////
 export const Aside = () => {
 
+  const {setGrupos} = useContext(AppContext)
+
   //AGREGAR TAREA *******************
-  const agregarNuevaTarea = (evento, idGrupo) => {
-    // evento.preventDefault()
+  const agregarNuevaTarea = (evento) => {
 
     //OBTENER TODOS LOS VALORES QUE NECESITO
     let dificultad = evento.target.dificultad.value /* LISTO */
     let columna = evento.target.columna.value /* LISTO */
     let inputTitulo = evento.target.inputTitulo.value /* LISTO */
     let inputDescripcion = evento.target.inputDescripcion.value /* LISTO */
+    let idGrupo = obtenerIdGrupo(columna)
 
-    const obtenerIdGrupo = (columna) => {
-      switch (columna) {
-        case 'Progress': return 2
-        default: return 1
+    if (inputTitulo && inputDescripcion) {
+      
+      /* CREANDO AL ESTRCUTURA DE LA NUEVA TAREA */
+      const nuevaTarea = {
+        id: Math.floor(Math.random() * 100000),
+        nivel: dificultad,
+        contenido: {
+          titulo: inputTitulo,
+          descripcion: inputDescripcion
+        }
       }
+  
+      //AGREGAR LA TAREA VISUALMENTE A LA COLUMNA QUE CORRESPONDE
+      setGrupos(estadoActual => {
+        const gruposActualizados = estadoActual.map(grupo => {
+          if (grupo.id === idGrupo) {
+            return {
+              ...grupo,
+              tareas: [...grupo.tareas, nuevaTarea]
+            }
+          }
+          return grupo
+        })
+  
+        // console.log(gruposActualizados[idGrupo].tareas)
+        return gruposActualizados
+      })
+  
+      
+      //AGREGAR UNA NUEVA TAREA AL SERVIDOR, USANDO EL HELPER
+      // agregarTarea({
+      //   idGrupo,
+      //   dificultad,
+      //   cuerpo: {
+      //     columna, inputTitulo, inputDescripcion
+      //   }
+      // })
     }
-    // console.log(`se agrego nueva tarea, de dificultad: "${dificultad}", a la columna de "${columna}", tiene el titulo "${inputTitulo}" y descripcion "${inputDescripcion}"`)
-    
-    //USAR EL HELPER
-    agregarTarea({
-      idGrupo: obtenerIdGrupo(columna),
-      dificultad,
-      cuerpo: {
-        columna, inputTitulo, inputDescripcion
-      }
-    })
-
   }
 
 
@@ -73,13 +105,13 @@ export const Aside = () => {
           <textarea
             className='header__input1'
             rows="1"
-            defaultValue='#Tag...'
+            placeholder='Titulo...'
             name='inputTitulo'/>
           <hr/>
           <textarea
             className='header__input2'
             rows="9"
-            defaultValue='Task...'
+            placeholder='Descripcion...'
             name='inputDescripcion'/>
         </div>
 
