@@ -1,0 +1,118 @@
+.App {
+  display: flex;
+  max-height: 100vh;
+  overflow: hidden;
+  min-width: 33.2rem;
+}
+
+/* ASIDE //////////////////////////////////////////// */
+.App__aside {
+  background: var(--gray2);
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem;
+
+  width: 32rem;
+  min-width: 32rem;
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  z-index: 3;
+  /* background: rgb(0, 0, 255); */
+  overflow-y: scroll;
+
+  border-right: 0.1rem solid #33333388;
+}
+.App__aside::-webkit-scrollbar {
+  background: transparent;
+  width: .5rem;
+}
+.App__aside::-webkit-scrollbar-thumb {
+  /* background: rgb(0, 247, 255); */
+  background: #33333335;
+}
+
+.App__aside--visible{
+  transform: translateX(0);
+}
+
+.Aside__boton-cerrar{
+  position: absolute;
+  padding: 0.5rem 1rem;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 1;
+  cursor: pointer;
+
+  width: 4rem;
+  height: 4rem;
+  /* border-radius: 50%; */
+  border: none;
+  border-radius: 1rem;
+
+  background: #ffffff;
+	border: none;
+	transition: 300ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Aside__boton-cerrar i{
+  font-size: 1.8rem;
+}
+
+/* .Aside__boton-cerrar:hover{
+	transform: scale(1.15);
+} */
+
+/* CONTENEDOR DE HEADER Y MAIN ///////////////////// */
+.App__container {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+
+/* HEADER*/
+.App__header {
+  /* background: red; */
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.321);
+  box-shadow: 0 5px 5px rgba(128, 128, 128, 0.134);
+}
+
+.Header__boton-abrir{
+  padding: 0.5rem 1rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  cursor: pointer;
+}
+
+/* MAIN */
+.App__main {
+  background-color: var(--gray4);
+  /* background: green; */
+  flex-grow: 1;
+}
+
+
+@media (min-width: 1024px) {
+  /* @media (min-width: 900px) { */
+  .App__aside{
+    /* background-color: rgb(238, 130, 238); */
+    transform: translateX(0rem);
+    position: relative;
+  }
+  .Aside__boton-cerrar,
+  .Header__boton-abrir{
+    display: none;
+  }
+}

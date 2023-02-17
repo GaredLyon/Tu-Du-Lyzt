@@ -41,8 +41,8 @@
   /*border-bottom: 0.2rem dashed var(--gray1);*/
   outline: none;
   resize: none;
-  height: 2.4rem;
-  font-size: var(--lg);
+  /* height: 2.4rem; */
+  font-size: var(--xl);
 }
 .card__title:disabled {
   border-bottom: 0.1rem solid var(--gray1);
