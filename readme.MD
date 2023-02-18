@@ -71,7 +71,7 @@ App para llevar un registro de tareas pendientes y completadas.
 
 ## 🌍 Despliegue y sitio web de la aplicacion
 
-Puedes probar la aplicacion [aqui](https://localhost:8080/).
+Puedes probar la aplicacion [aqui](https://github.com/GaredLyon/Tu-Du-Lyzt/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
 
