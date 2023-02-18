@@ -19,7 +19,7 @@ const TaskSchema = new mongoose.Schema({
     },
     estado: {
         type: String,
-        default: false,
+        default: 'Todo',
     },
     creado: {
         type: Date,
