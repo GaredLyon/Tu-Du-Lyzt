@@ -1,34 +1,34 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
-import { traerTags } from "../../helpers/traerTags";
+import { getTags } from "../../helpers/getTags";
 import "./Header.css";
 import TextInput from '../TextInput/TextInput'
 
 ///////////////////////////////////////////
 const Header = () => { 
-  const {grupos} = useContext(AppContext)  
+  const {groups} = useContext(AppContext)  
 
 	const [tags, setTags] = useState([]);
 
 	useEffect(() => {
-		let valores = traerTags(grupos)
-		setTags(valores)
-	},[grupos])
+		let values = getTags(groups)
+		setTags(values)
+	},[groups])
 
 	///////////////////////////////////////////
 	return (
 		<header className="header">
 
 			{/* CONTENEDOR */}
-			<div className="header__contenedor">
+			<div className="header__container">
 
 				{/* CAJA DE SELECTORESS */}
-				<section className="header__contenedor-selectores">
+				<section className="header__container-selectors">
 
 					{/* SELECTOR 1 */}
 					<select className="header__selector" name="priority" id="priority" >
 						{/* <optgroup label="priority"> */}
-							<option value="">TODOS</option>
+							<option value="all">TODOS</option>
 							<option value="high">High</option>
 							<option value="middle">Middle</option>
 							<option value="low">Low</option>
@@ -90,7 +90,7 @@ const Header = () => {
 				</section>
 
 				{/* BUSCADOR */}
-				<div className="header__buscador">
+				<div className="header__search">
 					<TextInput  />
 					<i className="fa-solid fa-magnifying-glass"></i>
 				</div>

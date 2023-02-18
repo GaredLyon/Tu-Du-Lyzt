@@ -1,9 +1,11 @@
+/* ES TO EN */
+
 import React, { useContext } from 'react'
 import { AppContext } from '../../context/AppContext'
 import './Aside.css'
 
-const getIdGroup = (columna) => {
-  switch (columna) {
+const getIdGroup = (column) => {
+  switch (column) {
     case 'Progress': return 2
     default: return 1
   }
@@ -120,7 +122,7 @@ export const Aside = () => {
             name='inputDescription' />
         </div>
 
-        <button type='submit' className='aside__button-create'>Create</button>
+        <button type='submit' className='aside__button-create'>Crear</button>
       </form>
     </aside>
   )
