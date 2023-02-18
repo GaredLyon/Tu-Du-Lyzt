@@ -1,3 +1,5 @@
+/* ES TO EN */
+
 import React, { useContext} from 'react'
 import './Main.css'
 import { Column } from './Column/Column'
@@ -5,7 +7,7 @@ import { AppContext } from '../../context/AppContext'
 
 export const Main = ({asideVisible, toogleAside}) => {
 
-  const {grupos: groups} = useContext(AppContext)
+  const {groups} = useContext(AppContext)
 
   //////////////////////////////////////
   return (

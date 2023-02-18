@@ -36,7 +36,7 @@ export const Card = ({idGroup , task}) => {
     const title = document.getElementById(`input1-task${id}`).value
     const description = document.getElementById(`input2-task${id}`).value
     
-    setGrupos(currentState => {
+    setGroups(currentState => {
       
       const updatedGroups = currentState.map(group => {
         if (group.id === idGrupo) {
@@ -62,11 +62,11 @@ export const Card = ({idGroup , task}) => {
   }
 
   //ELIMINAR TAREA ****************************************************
-  const {setGrupos} = useContext(AppContext)
+  const {setGroups} = useContext(AppContext)
 
   const deleteCurrentTask = (idGroup, idTask) => {
 
-    setGrupos(currentState => {
+    setGroups(currentState => {
       
       const updatedGroups = currentState.map(group => {
         if (group.id === idGroup) {

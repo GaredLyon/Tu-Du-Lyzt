@@ -1,3 +1,5 @@
+/* ES TO EN */
+
 import React, { useState } from 'react'
 import Home from './pages/Home'
 //IMPORTAMOS NUESTRO CONTEXTO
@@ -6,16 +8,16 @@ import { data } from './data/data'
 
 export const App = () => {
 
-  const [grupos, setGrupos] = useState(data)
+  const [groups, setGroups] = useState(data)
 
-  let estadosGlobales = {
-    grupos,
-    setGrupos
+  let globalStates = {
+    groups,
+    setGroups
   }
 
   /////////////////////////
   return (
-    <AppContext.Provider value={estadosGlobales}>
+    <AppContext.Provider value={globalStates}>
       <Home/>
     </AppContext.Provider>
   )
