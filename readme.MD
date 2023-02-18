@@ -27,6 +27,11 @@ App para llevar un registro de tareas pendientes y completadas.
 - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 - xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ## 🔠 Fuente de texto
 
@@ -63,7 +68,7 @@ App para llevar un registro de tareas pendientes y completadas.
 
 </div>
 
-## 🌍 Sitio web de la aplicacion
+## 🌍 Despliegue y sitio web de la aplicacion
 
 Puedes probar la aplicacion [aqui](https://localhost:8080/).
 
