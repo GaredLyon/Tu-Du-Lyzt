@@ -1,7 +1,7 @@
 export let data = [
 	{
 		id: 1,
-		title: "Todo",
+		title: "Pendientes",
 		color: "gray",
 		tasks: [
 			{
@@ -35,7 +35,7 @@ export let data = [
 	},
 	{
 		id: 2,
-		title: "Progress",
+		title: "Proceso",
 		color: "purple",
 		tasks: [
 			{
@@ -69,7 +69,7 @@ export let data = [
 	},
 	{
 		id: 3,
-		title: "Completed",
+		title: "Completados",
 		color: "green",
 		tasks: [
 			{

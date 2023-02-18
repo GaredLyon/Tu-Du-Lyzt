@@ -1,3 +1,5 @@
+/* ES TO EN */
+
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { getTags } from "../../helpers/getTags";
@@ -28,27 +30,27 @@ const Header = () => {
 					{/* SELECTOR 1 */}
 					<select className="header__selector" name="priority" id="priority" >
 						{/* <optgroup label="priority"> */}
-							<option value="all">TODOS</option>
-							<option value="high">High</option>
-							<option value="middle">Middle</option>
-							<option value="low">Low</option>
+							<option value="all">Todos</option>
+							<option value="high">Alto</option>
+							<option value="middle">Medio</option>
+							<option value="low">Bajo</option>
 						{/* </optgroup> */}
 					</select>
 
 					{/* SELECTOR 2 */}
 					<select className="header__selector" name="column" id="column">
 						{/* <optgroup label="column"> */}
-							<option value="all">TODOS</option>
-							<option value="todo">Todo</option>
-							<option value="progress">Progress</option>
-							<option value="completed">completed</option>
+							<option value="all">Todos</option>
+							<option value="todo">Pendientes</option>
+							<option value="progress">Proceso</option>
+							<option value="completed">Completados</option>
 						{/* </optgroup> */}
 					</select>
 
 					{/* SELECTOR 3 */}
 					<select className="header__selector" name="tag" id="tag">
 						{/* <optgroup label="tag"> */}
-						<option value="">TODOS</option>
+						<option value="">Todos</option>
 						{tags.map((tag, index) => (
 							<option key={index} value={tag}> {tag}</option>
 						))}
@@ -58,7 +60,7 @@ const Header = () => {
 					{/* SELECTOR 4 */}
 					<select className="header__selector" name="time" id="time">
 						{/* <optgroup label="time"> */}
-							<option value="all">TODOS</option>
+							<option value="all">Todos</option>
 							<option value="day">1 hora</option>
 							<option value="day">2 horas</option>
 							<option value="day">4 horas</option>

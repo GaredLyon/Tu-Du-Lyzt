@@ -86,13 +86,13 @@ export const Aside = () => {
         <header className='header__form'>
           <div>
             <select name='priority'>
-              <option>Low</option>
-              <option>Middle</option>
-              <option>High</option>
+              <option value='Low'>Bajo</option>
+              <option value='Middle'>Medio</option>
+              <option value='High'>Alto</option>
             </select>
             <select name='column'>
-              <option>Todo</option>
-              <option>Progress</option>
+              <option value='Todo'>Pendientes</option>
+              <option value='Progress'>Proceso</option>
             </select>
           </div>
 
