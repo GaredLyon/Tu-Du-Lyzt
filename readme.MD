@@ -49,31 +49,22 @@
 - gray4: #EEEEEE;
 - white: #fff; -->
 
-<table>
-  <tr>
-    <td style="background-color:#57A8EB; color: #000">#57A8EB</td>
-    <td style="background-color:#70B5EE; color: #000">#70B5EE</td>
-    <td style="background-color:#FC8A8A; color: #000">#FC8A8A</td>
-    <td style="background-color:#FC8A8A; color: #000">#FC8A8A</td>
-    <td style="background-color:#F4DB54; color: #000">#F4DB54</td>
-    <td style="background-color:#F6E06D; color: #000">#F6E06D</td>
-  </tr>
-  <tr>
-    <td style="background-color:#5CCD87; color: #000">#5CCD87</td>
-    <td style="background-color:#85DAA5; color: #000">#85DAA5</td>
-    <td style="background-color:#47C9BE; color: #000">#47C9BE</td>
-    <td style="background-color:#62D1C7; color: #000">#62D1C7</td>
-    <td style="background-color:#AE87F3; color: #000">#AE87F3</td>
-    <td style="background-color:#4F4E4E; color: #000">#4F4E4E</td>
-  </tr>
-  </tr>
-    <tr>
-    <td style="background-color:#8A8D96; color: #000">#8A8D96</td>
-    <td style="background-color:#E2E2E5; color: #000">#E2E2E5</td>
-    <td style="background-color:#EEEEEE; color: #000">#EEEEEE</td>
-    <td style="background-color:#fff; color: #000">#fff</td>
-  </tr>
-</table>
+<img src="https://via.placeholder.com/200x50/57A8EB/FFFFFF/?text=57A8EB" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/70B5EE/FFFFFF/?text=70B5EE" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/FC8A8A/FFFFFF/?text=FC8A8A" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/FC8A8A/FFFFFF/?text=FC8A8A" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/F4DB54/FFFFFF/?text=F4DB54" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/F6E06D/FFFFFF/?text=F6E06D" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/5CCD87/FFFFFF/?text=5CCD87" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/85DAA5/FFFFFF/?text=85DAA5" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/47C9BE/FFFFFF/?text=47C9BE" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/62D1C7/FFFFFF/?text=62D1C7" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/AE87F3/FFFFFF/?text=AE87F3" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/4F4E4E/FFFFFF/?text=4F4E4E" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/8A8D96/FFFFFF/?text=8A8D96" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/E2E2E5/000000/?text=E2E2E5" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/EEEEEE/000000/?text=EEEEEE" style="width: 120px">
+<img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px">
 
 ## 🚀 Desarrollado con las siguientes tecnologias
 
@@ -89,5 +80,4 @@
 Puedes probar la aplicaciona [aqui](https://localhost:8080/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
-
 
