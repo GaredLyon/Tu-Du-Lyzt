@@ -23,13 +23,12 @@ App para llevar un registro de tareas pendientes y completadas.
 
 <img src="https://octodex.github.com/images/inspectocat.jpg" style="width: 25%" align="right">
 
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+- Crear y administrar una lista de tareas pendientes.
+- Establecer prioridades o niveles de urgencia para cada tarea.
+- Establecer fechas de vencimiento o plazos para las tareas.
+- Marcar tareas como completadas una vez que se hayan terminado.
+- Organizar las tareas por categorías o etiquetas.
+- Recibir recordatorios o notificaciones para las tareas próximas a vencerse.
 
 ## 🔠 Fuente de texto
 
