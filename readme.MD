@@ -50,19 +50,19 @@
 - white: #fff; -->
 
 <div>
-  <img src="https://via.placeholder.com/200x50/57A8EB/FFFFFF/?text=57A8EB" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/70B5EE/FFFFFF/?text=70B5EE" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/FC8A8A/FFFFFF/?text=FC8A8A" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/FC8A8A/FFFFFF/?text=FC8A8A" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/F4DB54/FFFFFF/?text=F4DB54" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/F6E06D/FFFFFF/?text=F6E06D" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/5CCD87/FFFFFF/?text=5CCD87" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/85DAA5/FFFFFF/?text=85DAA5" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/47C9BE/FFFFFF/?text=47C9BE" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/62D1C7/FFFFFF/?text=62D1C7" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/AE87F3/FFFFFF/?text=AE87F3" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/4F4E4E/FFFFFF/?text=4F4E4E" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/8A8D96/FFFFFF/?text=8A8D96" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/57A8EB/000000/?text=57A8EB" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/70B5EE/000000/?text=70B5EE" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/FC8A8A/000000/?text=FC8A8A" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/FC8A8A/000000/?text=FC8A8A" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/F4DB54/000000/?text=F4DB54" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/F6E06D/000000/?text=F6E06D" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/5CCD87/000000/?text=5CCD87" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/85DAA5/000000/?text=85DAA5" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/47C9BE/000000/?text=47C9BE" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/62D1C7/000000/?text=62D1C7" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/AE87F3/000000/?text=AE87F3" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/4F4E4E/000000/?text=4F4E4E" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/8A8D96/000000/?text=8A8D96" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/E2E2E5/000000/?text=E2E2E5" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/EEEEEE/000000/?text=EEEEEE" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/FFFFFF/000000/?text=FFFFFF" style="width: 120px">
