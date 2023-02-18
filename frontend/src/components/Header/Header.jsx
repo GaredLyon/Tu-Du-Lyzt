@@ -28,7 +28,7 @@ const Header = () => {
 				<section className="header__container-selectors">
 
 					{/* SELECTOR 1 */}
-					<select className="header__selector" name="priority" id="priority" >
+					<select className="header__selector" name="priority" id="priority" title="Prioridad" >
 						{/* <optgroup label="priority"> */}
 							<option value="all">Todos</option>
 							<option value="high">Alto</option>
@@ -38,7 +38,7 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 2 */}
-					<select className="header__selector" name="column" id="column">
+					<select className="header__selector" name="column" id="column" title='Estado de las tareas'>
 						{/* <optgroup label="column"> */}
 							<option value="all">Todos</option>
 							<option value="todo">Pendientes</option>
@@ -48,7 +48,7 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 3 */}
-					<select className="header__selector" name="tag" id="tag">
+					<select className="header__selector" name="tag" id="tag" title="Lista de tags">
 						{/* <optgroup label="tag"> */}
 						<option value="">Todos</option>
 						{tags.map((tag, index) => (
@@ -58,7 +58,7 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 4 */}
-					<select className="header__selector" name="time" id="time">
+					<select className="header__selector" name="time" id="time" title="Fecha de creación">
 						{/* <optgroup label="time"> */}
 							<option value="all">Todos</option>
 							<option value="day">1 hora</option>
@@ -93,7 +93,7 @@ const Header = () => {
 
 				{/* BUSCADOR */}
 				<div className="header__search">
-					<TextInput  />
+					<TextInput/>
 					<i className="fa-solid fa-magnifying-glass"></i>
 				</div>
 			</div>
