@@ -23,7 +23,7 @@ function Home() {
           <i className="fa-solid fa-x"></i>
         </button>
         
-        {/* <Aside/> */}
+        <Aside/>
       </section>
 
       <section className="App__container">
