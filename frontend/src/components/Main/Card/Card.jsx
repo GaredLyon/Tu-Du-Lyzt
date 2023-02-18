@@ -113,18 +113,21 @@ export const Card = ({idGroup , task}) => {
           {/* ICONO TACHO */}
           <i
             className="fa-sharp fa-solid fa-trash card__icon"
+            title='Eliminar tarea'
             onClick={() => deleteCurrentTask(idGroup, id)}></i>
           {
             cardEditable ? (
               /* ICONO LAPIZ */
               <i
                 className="fa-solid fa-pencil card__icon"
+                title='Editar tarea'
                 onClick={()=>setCardEditable(!cardEditable)}>
               </i>
             ): (
               /* ICONO GUARDAR */
               <i
                 className="fa-solid fa-floppy-disk card__icon"
+                title='Guardar tarea'
                 onClick={()=>{
                   editCurrentTask(idGroup, id)
                   setCardEditable(!cardEditable)
@@ -135,14 +138,14 @@ export const Card = ({idGroup , task}) => {
 
           <div className='caja__icon'>
             {/* ICONO DE RELOJ */}
-            <i className={`fa-solid fa-clock card__icon`}></i>
+            <i className={`fa-solid fa-clock card__icon`} title='Hace cuando tiempo fue creado'></i>
             <div className='card__alert'>{timeElapsed}</div>
             <div className='card__alert'>{}</div>
           </div>
 
           <div className='caja__icon'>
             {/* ICONO DE CALENDARIO */}
-            <i className={`fa-solid fa-calendar card__icon`}></i>
+            <i className={`fa-solid fa-calendar card__icon`} title='Fecha de creacion'></i>
             <div className='card__alert'>{formatDate(task.dateAndHour)}</div>
           </div>
 
