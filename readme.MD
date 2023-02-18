@@ -2,6 +2,8 @@
 
 # Tu Du Lyzt
 
+App para llevar un registro de tareas pendientes y completadas.
+
 </div>
 
 <div align="center" >
@@ -32,23 +34,6 @@
 
 ## 🎨 Paleta de colores
 
-<!-- - blue: #57A8EB;
-- blue-light: #70B5EE;
-- red: #FC7575;
-- red-light: #FC8A8A;
-- yellow: #F4DB54;
-- yellow-light: #F6E06D;
-- green: #5CCD87;
-- green-light: #85DAA5;
-- turquesa: #47C9BE;
-- turquesa-light: #62D1C7;
-- purple: #AE87F3;
-- gray1: #4F4E4E;
-- gray2: #8A8D96;
-- gray3: #E2E2E5;
-- gray4: #EEEEEE;
-- white: #fff; -->
-
 <div>
   <img src="https://via.placeholder.com/200x50/57A8EB/000000/?text=57A8EB" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/70B5EE/000000/?text=70B5EE" style="width: 120px">
@@ -61,7 +46,7 @@
   <img src="https://via.placeholder.com/200x50/47C9BE/000000/?text=47C9BE" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/62D1C7/000000/?text=62D1C7" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/AE87F3/000000/?text=AE87F3" style="width: 120px">
-  <img src="https://via.placeholder.com/200x50/4F4E4E/000000/?text=4F4E4E" style="width: 120px">
+  <img src="https://via.placeholder.com/200x50/4F4E4E/FFFFFF/?text=4F4E4E" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/8A8D96/000000/?text=8A8D96" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/E2E2E5/000000/?text=E2E2E5" style="width: 120px">
   <img src="https://via.placeholder.com/200x50/EEEEEE/000000/?text=EEEEEE" style="width: 120px">
@@ -80,7 +65,7 @@
 
 ## 🌍 Sitio web de la aplicacion
 
-Puedes probar la aplicaciona [aqui](https://localhost:8080/).
+Puedes probar la aplicacion [aqui](https://localhost:8080/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
 
