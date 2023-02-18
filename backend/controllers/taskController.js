@@ -1,4 +1,5 @@
 import TaskModel from "../models/Task.js";
+import {body, validationResult} from 'express-validator';
 //TODO: Validations (choose library)
 //FIXME: Error handling and exist validations
 //
@@ -6,6 +7,11 @@ import TaskModel from "../models/Task.js";
 export const createTask = async (req, res) => {
 
     const { titulo, descripcion, estado, nivel } = req.body;
+    const validationErrors = validationResult(req);
+
+    if (!validationErrors.isEmpty()) {
+        return res.status(400).json({ errors: validationErrors.array() });
+    }
 
     try {
         const newTask ={
