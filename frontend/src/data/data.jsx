@@ -8,8 +8,8 @@ export let data = [
 				id: 1,
 				priority: "High",
 				content: {
-					title: "Task 1",
-					description: "content 1",
+					title: "Tarea 1",
+					description: "Descripcion 1",
 				},
 				dateAndHour: Date.now()
 			},
@@ -17,8 +17,8 @@ export let data = [
 				id: 2,
 				priority: "Middle",
 				content: {
-					title: "Task 2",
-					description: "content 2",
+					title: "Tarea 2",
+					description: "Descripcion 2",
 				},
 				dateAndHour: Date.now()
 			},
@@ -26,8 +26,8 @@ export let data = [
 				id: 3,
 				priority: "Low",
 				content: {
-					title: "Task 3",
-					description: "content 3",
+					title: "Tarea 3",
+					description: "Descripcion 3",
 				},
 				dateAndHour: Date.now()
 			},
@@ -42,8 +42,8 @@ export let data = [
 				id: 10,
 				priority: "High",
 				content: {
-					title: "Task 10",
-					description: "content 10",
+					title: "Tarea 10",
+					description: "Descripcion 10",
 				},
 				dateAndHour: Date.now()
 			},
@@ -51,8 +51,8 @@ export let data = [
 				id: 20,
 				priority: "Middle",
 				content: {
-					title: "Task 20",
-					description: "content 20",
+					title: "Tarea 20",
+					description: "Descripcion 20",
 				},
 				dateAndHour: Date.now()
 			},
@@ -60,8 +60,8 @@ export let data = [
 				id: 30,
 				priority: "Low",
 				content: {
-					title: "Task 30",
-					description: "content 30",
+					title: "Tarea 30",
+					description: "Descripcion 30",
 				},
 				dateAndHour: Date.now()
 			},
@@ -76,8 +76,8 @@ export let data = [
 				id: 100,
 				priority: "High",
 				content: {
-					title: "Task 100",
-					description: "content 100",
+					title: "Tarea 100",
+					description: "Descripcion 100",
 				},
 				dateAndHour: Date.now()
 			},
@@ -85,8 +85,8 @@ export let data = [
 				id: 200,
 				priority: "Middle",
 				content: {
-					title: "Task 200",
-					description: "content 200",
+					title: "Tarea 200",
+					description: "Descripcion 200",
 				},
 				dateAndHour: Date.now()
 			},
@@ -94,8 +94,8 @@ export let data = [
 				id: 300,
 				priority: "Low",
 				content: {
-					title: "Task 300",
-					description: "content 300",
+					title: "Tarea 300",
+					description: "Descripcion 300",
 				},
 				dateAndHour: Date.now()
 			},

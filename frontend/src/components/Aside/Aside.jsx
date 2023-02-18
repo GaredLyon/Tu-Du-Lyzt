@@ -86,9 +86,9 @@ export const Aside = () => {
         <header className='header__form'>
           <div>
             <select name='priority' title='Prioridad'>
-              <option value='Low'>Bajo</option>
-              <option value='Middle'>Medio</option>
               <option value='High'>Alto</option>
+              <option value='Middle' selected>Medio</option>
+              <option value='Low'>Bajo</option>
             </select>
             <select name='column' title='Columna'>
               <option value='Todo'>Pendientes</option>

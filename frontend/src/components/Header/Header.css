@@ -2,8 +2,6 @@
 
 /* HEADER /////////////////////////////// */
 .header {
-	/* padding: 1rem; */
-	/* padding: .5rem; */
 	width: 100%;
 }
 
@@ -65,7 +63,6 @@
 .header__search {
 	display: flex;
 	width: 100%;
-	/* background: yellow; */
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -78,9 +75,6 @@
 	padding: 1rem;
 	width: 100%;
 }
-/* 
-.header__search input::placeholder {
-} */
 
 .header__search i {
 	position: absolute;
@@ -91,16 +85,13 @@
 @media (min-width: 700px) {
 	.header__container {
 		flex-direction: row;
-		/* background: red; */
 	}
 	.header__container-selectores {
-		/* background-color: aqua; */
 		padding: 1rem;
 	}
 }
 
-/* @media (min-width: 1024px) { */
-	@media (min-width: 1078px) {
+@media (min-width: 1078px) {
 
 	.header__selector{
 		padding: .5rem;
@@ -110,10 +101,4 @@
 	.header__container {
 		flex-direction: row;
 	}
-
-	/* .buscador {
-		background: red;
-		padding: 1.7rem !important;
-	} */
-
 }
