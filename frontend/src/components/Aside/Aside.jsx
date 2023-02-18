@@ -85,12 +85,12 @@ export const Aside = () => {
         {/* HEADER DEL FORMULARIO */}
         <header className='header__form'>
           <div>
-            <select name='priority'>
+            <select name='priority' title='Prioridad'>
               <option value='Low'>Bajo</option>
               <option value='Middle'>Medio</option>
               <option value='High'>Alto</option>
             </select>
-            <select name='column'>
+            <select name='column' title='Columna'>
               <option value='Todo'>Pendientes</option>
               <option value='Progress'>Proceso</option>
             </select>
@@ -100,7 +100,7 @@ export const Aside = () => {
             {/* <button type='button' className='aside__contenedor-iconos'>
               <i className="fa-regular fa-calendar"></i>
             </button> */}
-            <button type='reset'  className='aside__container-icons' >
+            <button type='reset'  className='aside__container-icons' title='Limpiar formulario'>
               <i className="fa-sharp fa-solid fa-trash"></i>
             </button>
           </div>
