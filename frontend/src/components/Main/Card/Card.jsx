@@ -1,3 +1,5 @@
+/* ES TO EN */
+
 import React, { useContext, useState } from 'react'
 import './Card.css'
 import { AppContext } from '../../../context/AppContext'
@@ -31,8 +33,8 @@ export const Card = ({idGroup , task}) => {
   //EDITAR TAREA ******************************************************
   const editCurrentTask = ( idGrupo) => {
 
-    const title = document.getElementById(`input1-tarea${id}`).value
-    const description = document.getElementById(`input2-tarea${id}`).value
+    const title = document.getElementById(`input1-task${id}`).value
+    const description = document.getElementById(`input2-task${id}`).value
     
     setGrupos(currentState => {
       
@@ -91,14 +93,14 @@ export const Card = ({idGroup , task}) => {
       {/* CARD MAIN */}
       <main className='card__main'>
         <textarea
-          id={`input1-tarea${id}`}
+          id={`input1-task${id}`}
           className='card__title'
           defaultValue={content.title}
           disabled={cardEditable}
           maxLength={20}
           rows="1" />
         <textarea
-          id={`input2-tarea${id}`}
+          id={`input2-task${id}`}
           className='card__container'
           defaultValue={content.description}
           disabled={cardEditable}

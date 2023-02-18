@@ -1,3 +1,5 @@
+/* ES TO EN */
+
 .column {
 	display: flex;
 	flex-direction: column;
@@ -111,7 +113,8 @@
 		display: none;
 	}
 
-	.main__boton-new{
+	.main__new-button{
 		display: none;
+		background-color: blue;
 	}
 }

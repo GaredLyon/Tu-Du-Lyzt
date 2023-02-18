@@ -1,5 +1,7 @@
+/* ES TO EN */
+
 import React, { useEffect, useState } from "react";
-import { ordenarLista } from "../../../helpers/ordenarLista";
+import { sortedList } from "../../../helpers/sortedList";
 import { Card } from "../Card/Card";
 import "./Column.css";
 
@@ -7,12 +9,11 @@ export const Column = ({ grupo }) => {
 
 	const { id, title, color, tasks } = grupo
 
-
-	const [misTareas, setMisTareas] = useState(tasks)
+	const [myTasks, setMyTasks] = useState(tasks)
 
 	useEffect(() => {
 
-		setMisTareas(ordenarLista(tasks))
+		setMyTasks(sortedList(tasks))
 
 	}, [tasks])
 
@@ -27,8 +28,8 @@ export const Column = ({ grupo }) => {
 
 				{/* RENDERIZADO DE LAS TAREAS */}
 				{
-					misTareas && misTareas.length >= 1 && misTareas.map(tarea => (
-						<Card key={`tarea${tarea.id}`} idGroup={id} task={tarea} />
+					myTasks && myTasks.length >= 1 && myTasks.map(task => (
+						<Card key={`tarea${task.id}`} idGroup={id} task={task} />
 					))
 				}
 			</div>

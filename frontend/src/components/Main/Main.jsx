@@ -20,7 +20,7 @@ export const Main = ({asideVisible, alternarAside}) => {
       {/* BOTON PARA AGREGAR NUEVA TAREA Y MOSTRAR EL ASIDE  */}
       {
         !asideVisible && (
-          <button className='main__boton-new' onClick={()=>alternarAside(x => !x)}>
+          <button className='main__new-button' onClick={()=>alternarAside(x => !x)}>
             <i className="fa-solid fa-plus"></i>
           </button>
         )
