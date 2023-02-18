@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { traerTags } from "../../helpers/traerTags";
 import "./Header.css";
+import TextInput from '../TextInput/TextInput'
 
 ///////////////////////////////////////////
 const Header = () => { 
@@ -90,7 +91,7 @@ const Header = () => {
 
 				{/* BUSCADOR */}
 				<div className="header__buscador">
-					<input type="text" placeholder="search by importance" className="buscador"></input>
+					<TextInput  />
 					<i className="fa-solid fa-magnifying-glass"></i>
 				</div>
 			</div>
