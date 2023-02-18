@@ -1,13 +1,12 @@
 import React, { useContext, useState } from 'react'
 import './Card.css'
-/* import { editarTarea } from '../../../helpers/editarTarea'
-import { eliminartarea } from '../../../helpers/eliminarTarea' */
 import { AppContext } from '../../../context/AppContext'
-import { formatearFecha } from '../../../helpers/formatearFecha'
-import { formatearHora } from '../../../helpers/formatearHora'
+import { formatDate } from '../../../helpers/formatDate'
+import { formatHour } from '../../../helpers/formatHour'
 
-const obtenerColor = (nivel) => {
-  switch (nivel) {
+//obtener el color
+const getColor = (priority) => {
+  switch (priority) {
     case 'High': return 'red'
     case 'Middle': return 'yellow'
     default: return 'blue'
@@ -15,113 +14,94 @@ const obtenerColor = (nivel) => {
 }
 
 ///////////////////////////////////////////////////
-export const Card = ({idGrupo , tarea}) => {
+export const Card = ({idGroup , task}) => {
 
-  const {id, nivel, contenido} = tarea
-
-  const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
+  const {id, priority, content} = task
+  const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
-  const [tiempoTranscurrido, setTiempoTranscurrido] = useState()
+  const [timeElapsed, setTimeElapsed] = useState()
 
   setTimeout(() => {
-    let respuesta = formatearHora(tarea.fechayhora)
-    setTiempoTranscurrido(respuesta)
+    let result = formatHour(task.dateAndHour)
+    setTimeElapsed(result)
   }, 1000);
 
 
   //EDITAR TAREA ******************************************************
-  const editarTareaActual = ( idGrupo) => {
+  const editCurrentTask = ( idGrupo) => {
 
-    const titulo = document.getElementById(`input1-tarea${id}`).value
-    const descripcion = document.getElementById(`input2-tarea${id}`).value
+    const title = document.getElementById(`input1-tarea${id}`).value
+    const description = document.getElementById(`input2-tarea${id}`).value
     
-    setGrupos(estadoActual => {
+    setGrupos(currentState => {
       
-      const gruposActualizados = estadoActual.map(grupo => {
-        if (grupo.id === idGrupo) {
+      const updatedGroups = currentState.map(group => {
+        if (group.id === idGrupo) {
 
-          let tareasActualizadas = grupo.tareas.map(tarea => {
-            tarea.contenido.titulo = titulo
-            tarea.contenido.descripcion = descripcion
+          let updatedTasks = group.tasks.map(task => {
+            task.content.title = title
+            task.content.description = description
 
-            return tarea
+            return task
           })
 
           return {
-            ...grupo,
-            tareas: [...tareasActualizadas]
+            ...group,
+            tasks: [...updatedTasks]
           }
         }
-        return grupo
+        return group
       })
 
-      return gruposActualizados
+      return updatedGroups
     })
-
-
-    // //EJECUTAR LA PETICION AL SERVIDOR
-    // editarTarea({
-    //   idGrupo,
-    //   idTarea,
-    //   nuevoContenido: {
-    //     titulo,
-    //     descripcion
-    //   }
-    // })
 
   }
 
   //ELIMINAR TAREA ****************************************************
-  const {grupos, setGrupos} = useContext(AppContext)
+  const {setGrupos} = useContext(AppContext)
 
-  const eliminarTareaActual = (idGrupo, idTarea) => {
+  const deleteCurrentTask = (idGroup, idTask) => {
 
-    setGrupos(estadoActual => {
+    setGrupos(currentState => {
       
-      const gruposActualizados = estadoActual.map(grupo => {
-        if (grupo.id === idGrupo) {
+      const updatedGroups = currentState.map(group => {
+        if (group.id === idGroup) {
 
-          let nuevaLista = grupo.tareas.filter(tarea => tarea.id !== idTarea)
+          let newList = group.tasks.filter(task => task.id !== idTask)
 
           return {
-            ...grupo,
-            tareas: [...nuevaLista]
+            ...group,
+            tasks: [...newList]
           }
         }
-        return grupo
+        return group
       })
 
-      // console.log(gruposActualizados[idGrupo].tareas)
-      return gruposActualizados
+      return updatedGroups
     })
 
-
-    //EJECUTAR LA PETICION AL SERVIDOR
-    // eliminartarea({
-    //   idGrupo,
-    //   idTarea
-    // })
   }
 
   //////////////////////////////////
   return (
-    <article className={`card ${`card--${obtenerColor(nivel)}`}`} draggable>
+    <article className={`card ${`card--${getColor(priority)}`}`} draggable>
       
       {/* CARD MAIN */}
       <main className='card__main'>
         <textarea
           id={`input1-tarea${id}`}
           className='card__title'
-          defaultValue={contenido.titulo}
-          disabled={editable}
+          defaultValue={content.title}
+          disabled={cardEditable}
           maxLength={20}
           rows="1" />
         <textarea
           id={`input2-tarea${id}`}
           className='card__container'
-          defaultValue={contenido.descripcion}
-          disabled={editable}
+          defaultValue={content.description}
+          disabled={cardEditable}
           />
       </main>
 
@@ -131,21 +111,21 @@ export const Card = ({idGrupo , tarea}) => {
           {/* ICONO TACHO */}
           <i
             className="fa-sharp fa-solid fa-trash card__icon"
-            onClick={() => eliminarTareaActual(idGrupo, id)}></i>
+            onClick={() => deleteCurrentTask(idGroup, id)}></i>
           {
-            editable ? (
+            cardEditable ? (
               /* ICONO LAPIZ */
               <i
                 className="fa-solid fa-pencil card__icon"
-                onClick={()=>setEditable(!editable)}>
+                onClick={()=>setCardEditable(!cardEditable)}>
               </i>
             ): (
               /* ICONO GUARDAR */
               <i
                 className="fa-solid fa-floppy-disk card__icon"
                 onClick={()=>{
-                  editarTareaActual(idGrupo, id)
-                  setEditable(!editable)
+                  editCurrentTask(idGroup, id)
+                  setCardEditable(!cardEditable)
                 }}>
               </i>
             )
@@ -154,14 +134,14 @@ export const Card = ({idGrupo , tarea}) => {
           <div className='caja__icon'>
             {/* ICONO DE RELOJ */}
             <i className={`fa-solid fa-clock card__icon`}></i>
-            <div className='card__aviso'>{tiempoTranscurrido}</div>
-            <div className='card__aviso'>{}</div>
+            <div className='card__alert'>{timeElapsed}</div>
+            <div className='card__alert'>{}</div>
           </div>
 
           <div className='caja__icon'>
             {/* ICONO DE CALENDARIO */}
             <i className={`fa-solid fa-calendar card__icon`}></i>
-            <div className='card__aviso'>{formatearFecha(tarea.fechayhora)}</div>
+            <div className='card__alert'>{formatDate(task.dateAndHour)}</div>
           </div>
 
         </section>

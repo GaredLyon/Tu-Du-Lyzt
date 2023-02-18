@@ -21,14 +21,14 @@ function Inicio() {
           <i className="fa-solid fa-x"></i>
         </button>
         
-        <Aside/>
+        {/* <Aside/> */}
       </section>
 
       <section className="App__container">
 
         {/* HEADER */}
         <div className="App__header">
-          <Header/>
+          {/* <Header/> */}
         </div>
 
         {/* MAIN */}

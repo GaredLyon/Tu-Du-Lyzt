@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Inicio from '../src/pages/Inicio'
 //IMPORTAMOS NUESTRO CONTEXTO
 import { AppContext } from './context/AppContext'
-import { tareas } from './data/tareas'
+import { data } from './data/data'
 
 export const App = () => {
 
-  const [grupos, setGrupos] = useState(tareas)
+  const [grupos, setGrupos] = useState(data)
 
   let estadosGlobales = {
     grupos,

@@ -1,5 +1,4 @@
 .column {
-
 	display: flex;
 	flex-direction: column;
 	width: max-content;
@@ -8,9 +7,7 @@
 	border-bottom-right-radius: var(--r-xl);
 	gap: 2.4rem;
 	background: var(--white);
-	/* background: rgb(0, 255, 21); */
 	height: max-content;
-	/* border: 1px solid black; */
 	border-radius: 1rem;
 
   width: 100%;
@@ -22,9 +19,6 @@
 
 .column::-webkit-scrollbar {
 	width: 0rem;
-}
-
-.column::-webkit-scrollbar-thumb {
 }
 
 .column__container__title {
@@ -53,37 +47,20 @@
 }
 
 .column__container-cards {
-	/* display: flex; */
 	gap: 1.2rem;
 	flex-wrap: wrap;
 
 	display: grid;
 	grid-template-columns: 1fr;
 	width: 100%;
-
-
-	/* height: calc(100vh - 21rem);
-	overflow-y: scroll; */
 }
-
-/* 
-.column__container-cards::-webkit-scrollbar{
-	display: none;
-} */
 
 .stack {
 	display: flex;
-<<<<<<< HEAD:src/components/Main2/Column/Column.css
-    flex-direction: column;
-    background-color: var(--white);
-    border-radius: var(--xl);
-    height: 95%;
-=======
+  height: 95%;
 	flex-direction: column;
 	background-color: var(--white);
 	border-radius: var(--xl);
-
->>>>>>> implemetar-useContext:src/components/Main/Column/Column.css
 }
 
 
@@ -100,7 +77,6 @@
 	position: absolute;
 	top: 8px;
 	right: 10px;
-	/* background-color: red; */
 	background: white;
 }
 
@@ -110,11 +86,9 @@
 	}
 }
 
-/* @media (min-width: 1400px) { */
 	@media (min-width: 1325px) {
 	.column{
-		align-items: initial; /* PROV */
-		/* background: red; */
+		align-items: initial;
 		max-width: calc(100% / 3.2);
 	}
 
