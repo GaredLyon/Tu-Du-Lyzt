@@ -1,10 +1,10 @@
-import { peticiones } from "./peticiones"
+import { httpRequests } from "./httpRequests"
 
-export const editarTarea = async (idGrupo, idTarea, nuevoContenido) => {
+export const editTarea = async (idGroup, idTask, newContent) => {
 
   // console.log(`se edito la tarea que tiene titulo: "${titulo}" y de descripcion: "${descripcion}", que esta en el grupo: ${idGrupo}, y tiene el id: ${idTarea}`)
 
-  console.log(idGrupo, idTarea, nuevoContenido)
+  console.log(idGroup, idTask, newContent)
 
   //COMENTADO LAS LINEAS DE ABAJO PORQUE AUN NO TENEMOS SERVIDOR
 

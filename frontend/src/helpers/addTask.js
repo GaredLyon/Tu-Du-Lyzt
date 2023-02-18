@@ -1,8 +1,8 @@
-import { peticiones } from "./peticiones"
+import { httpRequets } from "./httpRequests"
 
-export const agregarTarea = async (idGrupo, dificultad, cuerpo) => {
+export const addTask = async (igGroup, priority, body) => {
 
-  console.log(idGrupo, dificultad, cuerpo)
+  console.log(igGroup, priority, body)
 
   //COMENTADO LAS LINEAS DE ABAJO PORQUE AUN NO TENEMOS SERVIDOR
 

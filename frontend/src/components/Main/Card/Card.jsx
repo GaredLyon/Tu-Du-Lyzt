@@ -138,7 +138,7 @@ export const Card = ({idGroup , task}) => {
 
           <div className='caja__icon'>
             {/* ICONO DE RELOJ */}
-            <i className={`fa-solid fa-clock card__icon`} title='Hace cuando tiempo fue creado'></i>
+            <i className={`fa-solid fa-clock card__icon`} title='Hace cuanto atras fue creado'></i>
             <div className='card__alert'>{timeElapsed}</div>
             <div className='card__alert'>{}</div>
           </div>
