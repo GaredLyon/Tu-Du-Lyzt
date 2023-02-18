@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Inicio from '../src/pages/Inicio'
+import Home from './pages/Home'
 //IMPORTAMOS NUESTRO CONTEXTO
 import { AppContext } from './context/AppContext'
 import { data } from './data/data'
@@ -16,7 +16,7 @@ export const App = () => {
   /////////////////////////
   return (
     <AppContext.Provider value={estadosGlobales}>
-      <Inicio/>
+      <Home/>
     </AppContext.Provider>
   )
 }

@@ -3,24 +3,24 @@ import './Main.css'
 import { Column } from './Column/Column'
 import { AppContext } from '../../context/AppContext'
 
-export const Main = ({asideVisible, alternarAside}) => {
+export const Main = ({asideVisible, toogleAside}) => {
 
-  const {grupos} = useContext(AppContext)
+  const {grupos: groups} = useContext(AppContext)
 
   //////////////////////////////////////
   return (
     <div className='container-columns'>
       {/* RENDERIZADO DE LOS GRUPOS */}
       {
-        grupos && grupos.length >= 1 && grupos.map(grupo => (
-          <Column key={`columna${grupo.id}`} grupo={grupo}/>
+        groups && groups.length >= 1 && groups.map(group => (
+          <Column key={`column${group.id}`} group={group}/>
         ))
       }
 
       {/* BOTON PARA AGREGAR NUEVA TAREA Y MOSTRAR EL ASIDE  */}
       {
         !asideVisible && (
-          <button className='main__new-button' onClick={()=>alternarAside(x => !x)}>
+          <button className='main__new-button' onClick={()=>toogleAside(x => !x)}>
             <i className="fa-solid fa-plus"></i>
           </button>
         )

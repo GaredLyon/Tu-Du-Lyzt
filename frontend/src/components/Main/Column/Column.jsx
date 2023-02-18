@@ -5,9 +5,9 @@ import { sortedList } from "../../../helpers/sortedList";
 import { Card } from "../Card/Card";
 import "./Column.css";
 
-export const Column = ({ grupo }) => {
+export const Column = ({ group }) => {
 
-	const { id, title, color, tasks } = grupo
+	const { id, title, color, tasks } = group
 
 	const [myTasks, setMyTasks] = useState(tasks)
 
