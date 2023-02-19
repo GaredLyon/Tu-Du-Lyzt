@@ -17,7 +17,7 @@ function Home() {
   return (
     <main className="App">
       {/* ASIDE */}
-      <section className={`App__aside ${asideVisible && 'App__aside--visible'}`}>
+      <section className={`App__aside ${asideVisible && 'App__aside--visible'}`} data-theme>
         {/* boton cerrar */}
         <button className="Aside__button-close" onClick={ () => toggleAside(false)}>
           <i className="fa-solid fa-x"></i>

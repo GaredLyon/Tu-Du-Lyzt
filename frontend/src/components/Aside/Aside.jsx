@@ -1,7 +1,9 @@
 /* ES TO EN */
 
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
+import { changeTheme } from '../../helpers/changeTheme'
+
 import './Aside.css'
 
 const getIdGroup = (column) => {
@@ -15,6 +17,15 @@ const getIdGroup = (column) => {
 export const Aside = () => {
 
   const { setGroups } = useContext(AppContext)
+  const [checkedTheme, setCheckedTheme]= useState(localStorage.getItem("IsChecked")=="true"? true : false)
+  
+  useEffect(()=>{
+    localStorage.setItem("IsChecked", checkedTheme)
+    changeTheme({checkedTheme})
+  },[checkedTheme])
+  function handleCheckboxChange(){
+    setCheckedTheme(!checkedTheme)
+  }
 
   //AGREGAR TAREA *******************
   const addNewtask = (e) => {
@@ -80,7 +91,7 @@ export const Aside = () => {
       <form className='aside__form' onSubmit={(e) => {
         e.preventDefault()
         addNewtask(e)
-      }}>
+      }} data-theme>
 
         {/* HEADER DEL FORMULARIO */}
         <header className='header__form'>
@@ -101,14 +112,14 @@ export const Aside = () => {
               <i className="fa-regular fa-calendar"></i>
             </button> */}
             <button type='reset'  className='aside__container-icons' title='Limpiar formulario'>
-              <i className="fa-sharp fa-solid fa-trash"></i>
+              <i className="fa-sharp fa-solid fa-trash" data-theme></i>
             </button>
           </div>
 
         </header>
 
         {/* CONTENEDOR DE TEXTO */}
-        <div className='header__text'>
+        <div className='header__text' data-theme>
           <textarea
             className='header__input1'
             rows="1"
@@ -124,6 +135,9 @@ export const Aside = () => {
 
         <button type='submit' className='aside__button-create'>Crear</button>
       </form>
+      
+      <input type="checkbox" className="l" onChange={handleCheckboxChange} checked={checkedTheme}></input>
+      
     </aside>
   )
 }
