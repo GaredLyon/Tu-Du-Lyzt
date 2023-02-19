@@ -11,7 +11,7 @@ export const Main = ({asideVisible, toggleAside}) => {
 
   //////////////////////////////////////
   return (
-    <div className='container-columns'>
+    <div className='container-columns' data-theme>
       {/* RENDERIZADO DE LOS GRUPOS */}
       {
         groups && groups.length >= 1 && groups.map(group => (

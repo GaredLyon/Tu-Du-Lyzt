@@ -22,7 +22,7 @@ const Header = () => {
 		<header className="header">
 
 			{/* CONTENEDOR */}
-			<div className="header__container">
+			<div className="header__container" data-theme>
 
 				{/* CAJA DE SELECTORESS */}
 				<section className="header__container-selectors">

@@ -19,7 +19,7 @@ export const Column = ({ group }) => {
 
 	/////////////////////////////
 	return (
-		<div className="column">
+		<div className="column" data-theme>
 			<div className="column__container__title">
 				<h5 className={`column__title ${`column__title--${color}`}`}>{title}</h5>
 				<h3 className="column__contador">{tasks.length}</h3>

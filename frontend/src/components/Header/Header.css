@@ -102,3 +102,6 @@
 		flex-direction: row;
 	}
 }
+.dark{
+	background-color: #43526e;
+}
