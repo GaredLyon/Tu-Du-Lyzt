@@ -9,16 +9,16 @@ import { formatHour } from '../../../helpers/formatHour'
 //obtener el color
 const getColor = (priority) => {
   switch (priority) {
-    case 'High': return 'red'
-    case 'Middle': return 'yellow'
+    case 'high': return 'red'
+    case 'middle': return 'yellow'
     default: return 'blue'
   }
 }
 
 ///////////////////////////////////////////////////
-export const Card = ({idGroup , task}) => {
+export const Card = ({idGroup=1 , task}) => {
 
-  const {id, priority, content} = task
+  const {id, priority, title, description} = task
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
@@ -42,8 +42,8 @@ export const Card = ({idGroup , task}) => {
         if (group.id === idGrupo) {
 
           let updatedTasks = group.tasks.map(task => {
-            task.content.title = title
-            task.content.description = description
+            task.title = title
+            task.description = description
 
             return task
           })
@@ -95,14 +95,14 @@ export const Card = ({idGroup , task}) => {
         <textarea
           id={`input1-task${id}`}
           className='card__title'
-          defaultValue={content.title}
+          defaultValue={title}
           disabled={cardEditable}
           maxLength={20}
           rows="1" />
         <textarea
           id={`input2-task${id}`}
           className='card__container'
-          defaultValue={content.description}
+          defaultValue={description}
           disabled={cardEditable}
           />
       </main>
