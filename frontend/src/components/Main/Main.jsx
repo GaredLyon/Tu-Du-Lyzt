@@ -5,7 +5,7 @@ import './Main.css'
 import { Column } from './Column/Column'
 import { AppContext } from '../../context/AppContext'
 
-export const Main = ({asideVisible, toogleAside}) => {
+export const Main = ({asideVisible, toggleAside}) => {
 
   const {groups} = useContext(AppContext)
 
@@ -22,7 +22,7 @@ export const Main = ({asideVisible, toogleAside}) => {
       {/* BOTON PARA AGREGAR NUEVA TAREA Y MOSTRAR EL ASIDE  */}
       {
         !asideVisible && (
-          <button className='main__new-button' onClick={()=>toogleAside(x => !x)}>
+          <button className='main__new-button' onClick={()=>toggleAside(x => !x)}>
             <i className="fa-solid fa-plus"></i>
           </button>
         )
