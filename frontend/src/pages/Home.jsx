@@ -10,7 +10,7 @@ function Home() {
 
   const [asideVisible, setAsideVisible] = useState(false)
 
-  const toogleAside = (valor) =>{
+  const toggleAside = (valor) =>{
     setAsideVisible(valor)
   }
 
@@ -19,7 +19,7 @@ function Home() {
       {/* ASIDE */}
       <section className={`App__aside ${asideVisible && 'App__aside--visible'}`}>
         {/* boton cerrar */}
-        <button className="Aside__button-close" onClick={ () => toogleAside(false)}>
+        <button className="Aside__button-close" onClick={ () => toggleAside(false)}>
           <i className="fa-solid fa-x"></i>
         </button>
         
@@ -35,7 +35,7 @@ function Home() {
 
         {/* MAIN */}
         <div className="App__main">
-          <Main asideVisible={asideVisible} toogleAside={toogleAside}/>
+          <Main asideVisible={asideVisible} toggleAside={toggleAside}/>
         </div>
 
       </section>
