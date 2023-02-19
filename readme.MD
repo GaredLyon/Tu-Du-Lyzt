@@ -2,7 +2,7 @@
 
 # Tu Du Lyzt
 
-App para llevar un registro de tareas pendientes y completadas.
+App to keep track of pending and completed tasks.
 
 </div>
 
@@ -19,22 +19,22 @@ App para llevar un registro de tareas pendientes y completadas.
 
 <img src="./assets/captura.png" style="width: 100%"  />
 
-## 📌 Los usuarios deberían ser capaces de
+## 📌 Users should be able to
 
 <img src="https://octodex.github.com/images/inspectocat.jpg" style="width: 25%" align="right">
 
-- Crear y administrar una lista de tareas pendientes.
-- Establecer prioridades o niveles de urgencia para cada tarea.
-- Establecer fechas de vencimiento o plazos para las tareas.
-- Marcar tareas como completadas una vez que se hayan terminado.
-- Organizar las tareas por categorías o etiquetas.
-- Recibir recordatorios o notificaciones para las tareas próximas a vencerse.
+- Create and manage a list of pending tasks.
+- Set priorities or urgency levels for each task.
+- Set due dates or deadlines for tasks.
+- Mark tasks as completed once they have been finished.
+- Organize tasks by categories or tags.
+- Receive reminders or notifications for tasks that are about to be due.
 
-## 🔠 Fuente de texto
+## 🔠 Font
 
 - Nunito - https://fonts.google.com/specimen/Nunito?query=nunito
 
-## 🎨 Paleta de colores
+## 🎨 Color palette
 
 <div>
   <img src="https://via.placeholder.com/200x50/57A8EB/000000/?text=57A8EB" style="width: 120px">
@@ -56,7 +56,7 @@ App para llevar un registro de tareas pendientes y completadas.
 
 </div>
 
-## 🚀 Desarrollado con las siguientes tecnologias
+## 🚀 Developed with the following technologies
 
 <div align="left" >
 
@@ -69,9 +69,9 @@ App para llevar un registro de tareas pendientes y completadas.
 
 </div>
 
-## 🌍 Despliegue y sitio web de la aplicacion
+## 🌍 Deployment and website of the application
 
-Puedes probar la aplicacion [aqui](https://github.com/GaredLyon/Tu-Du-Lyzt/).
+You can try the application [here](https://github.com/GaredLyon/Tu-Du-Lyzt/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
 

@@ -21,7 +21,7 @@ const TextInput = () => {
 		};
 	}, [currentTextIndex, texts.length]);
 
-	return <input type="text" placeholder={currentText} className="buscador" />;
+	return <input type="text" placeholder={currentText} className="buscador" title='Buscador'/>;
 };
 
 export default TextInput;

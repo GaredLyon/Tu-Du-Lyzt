@@ -1,3 +1,5 @@
+/* ES TO EN */
+
 /* CARD ///////////////////// */
 .card {
   border-radius: 1.5rem;
@@ -6,12 +8,6 @@
   background: var(--red);
   width: 27.2rem;
   height: 16.8rem;
-
-  width: 100%;
-  /* min-width: 250px; */
-  /* max-width: 300px; */
-  /* flex-grow: 1; */
-
   width: 100%;
 }
 .card--yellow {
@@ -38,10 +34,8 @@
   width: 100%;
 
   border: none;
-  /*border-bottom: 0.2rem dashed var(--gray1);*/
   outline: none;
   resize: none;
-  /* height: 2.4rem; */
   font-size: var(--xl);
 }
 .card__title:disabled {
@@ -74,14 +68,11 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 0.6rem;
-  /*   padding: 0 0.6rem; */
-  /* background: green; */
 }
 .card__icon-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  /* background: red; */
 }
 .card__icon {
   border-radius: 0.5rem;
@@ -90,7 +81,6 @@
   font-size: 1.6rem;
   padding: 0.4rem;
   margin: 0 0.4rem;
-  /* background: blue; */
   cursor: pointer;
 
 }
@@ -112,10 +102,10 @@
   position: relative;
 }
 
-.caja__icon:hover .card__aviso {
+.caja__icon:hover .card__alert {
   display: flex;
 }
-.card__aviso {
+.card__alert {
   position: absolute;
   background: var(--purple);
   color: white;
@@ -127,7 +117,7 @@
   display: none;
 }
 
-.card__aviso:before {
+.card__alert:before {
   content: "";
   background: var(--purple);
   position: absolute;

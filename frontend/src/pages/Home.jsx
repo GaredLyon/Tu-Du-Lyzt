@@ -1,14 +1,16 @@
+/* ES TO EN */
+
 import { Main } from "../components/Main/Main"
 import { Aside } from "../components/Aside/Aside"
 import Header  from "../components/Header/Header"
 import { useState } from "react"
-import './Inicio.css'
+import './Home.css'
 
-function Inicio() {
+function Home() {
 
   const [asideVisible, setAsideVisible] = useState(false)
 
-  const alternarAside = (valor) =>{
+  const toogleAside = (valor) =>{
     setAsideVisible(valor)
   }
 
@@ -17,7 +19,7 @@ function Inicio() {
       {/* ASIDE */}
       <section className={`App__aside ${asideVisible && 'App__aside--visible'}`}>
         {/* boton cerrar */}
-        <button className="Aside__boton-cerrar" onClick={ () => alternarAside(false)}>
+        <button className="Aside__button-close" onClick={ () => toogleAside(false)}>
           <i className="fa-solid fa-x"></i>
         </button>
         
@@ -33,7 +35,7 @@ function Inicio() {
 
         {/* MAIN */}
         <div className="App__main">
-          <Main asideVisible={asideVisible} alternarAside={alternarAside}/>
+          <Main asideVisible={asideVisible} toogleAside={toogleAside}/>
         </div>
 
       </section>
@@ -41,4 +43,4 @@ function Inicio() {
   )
 }
 
-export default Inicio
+export default Home

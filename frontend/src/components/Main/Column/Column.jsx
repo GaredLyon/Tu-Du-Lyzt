@@ -1,34 +1,35 @@
+/* ES TO EN */
+
 import React, { useEffect, useState } from "react";
-import { ordenarLista } from "../../../helpers/ordenarLista";
+import { sortedList } from "../../../helpers/sortedList";
 import { Card } from "../Card/Card";
 import "./Column.css";
 
-export const Column = ({ grupo }) => {
+export const Column = ({ group }) => {
 
-	const { id, titulo, color, tareas } = grupo
+	const { id, title, color, tasks } = group
 
-
-	const [misTareas, setMisTareas] = useState(tareas)
+	const [myTasks, setMyTasks] = useState(tasks)
 
 	useEffect(() => {
 
-		setMisTareas(ordenarLista(tareas))
+		setMyTasks(sortedList(tasks))
 
-	}, [tareas])
+	}, [tasks])
 
 	/////////////////////////////
 	return (
 		<div className="column">
 			<div className="column__container__title">
-				<h5 className={`column__title ${`column__title--${color}`}`}>{titulo}</h5>
-				<h3 className="column__contador">{tareas.length}</h3>
+				<h5 className={`column__title ${`column__title--${color}`}`}>{title}</h5>
+				<h3 className="column__contador">{tasks.length}</h3>
 			</div>
 			<div className="column__container-cards">
 
 				{/* RENDERIZADO DE LAS TAREAS */}
 				{
-					misTareas && misTareas.length >= 1 && misTareas.map(tarea => (
-						<Card key={`tarea${tarea.id}`} idGrupo={id} tarea={tarea} />
+					myTasks && myTasks.length >= 1 && myTasks.map(task => (
+						<Card key={`tarea${task.id}`} idGroup={id} task={task} />
 					))
 				}
 			</div>

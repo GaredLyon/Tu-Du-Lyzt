@@ -1,11 +1,11 @@
+/* ES TO EN */
+
 import React, { useContext } from 'react'
 import { AppContext } from '../../context/AppContext'
-/* import { formatearFecha } from '../../helpers/formatearFecha' */
-// import { agregarTarea } from '../../helpers/agregartarea'
 import './Aside.css'
 
-const obtenerIdGrupo = (columna) => {
-  switch (columna) {
+const getIdGroup = (column) => {
+  switch (column) {
     case 'Progress': return 2
     default: return 1
   }
@@ -14,55 +14,52 @@ const obtenerIdGrupo = (columna) => {
 ////////////////////////////////////
 export const Aside = () => {
 
-  const { setGrupos } = useContext(AppContext)
+  const { setGroups } = useContext(AppContext)
 
   //AGREGAR TAREA *******************
-  const agregarNuevaTarea = (evento) => {
+  const addNewtask = (e) => {
 
     //OBTENER TODOS LOS VALORES QUE NECESITO
-    let dificultad = evento.target.dificultad.value /* LISTO */
-    let columna = evento.target.columna.value /* LISTO */
-    let inputTitulo = evento.target.inputTitulo.value /* LISTO */
-    let inputDescripcion = evento.target.inputDescripcion.value /* LISTO */
-    let idGrupo = obtenerIdGrupo(columna)
+    let priority = e.target.priority.value /* LISTO */
+    let column = e.target.column.value /* LISTO */
+    let title = e.target.inputTitle.value /* LISTO */
+    let description = e.target.inputDescription.value /* LISTO */
+    let idGroup = getIdGroup(column)
 
-    if (inputTitulo && inputDescripcion) {
-
-      // const fecha = new Date();
-      // const opciones = { day: 'numeric', month: 'long', year: 'numeric' };
-      // const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+    if (title && description) {
 
       /* CREANDO AL ESTRCUTURA DE LA NUEVA TAREA */
-      const nuevaTarea = {
+      const newTask = {
         id: Math.floor(Math.random() * 100000),
-        nivel: dificultad,
-        contenido: {
-          titulo: inputTitulo,
-          descripcion: inputDescripcion
+        priority,
+        content: {
+          title,
+          description
         },
         // fechayhora: formatearFecha(Date.now()),
-        fechayhora: Date.now(),
+        dateAndHour: Date.now(),
       }
 
       //AGREGAR LA TAREA VISUALMENTE A LA COLUMNA QUE CORRESPONDE
-      setGrupos(estadoActual => {
-        const gruposActualizados = estadoActual.map(grupo => {
-          if (grupo.id === idGrupo) {
+      setGroups(currentState => {
+
+        const updatedGroups = currentState.map(group => {
+          if (group.id === idGroup) {
             return {
-              ...grupo,
-              tareas: [...grupo.tareas, nuevaTarea]
+              ...group,
+              tasks: [...group.tasks, newTask]
             }
           }
-          return grupo
+          return group
         })
 
         // console.log(gruposActualizados[idGrupo].tareas)
-        return gruposActualizados
+        return updatedGroups
       })
 
 
       //LIMPIAR EL FORMULARIO
-      evento.target.reset()
+      e.target.reset()
 
       //AGREGAR UNA NUEVA TAREA AL SERVIDOR, USANDO EL HELPER
       // agregarTarea({
@@ -80,22 +77,22 @@ export const Aside = () => {
   return (
     <aside className='aside'>
       <h3 className='aside__title'>Tu-Du Lyzt</h3>
-      <form className='aside__form' onSubmit={(evento) => {
-        evento.preventDefault()
-        agregarNuevaTarea(evento)
+      <form className='aside__form' onSubmit={(e) => {
+        e.preventDefault()
+        addNewtask(e)
       }}>
 
         {/* HEADER DEL FORMULARIO */}
-        <header className='header__formulario'>
+        <header className='header__form'>
           <div>
-            <select name='dificultad'>
-              <option>Low</option>
-              <option>Middle</option>
-              <option>High</option>
+            <select name='priority' title='Prioridad' defaultValue='Middle'>
+              <option value='High'>Alto</option>
+              <option value='Middle'>Medio</option>
+              <option value='Low'>Bajo</option>
             </select>
-            <select name='columna'>
-              <option>Todo</option>
-              <option>Progress</option>
+            <select name='column' title='Columna'>
+              <option value='Todo'>Pendientes</option>
+              <option value='Progress'>Proceso</option>
             </select>
           </div>
 
@@ -103,7 +100,7 @@ export const Aside = () => {
             {/* <button type='button' className='aside__contenedor-iconos'>
               <i className="fa-regular fa-calendar"></i>
             </button> */}
-            <button type='reset'  className='aside__contenedor-iconos' >
+            <button type='reset'  className='aside__container-icons' title='Limpiar formulario'>
               <i className="fa-sharp fa-solid fa-trash"></i>
             </button>
           </div>
@@ -111,21 +108,21 @@ export const Aside = () => {
         </header>
 
         {/* CONTENEDOR DE TEXTO */}
-        <div className='header__texto'>
+        <div className='header__text'>
           <textarea
             className='header__input1'
             rows="1"
             placeholder='Titulo...'
-            name='inputTitulo' />
+            name='inputTitle' />
           <hr />
           <textarea
             className='header__input2'
             rows="9"
             placeholder='Descripcion...'
-            name='inputDescripcion' />
+            name='inputDescription' />
         </div>
 
-        <button type='submit' className='aside__boton-crear'>Create</button>
+        <button type='submit' className='aside__button-create'>Crear</button>
       </form>
     </aside>
   )

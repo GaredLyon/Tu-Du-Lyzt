@@ -1,49 +1,36 @@
+/* ES TO EN */
+
 /* HEADER /////////////////////////////// */
 .header {
-	/* padding: 1rem; */
-	/* padding: .5rem; */
 	width: 100%;
-	/* background: goldenrod; */
 }
 
 /* CONTENEDOR ///////////////////////////////*/
-.header__contenedor {
+.header__container {
 	background-color: var(--gray4);
 	background: #b2b2b2;
-	/* border-radius: var(--r-lg); */
-
-	/* background: violet; */
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: .5rem;
 	padding: .8rem;
-	
-	/* gap: 1rem; */
 	gap: 1.5rem;
 }
 
 
 /* CAJA DE SELECTORES ///////////////////////////////*/
-.header__contenedor-selectores {
-	/* background: blue; */
+.header__container-selectors {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	/* padding: .5rem; */
 	gap: .5rem;
 }
 
 /* SELECTOR ///////////////////////////////*/
 .header__selector{
-	/* background-color: red; */
 	width: max-content;
-	/* height: 28px; */
 	border-radius: var(--r-sm);
 	padding: .2rem 0 ;
-
-
-
 	flex-grow: 1;
 }
 
@@ -73,58 +60,45 @@
 
 
 /* BUSCADOR ///////////////////////////////*/
-.header__buscador {
+.header__search {
 	display: flex;
 	width: 100%;
-	/* background: yellow; */
 	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-.header__buscador input {
+.header__search input {
 	height: 3.2rem;
 	border: 0.1rem solid var(--gray1);
 	border-radius: var(--r-md);
 	padding: 1rem;
 	width: 100%;
 }
-/* 
-.header__buscador input::placeholder {
-} */
 
-.header__buscador i {
+.header__search i {
 	position: absolute;
 	right: 1rem;
   color: var(--gray1);
 }
 
 @media (min-width: 700px) {
-	.header__contenedor {
+	.header__container {
 		flex-direction: row;
-		/* background: red; */
 	}
-	.header__contenedor-selectores {
-		/* background-color: aqua; */
+	.header__container-selectores {
 		padding: 1rem;
 	}
 }
 
-/* @media (min-width: 1024px) { */
-	@media (min-width: 1078px) {
+@media (min-width: 1078px) {
 
 	.header__selector{
 		padding: .5rem;
 	}
 
 	/* CONTENEDOR ///////////////////////////////*/
-	.header__contenedor {
+	.header__container {
 		flex-direction: row;
 	}
-
-	.buscador {
-		/* background: red; */
-		padding: 1.7rem !important;
-	}
-
 }

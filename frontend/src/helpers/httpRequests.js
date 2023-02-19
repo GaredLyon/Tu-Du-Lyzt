@@ -1,6 +1,6 @@
 import { global } from "./global"
 
-export const peticiones = async( tipoMetodo, cuerpo) => {
+export const httpRequets = async( tipoMetodo, cuerpo) => {
 
   let opciones = {
     method: 'GET'

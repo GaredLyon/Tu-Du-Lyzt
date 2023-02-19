@@ -1,54 +1,56 @@
+/* ES TO EN */
+
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
-import { traerTags } from "../../helpers/traerTags";
+import { getTags } from "../../helpers/getTags";
 import "./Header.css";
 import TextInput from '../TextInput/TextInput'
 
 ///////////////////////////////////////////
 const Header = () => { 
-  const {grupos} = useContext(AppContext)  
+  const {groups} = useContext(AppContext)  
 
 	const [tags, setTags] = useState([]);
 
 	useEffect(() => {
-		let valores = traerTags(grupos)
-		setTags(valores)
-	},[grupos])
+		let values = getTags(groups)
+		setTags(values)
+	},[groups])
 
 	///////////////////////////////////////////
 	return (
 		<header className="header">
 
 			{/* CONTENEDOR */}
-			<div className="header__contenedor">
+			<div className="header__container">
 
 				{/* CAJA DE SELECTORESS */}
-				<section className="header__contenedor-selectores">
+				<section className="header__container-selectors">
 
 					{/* SELECTOR 1 */}
-					<select className="header__selector" name="priority" id="priority" >
+					<select className="header__selector" name="priority" id="priority" title="Prioridad" >
 						{/* <optgroup label="priority"> */}
-							<option value="">TODOS</option>
-							<option value="high">High</option>
-							<option value="middle">Middle</option>
-							<option value="low">Low</option>
+							<option value="all">Todos</option>
+							<option value="high">Alto</option>
+							<option value="middle">Medio</option>
+							<option value="low">Bajo</option>
 						{/* </optgroup> */}
 					</select>
 
 					{/* SELECTOR 2 */}
-					<select className="header__selector" name="column" id="column">
+					<select className="header__selector" name="column" id="column" title='Estado de las tareas'>
 						{/* <optgroup label="column"> */}
-							<option value="all">TODOS</option>
-							<option value="todo">Todo</option>
-							<option value="progress">Progress</option>
-							<option value="completed">completed</option>
+							<option value="all">Todos</option>
+							<option value="todo">Pendientes</option>
+							<option value="progress">Proceso</option>
+							<option value="completed">Completados</option>
 						{/* </optgroup> */}
 					</select>
 
 					{/* SELECTOR 3 */}
-					<select className="header__selector" name="tag" id="tag">
+					<select className="header__selector" name="tag" id="tag" title="Lista de tags">
 						{/* <optgroup label="tag"> */}
-						<option value="">TODOS</option>
+						<option value="">Todos</option>
 						{tags.map((tag, index) => (
 							<option key={index} value={tag}> {tag}</option>
 						))}
@@ -56,9 +58,9 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 4 */}
-					<select className="header__selector" name="time" id="time">
+					<select className="header__selector" name="time" id="time" title="Fecha de creación">
 						{/* <optgroup label="time"> */}
-							<option value="all">TODOS</option>
+							<option value="all">Todos</option>
 							<option value="day">1 hora</option>
 							<option value="day">2 horas</option>
 							<option value="day">4 horas</option>
@@ -90,8 +92,8 @@ const Header = () => {
 				</section>
 
 				{/* BUSCADOR */}
-				<div className="header__buscador">
-					<TextInput  />
+				<div className="header__search">
+					<TextInput/>
 					<i className="fa-solid fa-magnifying-glass"></i>
 				</div>
 			</div>
