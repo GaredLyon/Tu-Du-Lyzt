@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AppContext } from "../../context/AppContext";
 import { search } from "../../helpers/search";
 import './TextInput.css'
 
@@ -33,11 +34,24 @@ const TextInput = () => {
   }, []);
 
   //FUNCIONAMIENTO DEL BUSCADOR/////////////////
-  const buscar = () => {
+
+  const {groups, setGroups, getData} = useContext(AppContext)
+
+  const buscar = async () => {
     const busqueda = document.getElementById('buscador').value
     // console.log(busqueda)
-    search(busqueda)
+    const resultados = await search(busqueda)
+
+    setGroups(resultados)
+    // console.log(resultados)
   }
+
+  const verLargo = (e) =>{
+    if (e.target.value.length === 0) {
+      getData()
+    }
+  }
+
 
   ////////////////////////////////
   return (
@@ -48,8 +62,9 @@ const TextInput = () => {
         placeholder={'Buscar por: ' + currentText}
         className="buscador"
         title='Buscador'
+        onChange={verLargo}
       />
-      <i className="fa-solid fa-magnifying-glass" ></i>
+      <i className="fa-solid fa-magnifying-glass" onClick={buscar}></i>
     </div>
   );
 };
