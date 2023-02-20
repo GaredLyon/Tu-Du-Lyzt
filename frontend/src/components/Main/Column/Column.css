@@ -98,11 +98,23 @@
   }
 
   .column__container-cards { /* PROVVVVVVVVVVVVVVVVVV */
-    grid-template-columns: 1fr;
-		/* flex-wrap: wrap; */
-		/* display: flex; */
-		display: grid;
+    /* grid-template-columns: 1fr;
+		flex-wrap: wrap;
+		display: flex; */
+
+    display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .column__container-cards--1column{
+    /* PARA CUANDO SOLO HAY UNA COLUMNA */
+		/* display: grid;
+		grid-template-columns: 1fr 1fr 1fr; */
+
+
+    grid-template-columns: 1fr;
+		flex-wrap: wrap;
+		display: flex;
   }
 
   .column {

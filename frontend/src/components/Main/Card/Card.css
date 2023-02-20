@@ -132,8 +132,14 @@
 @media (min-width: 1325px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */
   .card{
     /* background-color: red; */
-    /* width: 300px; */
     flex-grow: 1;
+
+
+  }
+
+  .card--1column{ /* NO SE ESTA USANDO, PERO DISPONIBLE POR SI LO NECESITO MAS LUEGO */
+    /* PARA CUANDO SOLO HAY UNA COLUMNA */
+    width: 300px; 
   }
 }
 

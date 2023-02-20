@@ -15,7 +15,7 @@ export const Column = ({ title, color , group = [] , type}) => {
 				<h5 className={`column__title ${`column__title--${color}`}`}>{title}</h5>
 				<h3 className="column__contador">{group.length}</h3>
 			</div>
-			<div className="column__container-cards">
+			<div className={`column__container-cards ${typeColumn === 'all' && 'column__container-cards--1column'}`}>
 
 				{/* RENDERIZADO DE LAS TAREAS */}
 				{
