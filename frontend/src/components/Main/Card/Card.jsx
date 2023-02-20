@@ -20,9 +20,9 @@ export const Card = ({ task }) => {
 
   const { _id, priority, title, description } = task
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
-  const [cardVisible, setCardVisible] = useState(true)
+  // const [cardVisible, setCardVisible] = useState(true)
 
-  const {getData} = useContext(AppContext)
+  const {getData, typeCards} = useContext(AppContext)
 
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
   const [timeElapsed, setTimeElapsed] = useState(true)
@@ -49,7 +49,7 @@ export const Card = ({ task }) => {
   }
   //////////////////////////////////
   return (
-    <article className={`card ${`card--${getColor(priority)}`} ${cardVisible && 'card--visible'}`} draggable>
+    <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`} draggable>
 
       {/* CARD MAIN */}
       <main className='card__main'>

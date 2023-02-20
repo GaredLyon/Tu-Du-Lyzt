@@ -3,7 +3,8 @@ import React from "react";
 import { Card } from "../Card/Card";
 import "./Column.css";
 
-export const Column = ({ title, color, group }) => {
+export const Column = ({ title, color , group = [] }) => {
+
 
 	/////////////////////////////
 	return (

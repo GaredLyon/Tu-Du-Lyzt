@@ -8,8 +8,32 @@ import { getListTasks } from './helpers/getListTasks'
 /////////////////////////////////////
 export const App = () => {
   const [groups, setGroups] = useState([])
+  const [columns, setColumns] = useState([
+		{
+      id: 0,
+			title: "pendients",
+      color: 'gray',
+			visibility: true
+		},
+		{
+      id: 1,
+			title: "progress",
+      color: 'purple',
+			visibility: true
+		},
+		{
+      id: 2,
+			title: "completed",
+      color: 'green',
+			visibility: true
+		}
+	])
 
-  //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL
+  const [typeColumn, setTypeColumn] = useState('all')
+  const [typeCards, setTypeCards] = useState('all')
+
+
+  //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL ////////////////////////
   const getData = async() => {
     let result = await getListTasks()
     setGroups(result)
@@ -19,7 +43,15 @@ export const App = () => {
   let globalStates = {
     groups,
     setGroups,
-    getData
+    getData,
+
+    columns,
+    setColumns,
+
+    typeColumn,
+    setTypeColumn,
+    typeCards,
+    setTypeCards
   }
 
 

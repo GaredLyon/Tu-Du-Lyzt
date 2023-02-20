@@ -12,11 +12,40 @@ const Header = () => {
 
 	useEffect(() => {
 		let values = getTags(groups)
-
 		// console.log(values)
 
 		setTags(values)
 	},[groups])
+
+	const {columns, setColumns, setTypeCards, setTypeColumn} = useContext(AppContext)
+
+	const controlarColumnasVisibles = (e) => {
+		let value = e.target.value
+
+		let result = columns.map(column => {
+			if ( value === 'all' || column.title === value) {
+				return {...column, visibility : true}
+			} else{
+				return {...column, visibility : false}
+			}
+		})
+
+		setColumns(result)
+	}
+
+
+	/////////////////////////////
+	const filtrarPorEstado = (e) => {
+		const valor = e.target.value
+		// console.log(valor)
+		setTypeColumn(valor)
+	}
+
+	const filtrarPorPrioridad = (e) => {
+		const valor = e.target.value
+		// console.log(valor)
+		setTypeCards(valor)
+	}
 
 	///////////////////////////////////////////
 	return (
@@ -29,7 +58,7 @@ const Header = () => {
 				<section className="header__container-selectors">
 
 					{/* SELECTOR 1 */}
-					<select className="header__selector" name="priority" id="priority" title="Prioridad" >
+					<select className="header__selector" name="priority" id="priority" title="Prioridad" onChange={filtrarPorPrioridad}>
 						{/* <optgroup label="priority"> */}
 							<option value="all">Todos</option>
 							<option value="high">Alto</option>
@@ -39,10 +68,10 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 2 */}
-					<select className="header__selector" name="column" id="column" title='Estado de las tareas'>
+					<select className="header__selector" name="column" id="column" title='Estado de las tareas' onChange={filtrarPorEstado}>
 						{/* <optgroup label="column"> */}
 							<option value="all">Todos</option>
-							<option value="todo">Pendientes</option>
+							<option value="pendients">Pendientes</option>
 							<option value="progress">Proceso</option>
 							<option value="completed">Completados</option>
 						{/* </optgroup> */}
@@ -50,46 +79,21 @@ const Header = () => {
 
 					{/* SELECTOR 3 */}
 					<select className="header__selector" name="tag" id="tag" title="Lista de tags">
-						{/* <optgroup label="tag"> */}
 						<option value="">Todos</option>
 						{tags.map((tag, index) => (
 							<option key={index} value={tag}> {tag}</option>
 						))}
-						{/*</optgroup> */}
 					</select>
 
 					{/* SELECTOR 4 */}
-					<select className="header__selector" name="time" id="time" title="Fecha de creación">
-						{/* <optgroup label="time"> */}
+					{/* <select className="header__selector" name="time" id="time" title="Fecha de creación">
 							<option value="all">Todos</option>
 							<option value="day">1 hora</option>
 							<option value="day">2 horas</option>
 							<option value="day">4 horas</option>
 							<option value="day">8 horas</option>
 							<option value="day">12 horas</option>
-							<option value="day">1 dia</option>
-							<option value="day">2 dias</option>
-							<option value="day">3 dias</option>
-							<option value="day">4 dias</option>
-							<option value="day">5 dias</option>
-							<option value="day">6 dias</option>
-							<option value="week">1 semana</option>
-							<option value="week">2 semanas</option>
-							<option value="week">3 semanas</option>
-							<option value="month">1 mes</option>
-							<option value="month">2 meses</option>
-							<option value="month">3 meses</option>
-							<option value="month">4 meses</option>
-							<option value="month">5 meses</option>
-							<option value="month">6 meses</option>
-							<option value="month">7 meses</option>
-							<option value="month">8 meses</option>
-							<option value="month">9 meses</option>
-							<option value="month">10 meses</option>
-							<option value="month">11 meses</option>
-							<option value="month">12 meses</option>
-						{/* </optgroup> */}
-					</select>
+					</select> */}
 				</section>
 
 				{/* BUSCADOR */}

@@ -131,3 +131,11 @@
   transform: rotateZ(-270deg) scale(0.6);
 }
 
+@media (min-width: 1325px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */
+  .card{
+    /* background-color: red; */
+    /* width: 300px; */
+    flex-grow: 1;
+  }
+}
+
