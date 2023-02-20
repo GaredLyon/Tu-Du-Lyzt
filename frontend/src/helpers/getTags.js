@@ -1,22 +1,28 @@
 /* ES TO EN */
 export const getTags = (groups) => {
   
+  // console.log(groups)
+
   let titles = []
 
   groups.map(group => {
 
-    group.tasks.map(task => {
-      titles = [...titles, task.content.title]
-    })
+    // console.log(group)
 
+    group && group.map(task => {
+
+        // console.log(task.title)
+        titles = [...titles, task.title]
+    })
   })
 
-  //ELIMINAR ELEMENTOS REPETIDOS
+  // //ELIMINAR ELEMENTOS REPETIDOS
   let titulosSinRepetir = [...new Set(titles)];
 
-  //ORDENARLOS ALFABETICAMENTE
+  // //ORDENARLOS ALFABETICAMENTE
   let ordenados = titulosSinRepetir.sort()
 
+  // console.log(ordenados)
+
   return ordenados
-  // return ["design", "code", "managment", "slicing"];
 } 

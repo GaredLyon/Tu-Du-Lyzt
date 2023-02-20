@@ -1,5 +1,3 @@
-/* ES TO EN */
-
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
 import { getTags } from "../../helpers/getTags";
@@ -14,6 +12,9 @@ const Header = () => {
 
 	useEffect(() => {
 		let values = getTags(groups)
+
+		// console.log(values)
+
 		setTags(values)
 	},[groups])
 

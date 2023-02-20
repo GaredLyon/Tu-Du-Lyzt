@@ -34,8 +34,6 @@ export const Aside = () => {
     if (title || description) {
       await addTask( title, description, priority, state)
 
-      // console.log(nuevaTarea)
-
       getData()
     }
 

@@ -30,7 +30,7 @@ function Home() {
 
         {/* HEADER */}
         <div className="App__header">
-          {/* <Header/> */}
+          <Header/>
         </div>
 
         {/* MAIN */}
