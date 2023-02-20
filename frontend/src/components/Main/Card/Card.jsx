@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Card.css'
 import { formatDate } from '../../../helpers/formatDate'
 import { formatHour } from '../../../helpers/formatHour'
 import { deleteTasks } from '../../../helpers/deleteTask'
 import { editTask } from '../../../helpers/editTask'
+import { AppContext } from '../../../context/AppContext'
 
 //obtener el color
 const getColor = (priority) => {
@@ -21,6 +22,8 @@ export const Card = ({ task }) => {
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   const [cardVisible, setCardVisible] = useState(true)
 
+  const {getData} = useContext(AppContext)
+
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
   const [timeElapsed, setTimeElapsed] = useState(true)
 
@@ -37,6 +40,12 @@ export const Card = ({ task }) => {
     const description = document.getElementById(`input2-task${idTask}`).value
 
     editTask(idTask, title, description)
+  }
+
+  const solicitarEliminar = async () => {
+      await deleteTasks(_id)
+      getData()
+      // setCardVisible(!cardVisible)
   }
   //////////////////////////////////
   return (
@@ -66,10 +75,7 @@ export const Card = ({ task }) => {
           <i
             className="fa-sharp fa-solid fa-trash card__icon"
             title='Eliminar tarea'
-            onClick={() => {
-              deleteTasks(_id)
-              setCardVisible(!cardVisible)
-            }}></i>
+            onClick={() => solicitarEliminar(_id)}></i>
           {
             cardEditable ? (
               /* ICONO LAPIZ */

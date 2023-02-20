@@ -11,6 +11,7 @@ export const addTask = async ( title, description, priority, state) => {
       description,
       priority,
       state,
+      date: Date.now()
     }),
     headers: {
       'Content-Type': 'application/json'

@@ -64,6 +64,7 @@ export const Aside = () => {
             <select name='state' title='Estado'>
               <option value='pendient'>Pendientes</option>
               <option value='progress'>Proceso</option>
+              <option value='completed'>Completados</option>
             </select>
           </div>
 

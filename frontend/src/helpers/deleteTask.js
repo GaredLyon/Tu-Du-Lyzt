@@ -10,8 +10,9 @@ export const deleteTasks = async (idTask) => {
     }
   })
 
-  // const data = await request.json()
+  const data = await request.json()
 
+  return data
   // console.log('se elimino una tarea', data)
 }
 
