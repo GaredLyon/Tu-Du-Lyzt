@@ -1,16 +1,17 @@
-import { httpRequests } from "./httpRequests"
+import { global } from "./global"
 
-export const deleteTasks = async (idGroup, idTasks) => {
+export const deleteTasks = async (idTask) => {
+  // console.log(idTasks)
 
-  //COMENTADO LAS LINEAS DE ABAJO PORQUE AUN NO TENEMOS SERVIDOR
+  const peticion = await fetch(`${global.url}task/${idTask}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
 
-  // return await peticiones('DELETE', {
-  //   idGrupo,
-  //   idTarea
-  // })
+  // const data = await peticion.json()
 
-  console.log(idGroup, idTasks)
-
-  console.log('se elimino una tarea')
+  // console.log('se elimino una tarea', data)
 }
 

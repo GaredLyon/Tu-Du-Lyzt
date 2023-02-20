@@ -3,7 +3,7 @@ import { sortedList } from "./sortedList"
 
 export const getListTasks = async () => {
 
-  const peticion = await fetch(`${global.url}traer_tareas`)
+  const peticion = await fetch(`${global.url}task`)
   const data = await peticion.json()
 
   // console.log(data.tareas)

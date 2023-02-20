@@ -1,18 +1,21 @@
-import { httpRequests } from "./httpRequests"
+import { global } from "./global"
 
-export const editTarea = async (idGroup, idTask, newContent) => {
+export const editTask = async ( idTask, title, description) => {
 
-  // console.log(`se edito la tarea que tiene titulo: "${titulo}" y de descripcion: "${descripcion}", que esta en el grupo: ${idGrupo}, y tiene el id: ${idTarea}`)
+  // console.log(idTask, title, description)
 
-  console.log(idGroup, idTask, newContent)
+  const peticion = await fetch(`${global.url}task/${idTask}`, {
+    method: 'PUT',
+    body: JSON.stringify({
+      title,
+      description
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
 
-  //COMENTADO LAS LINEAS DE ABAJO PORQUE AUN NO TENEMOS SERVIDOR
+  // const data = await peticion.json()
 
-  // return await peticiones('PUT', {
-  //   idGrupo,
-  //   idTarea,
-  //   nuevoContenido
-  // })
-
-  console.log('Se actualizo una tarea')
+  // console.log('Se actualizo una tarea', data)
 }

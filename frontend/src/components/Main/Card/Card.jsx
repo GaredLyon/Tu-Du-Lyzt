@@ -1,8 +1,9 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import './Card.css'
-import { AppContext } from '../../../context/AppContext'
 import { formatDate } from '../../../helpers/formatDate'
 import { formatHour } from '../../../helpers/formatHour'
+import { deleteTasks } from '../../../helpers/deleteTask'
+import { editTask } from '../../../helpers/editTask'
 
 //obtener el color
 const getColor = (priority) => {
@@ -14,13 +15,14 @@ const getColor = (priority) => {
 }
 
 ///////////////////////////////////////////////////
-export const Card = ({idGroup=1 , task}) => {
+export const Card = ({ task }) => {
 
-  const {id, priority, title, description} = task
+  const { _id, priority, title, description } = task
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
-  
+  const [cardVisible, setCardVisible] = useState(true)
+
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
-  const [timeElapsed, setTimeElapsed] = useState()
+  const [timeElapsed, setTimeElapsed] = useState(true)
 
   setTimeout(() => {
     let result = formatHour(task.date)
@@ -29,80 +31,32 @@ export const Card = ({idGroup=1 , task}) => {
 
 
   //EDITAR TAREA ******************************************************
-  const editCurrentTask = ( idGrupo) => {
+  const solicitarCambio = (idTask) => {
 
-    const title = document.getElementById(`input1-task${id}`).value
-    const description = document.getElementById(`input2-task${id}`).value
-    
-    setGroups(currentState => {
-      
-      const updatedGroups = currentState.map(group => {
-        if (group.id === idGrupo) {
+    const title = document.getElementById(`input1-task${idTask}`).value
+    const description = document.getElementById(`input2-task${idTask}`).value
 
-          let updatedTasks = group.tasks.map(task => {
-            task.title = title
-            task.description = description
-
-            return task
-          })
-
-          return {
-            ...group,
-            tasks: [...updatedTasks]
-          }
-        }
-        return group
-      })
-
-      return updatedGroups
-    })
-
+    editTask(idTask, title, description)
   }
-
-  //ELIMINAR TAREA ****************************************************
-  const {setGroups} = useContext(AppContext)
-
-  const deleteCurrentTask = (idGroup, idTask) => {
-
-    setGroups(currentState => {
-      
-      const updatedGroups = currentState.map(group => {
-        if (group.id === idGroup) {
-
-          let newList = group.tasks.filter(task => task.id !== idTask)
-
-          return {
-            ...group,
-            tasks: [...newList]
-          }
-        }
-        return group
-      })
-
-      return updatedGroups
-    })
-
-  }
-
   //////////////////////////////////
   return (
-    <article className={`card ${`card--${getColor(priority)}`}`} draggable>
-      
+    <article className={`card ${`card--${getColor(priority)}`} ${cardVisible && 'card--visible'}`} draggable>
+
       {/* CARD MAIN */}
       <main className='card__main'>
         <textarea
-          id={`input1-task${id}`}
+          id={`input1-task${_id}`}
           className='card__title'
           defaultValue={title}
           disabled={cardEditable}
           maxLength={20}
           rows="1" />
         <textarea
-          id={`input2-task${id}`}
+          id={`input2-task${_id}`}
           className='card__container'
           defaultValue={description}
           disabled={cardEditable}
-          />
+        />
       </main>
 
       {/* CARD ASIDE */}
@@ -112,22 +66,25 @@ export const Card = ({idGroup=1 , task}) => {
           <i
             className="fa-sharp fa-solid fa-trash card__icon"
             title='Eliminar tarea'
-            onClick={() => deleteCurrentTask(idGroup, id)}></i>
+            onClick={() => {
+              deleteTasks(_id)
+              setCardVisible(!cardVisible)
+            }}></i>
           {
             cardEditable ? (
               /* ICONO LAPIZ */
               <i
                 className="fa-solid fa-pencil card__icon"
                 title='Editar tarea'
-                onClick={()=>setCardEditable(!cardEditable)}>
+                onClick={() => setCardEditable(!cardEditable)}>
               </i>
-            ): (
+            ) : (
               /* ICONO GUARDAR */
               <i
                 className="fa-solid fa-floppy-disk card__icon"
                 title='Guardar tarea'
-                onClick={()=>{
-                  editCurrentTask(idGroup, id)
+                onClick={() => {
+                  solicitarCambio(_id)
                   setCardEditable(!cardEditable)
                 }}>
               </i>
@@ -138,7 +95,7 @@ export const Card = ({idGroup=1 , task}) => {
             {/* ICONO DE RELOJ */}
             <i className={`fa-solid fa-clock card__icon`} title='Hace cuanto atras fue creado'></i>
             <div className='card__alert'>{timeElapsed}</div>
-            <div className='card__alert'>{}</div>
+            <div className='card__alert'>{ }</div>
           </div>
 
           <div className='caja__icon'>
@@ -157,6 +114,7 @@ export const Card = ({idGroup=1 , task}) => {
       </aside>
 
     </article>
+
   )
 }
 

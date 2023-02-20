@@ -3,18 +3,21 @@
 /* CARD ///////////////////// */
 .card {
   border-radius: 1.5rem;
-  display: flex;
   padding: 0.9rem 0 0.9rem 0.9rem;
   background: var(--red);
   width: 27.2rem;
   height: 16.8rem;
   width: 100%;
+  display: none;
 }
 .card--yellow {
   background: var(--yellow);
 }
 .card--blue {
   background: var(--blue);
+}
+.card--visible{
+  display: flex;
 }
 
 /* CARD MAIN ///////////////////// */

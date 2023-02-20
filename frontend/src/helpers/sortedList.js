@@ -2,7 +2,7 @@
 
 export const sortedList = (lista) => {
 
-  console.log(lista)
+  // console.log(lista)
   const sortedList = lista.sort(compareByPriority);
   // console.log(listaOrdenada);
 
