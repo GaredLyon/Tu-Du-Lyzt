@@ -17,22 +17,7 @@ const Header = () => {
 		setTags(values)
 	},[groups])
 
-	const {columns, setColumns, setTypeCards, setTypeColumn} = useContext(AppContext)
-
-	const controlarColumnasVisibles = (e) => {
-		let value = e.target.value
-
-		let result = columns.map(column => {
-			if ( value === 'all' || column.title === value) {
-				return {...column, visibility : true}
-			} else{
-				return {...column, visibility : false}
-			}
-		})
-
-		setColumns(result)
-	}
-
+	const { setTypeCards, setTypeColumn} = useContext(AppContext)
 
 	/////////////////////////////
 	const filtrarPorEstado = (e) => {
