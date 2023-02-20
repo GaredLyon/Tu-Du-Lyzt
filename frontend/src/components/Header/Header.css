@@ -34,31 +34,6 @@
 	flex-grow: 1;
 }
 
-/* .header__selector option[value="todo"] {
-	background-color: var(--gray3);
-}
-.header__selector option[value="progress"] {
-	background-color: var(--purple);
-}
-.header__selector option[value="completed"] {
-	background-color: var(--green-light);
-}
-.header__selector option[value="high"] {
-	background-color: var(--red-light);
-}
-.header__selector option[value="middle"] {
-	background-color: var(--yellow-light);
-}
-.header__selector option[value="low"] {
-	background-color: var(--blue-light);
-} */
-
-/* CALENDARIO ///////////////////////////////*/
-/* .header__icono-calendario {
-	color: var(--gray1);
-} */
-
-
 /* BUSCADOR ///////////////////////////////*/
 .header__search {
 	display: flex;
@@ -80,6 +55,11 @@
 	position: absolute;
 	right: 1rem;
   color: var(--gray1);
+	cursor: pointer;
+}
+
+.header__search i:hover{
+	color: blue;
 }
 
 @media (min-width: 700px) {

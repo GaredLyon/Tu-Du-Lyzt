@@ -93,10 +93,7 @@ const Header = () => {
 				</section>
 
 				{/* BUSCADOR */}
-				<div className="header__search">
-					<TextInput/>
-					<i className="fa-solid fa-magnifying-glass"></i>
-				</div>
+				<TextInput/>
 			</div>
 
 		</header>

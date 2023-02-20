@@ -1,5 +1,3 @@
-/* ES TO EN */
-
 import { Main } from "../components/Main/Main"
 import { Aside } from "../components/Aside/Aside"
 import Header  from "../components/Header/Header"
