@@ -34,24 +34,22 @@ const TextInput = () => {
   }, []);
 
   //FUNCIONAMIENTO DEL BUSCADOR/////////////////
-
   const {groups, setGroups, getData} = useContext(AppContext)
 
   const buscar = async () => {
     const busqueda = document.getElementById('buscador').value
     // console.log(busqueda)
     const resultados = await search(busqueda)
-
     setGroups(resultados)
-    // console.log(resultados)
   }
 
   const verLargo = (e) =>{
     if (e.target.value.length === 0) {
       getData()
+    } else{
+      buscar()
     }
   }
-
 
   ////////////////////////////////
   return (
@@ -64,7 +62,7 @@ const TextInput = () => {
         title='Buscador'
         onChange={verLargo}
       />
-      <i className="fa-solid fa-magnifying-glass" onClick={buscar}></i>
+      {/* <i className="fa-solid fa-magnifying-glass" onClick={buscar}></i> */}
     </div>
   );
 };
