@@ -7,22 +7,20 @@ export const getListTasks = async () => {
   const data = await peticion.json()
 
   // console.log(data.tareas)
-  //1. dividir las tareas en 3 columnas(Pendientes, proceso, completados)
+  //1. clasificar las tareas en 3 columnas(Pendientes, proceso, completados)
 
-  let pendientes = []
-  let proceso = []
-  let completadas = []
+  let pending = []
+  let process = []
+  let completed = []
 
-  data.tareas.map(tarea => {
+  data.tasks.map(task => {
 
-    if (tarea.state === 'pendient') pendientes = [...pendientes, tarea]
-    if (tarea.state === 'progress') proceso = [...proceso, tarea]
-    if (tarea.state === 'completed') completadas = [...completadas, tarea]
+    if (task.state === 'pendient') pending = [...pending, task]
+    if (task.state === 'progress') process = [...process, task]
+    if (task.state === 'completed') completed = [...completed, task]
 
   })
 
-  // lista
-  // console.log(pendientes, proceso, completadas)
-
-  return [sortedList(pendientes), sortedList(proceso), sortedList(completadas)]
+  //2. ordenar cada lista por prioridad y devolver el resultados
+  return [sortedList(pending), sortedList(process), sortedList(completed)]
 }

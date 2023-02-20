@@ -1,5 +1,3 @@
-/* ES TO EN */
-
 import React, { useContext, useState } from 'react'
 import './Card.css'
 import { AppContext } from '../../../context/AppContext'
@@ -25,7 +23,7 @@ export const Card = ({idGroup=1 , task}) => {
   const [timeElapsed, setTimeElapsed] = useState()
 
   setTimeout(() => {
-    let result = formatHour(task.dateAndHour)
+    let result = formatHour(task.date)
     setTimeElapsed(result)
   }, 1000);
 
@@ -146,7 +144,7 @@ export const Card = ({idGroup=1 , task}) => {
           <div className='caja__icon'>
             {/* ICONO DE CALENDARIO */}
             <i className={`fa-solid fa-calendar card__icon`} title='Fecha de creacion'></i>
-            <div className='card__alert'>{formatDate(task.dateAndHour)}</div>
+            <div className='card__alert'>{formatDate(task.date)}</div>
           </div>
 
         </section>
