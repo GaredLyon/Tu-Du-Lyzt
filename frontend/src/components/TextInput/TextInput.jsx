@@ -35,7 +35,7 @@ const TextInput = () => {
 	return (
 		<input
 			type="text"
-			placeholder={currentText}
+			placeholder={'Buscar por: ' + currentText}
 			className="buscador"
 			title='Buscador'
 		/>

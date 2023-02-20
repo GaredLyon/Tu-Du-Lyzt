@@ -1,22 +1,15 @@
-/* ES TO EN */
-
 import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
+import { addTask } from '../../helpers/addTask'
 import { changeTheme } from '../../helpers/changeTheme'
-
 import './Aside.css'
-
-const getIdGroup = (column) => {
-  switch (column) {
-    case 'Progress': return 2
-    default: return 1
-  }
-}
 
 ////////////////////////////////////
 export const Aside = () => {
 
-  const { setGroups } = useContext(AppContext)
+  const { getData } = useContext(AppContext)
+
+  //PARA CAMBIAR TEMA ///////////////
   const [checkedTheme, setCheckedTheme]= useState(localStorage.getItem("IsChecked")=="true"? true : false)
   
   useEffect(()=>{
@@ -28,59 +21,24 @@ export const Aside = () => {
   }
 
   //AGREGAR TAREA *******************
-  const addNewtask = (e) => {
+  const addNewtask = async(e) => {
 
     //OBTENER TODOS LOS VALORES QUE NECESITO
-    let priority = e.target.priority.value /* LISTO */
-    let column = e.target.column.value /* LISTO */
-    let title = e.target.inputTitle.value /* LISTO */
-    let description = e.target.inputDescription.value /* LISTO */
-    let idGroup = getIdGroup(column)
+    let title = e.target.inputTitle.value 
+    let description = e.target.inputDescription.value
+    let priority = e.target.priority.value 
+    let state = e.target.state.value 
 
-    if (title && description) {
+    // console.log(priority, state, title, description)
 
-      /* CREANDO AL ESTRCUTURA DE LA NUEVA TAREA */
-      const newTask = {
-        id: Math.floor(Math.random() * 100000),
-        priority,
-        content: {
-          title,
-          description
-        },
-        // fechayhora: formatearFecha(Date.now()),
-        dateAndHour: Date.now(),
-      }
+    if (title || description) {
+      await addTask( title, description, priority, state)
 
-      //AGREGAR LA TAREA VISUALMENTE A LA COLUMNA QUE CORRESPONDE
-      setGroups(currentState => {
-
-        const updatedGroups = currentState.map(group => {
-          if (group.id === idGroup) {
-            return {
-              ...group,
-              tasks: [...group.tasks, newTask]
-            }
-          }
-          return group
-        })
-
-        // console.log(gruposActualizados[idGrupo].tareas)
-        return updatedGroups
-      })
-
-
-      //LIMPIAR EL FORMULARIO
-      e.target.reset()
-
-      //AGREGAR UNA NUEVA TAREA AL SERVIDOR, USANDO EL HELPER
-      // agregarTarea({
-      //   idGrupo,
-      //   dificultad,
-      //   cuerpo: {
-      //     columna, inputTitulo, inputDescripcion
-      //   }
-      // })
+      getData()
     }
+
+    //LIMPIAR EL FORMULARIO
+    e.target.reset()
   }
 
 
@@ -96,14 +54,15 @@ export const Aside = () => {
         {/* HEADER DEL FORMULARIO */}
         <header className='header__form'>
           <div>
-            <select name='priority' title='Prioridad' defaultValue='Middle'>
-              <option value='High'>Alto</option>
-              <option value='Middle'>Medio</option>
-              <option value='Low'>Bajo</option>
+            <select name='priority' title='Prioridad' defaultValue='low'>
+              <option value='low'>Bajo</option>
+              <option value='middle'>Medio</option>
+              <option value='high'>Alto</option>
             </select>
-            <select name='column' title='Columna'>
-              <option value='Todo'>Pendientes</option>
-              <option value='Progress'>Proceso</option>
+            <select name='state' title='Estado'>
+              <option value='pendient'>Pendientes</option>
+              <option value='progress'>Proceso</option>
+              <option value='completed'>Completados</option>
             </select>
           </div>
 

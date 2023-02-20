@@ -1,12 +1,26 @@
-import { httpRequets } from "./httpRequests"
+import { global } from "./global"
 
-export const addTask = async (igGroup, priority, body) => {
+export const addTask = async ( title, description, priority, state) => {
 
-  console.log(igGroup, priority, body)
+  // console.log(title, description, priority, state)
 
-  //COMENTADO LAS LINEAS DE ABAJO PORQUE AUN NO TENEMOS SERVIDOR
+  const request = await fetch(`${global.url}task`, {
+    method: 'POST',
+    body: JSON.stringify({
+      title,
+      description,
+      priority,
+      state,
+      date: Date.now()
+    }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
 
-  // return await peticiones('GET', {idGrupo, dificultad, cuerpo})
+  const data = await request.json()
 
-  console.log('se agrego una nueva tarea')
+  // console.log('se agrego una nueva tarea', data)
+
+  return data.task
 }

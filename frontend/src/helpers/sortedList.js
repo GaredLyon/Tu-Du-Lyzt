@@ -2,10 +2,11 @@
 
 export const sortedList = (lista) => {
 
+  // console.log(lista)
   const sortedList = lista.sort(compareByPriority);
   // console.log(listaOrdenada);
 
-  return sortedList
+  return sortedList || []
 }
 
 ///////////////////////////////////////
@@ -13,16 +14,16 @@ function compareByPriority(a, b) {
   const priorityA = a.priority;
   const priorityB = b.priority;
 
-  if (priorityA === 'High' && priorityB !== 'High') {
+  if (priorityA === 'high' && priorityB !== 'high') {
     return -1;
   }
-  if (priorityB === 'High' && priorityA !== 'High') {
+  if (priorityB === 'high' && priorityA !== 'high') {
     return 1;
   }
-  if (priorityA === 'Middle' && priorityB === 'Low') {
+  if (priorityA === 'middle' && priorityB === 'low') {
     return -1;
   }
-  if (priorityA === 'Low' && priorityB === 'Middle') {
+  if (priorityA === 'low' && priorityB === 'middle') {
     return 1;
   }
   return 0;
