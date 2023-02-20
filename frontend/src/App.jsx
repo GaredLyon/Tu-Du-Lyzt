@@ -5,21 +5,26 @@ import { AppContext } from './context/AppContext'
 // import { data } from './data/data'
 import { getListTasks } from './helpers/getListTasks'
 
+/////////////////////////////////////
 export const App = () => {
   const [groups, setGroups] = useState([])
 
-  let globalStates = {
-    groups,
-    setGroups
+  //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL
+  const getData = async() => {
+    let result = await getListTasks()
+    setGroups(result)
   }
 
-  useEffect(() => {
-    const getTasks = async() => {
-      let result = await getListTasks()
-      setGroups(result)
-    }
 
-    getTasks()
+  let globalStates = {
+    groups,
+    setGroups,
+    getData
+  }
+
+
+  useEffect(() => {
+    getData()
   }, [])
 
   /////////////////////////
