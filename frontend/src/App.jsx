@@ -14,12 +14,12 @@ export const App = () => {
   }
 
   useEffect(() => {
-    const traer = async() => {
-      let resultado = await getListTasks()
-      setGroups(resultado)
+    const getTasks = async() => {
+      let result = await getListTasks()
+      setGroups(result)
     }
 
-    traer()
+    getTasks()
   }, [])
 
   /////////////////////////
