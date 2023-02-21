@@ -7,6 +7,8 @@
   height: 16.8rem;
   width: 100%;
   display: none;
+  position: relative;
+  overflow: hidden;
 }
 .card--yellow {
   background: var(--yellow);
@@ -136,3 +138,54 @@
   }
 }
 
+/* /////////////////////////////////7 */
+.card-alert{
+  /* background: violet; */
+  background: rgba(0, 0, 0, 0.099);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  /* margin-right: .8rem; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.card-alert__title{
+  font-size: 2.3rem;
+  width: 85%;
+  text-align: center;
+  /* background: green; */
+  color: white;
+  line-height: 3rem;
+  /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.242); */
+}
+
+.card-alert__container-button{
+  /* background-color: red; */
+  display: flex;
+  gap: 2rem;
+}
+.card-alert__container-button button{
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  color: white;
+}
+
+.card-alert__container-button button:first-child{
+  background: rgb(66, 158, 66);
+}
+.card-alert__container-button button:last-child{
+  background: crimson;
+}
+.card-alert__container-button button:first-child:hover{
+  background: rgb(78, 188, 78);
+}
+.card-alert__container-button button:last-child:hover{
+  background: rgb(222, 64, 96);
+}
