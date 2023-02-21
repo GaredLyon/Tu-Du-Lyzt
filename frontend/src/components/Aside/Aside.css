@@ -173,7 +173,7 @@
 
 .l:checked:before {
   background-color: #d7d7d7;
-  transform: translateX(125%)
+  transform: translateX(125%);
 }
 
 .l:checked:after {
@@ -189,9 +189,13 @@
 /* DARK THEME */
 .App__aside.false.dark{
   background-color: #2e3342;
+
+  /* background: #242629; */
 }
 .App__aside.false.dark .dark{
   background-color: #202536;
+
+  /* background-color: #1b1b1f; */
 }
 
 .fa-sharp.fa-solid.fa-trash.dark{

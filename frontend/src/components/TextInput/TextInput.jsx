@@ -58,6 +58,7 @@ const TextInput = () => {
         id='buscador'
         type="text"
         placeholder={'Buscar por: ' + currentText}
+        // placeholder='Buscar'
         className="buscador"
         title='Buscador'
         onChange={verLargo}

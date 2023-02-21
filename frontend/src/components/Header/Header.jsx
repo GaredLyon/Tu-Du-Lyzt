@@ -17,7 +17,7 @@ const Header = () => {
 		setTags(values)
 	},[groups])
 
-	const { setTypeCards, setTypeColumn} = useContext(AppContext)
+	const {setTypeCards, setTypeColumn} = useContext(AppContext)
 
 	/////////////////////////////
 	const filtrarPorEstado = (e) => {
@@ -63,12 +63,12 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 3 */}
-					<select className="header__selector" name="tag" id="tag" title="Lista de tags">
+					{/* <select className="header__selector" name="tag" id="tag" title="Lista de tags">
 						<option value="">Todos</option>
 						{tags.map((tag, index) => (
 							<option key={index} value={tag}> {tag}</option>
 						))}
-					</select>
+					</select> */}
 
 					{/* SELECTOR 4 */}
 					{/* <select className="header__selector" name="time" id="time" title="Fecha de creación">
