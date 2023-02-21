@@ -18,7 +18,7 @@ const getColor = (priority) => {
 ///////////////////////////////////////////////////
 export const Card = ({ task }) => {
 
-  const { _id, priority, title, description } = task
+  const { _id, priority, title, description , state} = task
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   // const [cardVisible, setCardVisible] = useState(true)
 
@@ -53,7 +53,7 @@ export const Card = ({ task }) => {
   //CONFIRMACION PARA ELIMINAR TAREA********************************* */
   const [ventanaEliminar, setVentanaEliminar] = useState(false)
   const [ventanaCargando, setVentanaCargando] = useState(false)
-
+  const [ventanaMover, setVentanaMover] = useState(false)
 
   //////////////////////////////////
   return (
@@ -124,9 +124,7 @@ export const Card = ({ task }) => {
           </section>
           <section className='card__icon-container'>
             {/* ICONO ATRAS */}
-            <i className="fa-solid fa-arrow-left card__icon"></i>
-            {/* ICONO SIGUIENTE */}
-            <i className="fa-solid fa-arrow-right-long card__icon"></i>
+            <i class="fa-solid fa-up-down-left-right card__icon" onClick={() => setVentanaMover(true)}></i>
           </section>
         </aside>
       </>
@@ -139,6 +137,20 @@ export const Card = ({ task }) => {
             <div className='card-alert__container-button'>
               <button onClick={() => solicitarEliminar(_id)}>Confirmar</button>
               <button onClick={() => setVentanaEliminar(false)}>Cancelar</button>
+            </div>
+          </article>
+        )
+      }
+
+      {
+        ventanaMover && (
+          <article className='card-alert'>
+            <i class="fa-solid fa-xmark mover__icono-cerrar" onClick={() => setVentanaMover(false)}></i>
+            <h4 className='card-alert__title'>¿A donde los quieres mover?</h4>
+            <div className='card-alert__container-button'>
+              {state !== 'pendient' && (<button className='button-pendient'>Pendiente</button>)}
+              {state !== 'progress' && (<button className='button-process'>Proceso</button>)}
+              {state !== 'completed' && (<button className='button-completed'>Completado</button>)}
             </div>
           </article>
         )
