@@ -74,6 +74,14 @@ export const Aside = () => {
             </select>
           </div>
         </header>
+
+        {/* AVISO EN CASO DE NO ESCOGER LOS 4 CAMPOS */}
+        {
+          alertVisible && (
+            <p className='aside__aviso'>¡Campos incompletos!</p>
+          )
+        }
+
 				{/* CONTENEDOR DE TEXTO */}
 				<div className="header__text" data-theme>
 					<textarea className="header__input1" rows="1" placeholder="Titulo..." name="inputTitle" col={1}/>
@@ -81,15 +89,10 @@ export const Aside = () => {
 					<textarea className="header__input2" rows="9" placeholder="Descripcion..." name="inputDescription" />
 				</div>
 
-        {
-          alertVisible && (
-            <p className='aside__aviso'>¡Campos incompletos!</p>
-          )
-        }
 
         <div className='aside__container-icons'>
           <button type='submit' className='aside__button-create' title='Crear tarea'>Crear</button>
-          <button type='reset'  className='aside__button-delete' title='Limpiar formulario'>
+          <button type='reset'  className='aside__button-delete' title='Limpiar formulario' onClick={()=>setAlertaVisible(!alertVisible)}>
             <i className="fa-sharp fa-solid fa-trash" data-theme></i>
           </button>
           </div>
