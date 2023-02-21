@@ -62,7 +62,7 @@ App to keep track of pending and completed tasks.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/375px-React.svg.png" height="55px" />  
 <img src="https://camo.githubusercontent.com/d3af5ecb4b28914f8218d22ac2ca9e590e114412918e222392360c27f0039b25/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f362f36322f435353335f6c6f676f2e737667" height="55px" /> &nbsp;
-<img src="https://camo.githubusercontent.com/01d46ef9dff07a9f1065752ec48c5870b71ce9f013741766486ab0c432787fc8/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6e6f64656a732d312e737667" height="65px" />  &nbsp; 
+<img src="https://camo.githubusercontent.com/01d46ef9dff07a9f1065752ec48c5870b71ce9f013741766486ab0c432787fc8/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6e6f64656a732d312e737667" height="60px" />  &nbsp; 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" height="70px" />  
 <img src="https://camo.githubusercontent.com/76eef8f3cc351a6227d1ead376a039599f45c06efc48a6da32ec62f5482b34da/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6d6f6e676f64622d69636f6e2d312e737667" height="65px" />  
 
@@ -71,7 +71,7 @@ App to keep track of pending and completed tasks.
 
 ## 🌍 Deployment and website of the application
 
-You can try the application [here](https://github.com/GaredLyon/Tu-Du-Lyzt/).
+You can try the application [here](https://tudu-lyzt.netlify.app/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
 
