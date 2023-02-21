@@ -52,7 +52,7 @@ export const Card = ({ task }) => {
 
   //CONFIRMACION PARA ELIMINAR TAREA********************************* */
   const [ventanaEliminar, setVentanaEliminar] = useState(false)
-  const [ventanaCargando, setVentanaCargando] = useState(true)
+  const [ventanaCargando, setVentanaCargando] = useState(false)
 
 
   //////////////////////////////////
