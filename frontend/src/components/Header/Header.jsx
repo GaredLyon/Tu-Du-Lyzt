@@ -43,8 +43,14 @@ const Header = () => {
 				<section className="header__container-selectors">
 
 					{/* SELECTOR 1 */}
-					<select className="header__selector" name="priority" id="priority" title="Prioridad" onChange={filtrarPorPrioridad}>
-						<option  disabled selected>Prioridad</option>
+					<select
+						className="header__selector"
+						name="priority"
+						id="priority"
+						title="Prioridad"
+						defaultValue=''
+						onChange={filtrarPorPrioridad}>
+						<option disabled value=''>Prioridad</option>
 						<option value="all">Todos</option>
 						<option value="high">Alto</option>
 						<option value="middle">Medio</option>
@@ -52,8 +58,14 @@ const Header = () => {
 					</select>
 
 					{/* SELECTOR 2 */}
-					<select className="header__selector" name="column" id="column" title='Estado de las tareas' onChange={filtrarPorEstado}>
-						<option  disabled selected>Estado</option>
+					<select
+						className="header__selector"
+						name="column"
+						id="column"
+						title='Estado de las tareas'
+						defaultValue=''
+						onChange={filtrarPorEstado}>
+						<option disabled value=''>Estado</option>
 						<option value="all">Todos</option>
 						<option value="pendients">Pendientes</option>
 						<option value="progress">Proceso</option>
