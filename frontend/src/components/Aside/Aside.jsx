@@ -10,64 +10,72 @@ export const Aside = () => {
   const { getData } = useContext(AppContext)
 
   //PARA CAMBIAR TEMA ///////////////
-  const [checkedTheme, setCheckedTheme]= useState(localStorage.getItem("IsChecked")=="true"? true : false)
-  
-  useEffect(()=>{
+  const [checkedTheme, setCheckedTheme] = useState(localStorage.getItem("IsChecked") == "true" ? true : false)
+
+  useEffect(() => {
     localStorage.setItem("IsChecked", checkedTheme)
-    changeTheme({checkedTheme})
-  },[checkedTheme])
-  function handleCheckboxChange(){
+    changeTheme({ checkedTheme })
+  }, [checkedTheme])
+  function handleCheckboxChange() {
     setCheckedTheme(!checkedTheme)
   }
 
   //AGREGAR TAREA *******************
-  const addNewtask = async(e) => {
+  const addNewtask = async (e) => {
 
     //OBTENER TODOS LOS VALORES QUE NECESITO
     let title = e.target.inputTitle.value
     let description = e.target.inputDescription.value
-    let priority = e.target.priority.value 
-    let state = e.target.state.value 
+    let priority = e.target.priority.value
+    let state = e.target.state.value
 
-    console.log(title , description , priority , state)
+    // console.log(title, description, priority, state)
     // console.log(priority, state, title, description)
     if (title && description && priority && state) {
-      //LIMPIAR EL FORMULARIO
-      e.target.reset()
 
-      await addTask( title, description, priority, state)
+      setCardGuardando(true)
+
+      await addTask(title, description, priority, state)
+
+      setCardGuardando(false)
+      setAlertaVisible(false)
+
       getData()
 
-    } else{
+      // //LIMPIAR EL FORMULARIO
+      e.target.reset()
+
+    } else {
       setAlertaVisible(true)
     }
 
   }
 
   const [alertVisible, setAlertaVisible] = useState(false)
+  const [cardGuardando, setCardGuardando] = useState(false)
   //////////////////////////////
   return (
-		<aside className="aside">
-			<h3 className="aside__title">Tu-Du Lyzt</h3>
-			<form
-				className="aside__form"
-				onSubmit={(e) => {
-					e.preventDefault();
-					addNewtask(e);
-				}}
-				data-theme
-			>
+    <aside className="aside">
+      <h3 className="aside__title">Tu-Du Lyzt</h3>
+      <form
+        className="aside__form"
+        onSubmit={(e) => {
+          e.preventDefault();
+          addNewtask(e);
+        }}
+        data-theme
+      >
         {/* HEADER DEL FORMULARIO */}
         <header className='header__form'>
           <div className='aside__contenedor-selectores'>
             <select name='priority' title='Prioridad' defaultValue=''>
-              <option  disabled value=''>Titulo</option>
+              <option disabled value=''>Titulo</option>
               <option value='low'>Bajo</option>
               <option value='middle'>Medio</option>
               <option value='high'>Alto</option>
             </select>
             <select name='state' title='Estado' defaultValue=''>
-              <option  disabled value=''>Estado</option>
+              <option disabled value=''>Estado</option>
               <option value='pendient'>Pendiente</option>
               <option value='progress'>Proceso</option>
               {/* <option value='completed'>Completados</option> */}
@@ -82,24 +90,34 @@ export const Aside = () => {
           )
         }
 
-				{/* CONTENEDOR DE TEXTO */}
-				<div className="header__text" data-theme>
-					<textarea className="header__input1" rows="1" placeholder="Titulo..." name="inputTitle" col={1}/>
-					<hr />
-					<textarea className="header__input2" rows="9" placeholder="Descripcion..." name="inputDescription" />
-				</div>
+        {/* CONTENEDOR DE TEXTO */}
+        <div className="header__text" data-theme>
+          <textarea className="header__input1" rows="1" placeholder="Titulo..." name="inputTitle" col={1} />
+          <hr />
+          <textarea className="header__input2" rows="9" placeholder="Descripcion..." name="inputDescription" />
+
+          {/* CONTENEDOR CARGANDO FROMULARIO */}
+          {
+            cardGuardando && (
+              <div className='form-cargando'>
+                <div className='icono-cargando'></div>
+                <p>Guardando</p>
+              </div>
+            )
+          }
+        </div>
 
 
         <div className='aside__container-icons'>
           <button type='submit' className='aside__button-create' title='Crear tarea'>Crear</button>
-          <button type='reset'  className='aside__button-delete' title='Limpiar formulario' onClick={()=>setAlertaVisible(!alertVisible)}>
+          <button type='reset' className='aside__button-delete' title='Limpiar formulario' onClick={() => setAlertaVisible(!alertVisible)}>
             <i className="fa-sharp fa-solid fa-trash" data-theme></i>
           </button>
-          </div>
+        </div>
       </form>
-      
+
       <input type="checkbox" className="l" onChange={handleCheckboxChange} checked={checkedTheme}></input>
-      
+
     </aside>
   )
 }
