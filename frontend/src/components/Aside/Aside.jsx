@@ -36,11 +36,10 @@ export const Aside = () => {
       setCardGuardando(true)
 
       await addTask(title, description, priority, state)
+      getData()
 
       setCardGuardando(false)
       setAlertaVisible(false)
-
-      getData()
 
       // //LIMPIAR EL FORMULARIO
       e.target.reset()
