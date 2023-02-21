@@ -173,10 +173,10 @@
 .card-alert__container-button{
   /* background-color: red; */
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
 }
 .card-alert__container-button button{
-  padding: 1rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: .5rem;
   border: none;
   color: #333;
@@ -229,6 +229,28 @@
   font-size: 2rem;
 }
 
+/* ICONO CERRA _ MOVER */
+.mover__icono-cerrar{
+  position: absolute;
+  top: 8px;
+  right:8px ;
+  font-size: 2rem;
+  background: white;
+  padding: .8rem 1rem;
+  border-radius: 1.5rem;
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.mover__icono-cerrar:hover{
+  background: #333;
+  color: white;
+}
+
 @keyframes girar {
   to{
     transform: rotateZ(0deg);
@@ -236,4 +258,32 @@
   from{
     transform: rotateZ(360deg);
   }
+}
+
+/* BOTONES DE MOVER */
+.button-pendient,
+.button-process,
+.button-completed{
+  color: white !important;
+  cursor: pointer;
+}
+
+.card-alert .card-alert__container-button .button-pendient{
+  background: #a2a5ae ;
+}
+.card-alert .card-alert__container-button .button-process{
+  background: #ae87f3 ;
+}
+.card-alert .card-alert__container-button .button-completed{
+  background: #5ccd87 ;
+}
+
+.card-alert .card-alert__container-button .button-pendient:hover{
+  background: #575a62 ;
+}
+.card-alert .card-alert__container-button .button-process:hover{
+  background: #985dff ;
+}
+.card-alert  .card-alert__container-button .button-completed:hover{
+  background: #30c76a ;
 }
