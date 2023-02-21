@@ -12,7 +12,7 @@ export const formatHour = (fechaGuardada) => {
   // Crear una cadena de tiempo transcurrido formateada
   
   if (diffHours >= 1 )
-    return `hace ${diffHours} hrs, ${diffMinutes} min y ${diffSeconds} s`;
+    return `Hace ${diffHours} hrs, ${diffMinutes} min y ${diffSeconds} s`;
 
   else if (diffMinutes >= 1) {
     return `Hace ${diffMinutes} min y ${diffSeconds} seg`
