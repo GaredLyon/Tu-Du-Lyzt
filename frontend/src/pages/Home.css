@@ -29,6 +29,7 @@
 .App__aside::-webkit-scrollbar {
   background: transparent;
   width: .5rem;
+  display: none;
 }
 .App__aside::-webkit-scrollbar-thumb {
   background: #33333335;
@@ -83,8 +84,8 @@
   position: sticky;
   top: 0;
   z-index: 2;
-  border-bottom: 0.1rem solid rgba(128, 128, 128, 0.321);
-  box-shadow: 0 5px 5px rgba(128, 128, 128, 0.134);
+  /* border-bottom: 0.1rem solid rgba(128, 128, 128, 0.321); */
+  /* box-shadow: 0 5px 5px rgba(128, 128, 128, 0.134); */
 }
 
 /* .Header__boton-abrir{
