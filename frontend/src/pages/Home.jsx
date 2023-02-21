@@ -1,11 +1,10 @@
-/* ES TO EN */
-
 import { Main } from "../components/Main/Main"
 import { Aside } from "../components/Aside/Aside"
 import Header  from "../components/Header/Header"
 import { useState } from "react"
 import './Home.css'
 
+////////////////////////////////////////////
 function Home() {
 
   const [asideVisible, setAsideVisible] = useState(false)
@@ -14,6 +13,7 @@ function Home() {
     setAsideVisible(valor)
   }
 
+  ////////////////////////////////////////////
   return (
     <main className="App">
       {/* ASIDE */}

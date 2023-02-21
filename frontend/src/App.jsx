@@ -2,14 +2,15 @@ import React, { useEffect, useState } from 'react'
 import Home from './pages/Home'
 //IMPORTAMOS NUESTRO CONTEXTO
 import { AppContext } from './context/AppContext'
-// import { data } from './data/data'
 import { getListTasks } from './helpers/getListTasks'
 
 /////////////////////////////////////
 export const App = () => {
   const [groups, setGroups] = useState([])
+  const [typeColumn, setTypeColumn] = useState('all')
+  const [typeCards, setTypeCards] = useState('all')
 
-  //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL
+  //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL ////////////////////////
   const getData = async() => {
     let result = await getListTasks()
     setGroups(result)
@@ -19,7 +20,11 @@ export const App = () => {
   let globalStates = {
     groups,
     setGroups,
-    getData
+    getData,
+    typeColumn,
+    setTypeColumn,
+    typeCards,
+    setTypeCards
   }
 
 
