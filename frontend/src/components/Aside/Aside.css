@@ -48,7 +48,7 @@
 }
 
 .header__form select{
-  padding: .2rem .5rem;
+  padding: .5rem .5rem;
   border-radius: .5rem;
   flex-grow: 1;
 }
@@ -243,4 +243,13 @@
 
 .fa-sharp.fa-solid.fa-trash.dark{
   color: white;
+}
+
+/* ASIDE AVISO */
+.aside__aviso{
+  text-align: center;
+  color: crimson;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 1.9rem;
 }
