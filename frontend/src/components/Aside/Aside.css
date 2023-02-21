@@ -6,6 +6,7 @@
   align-items: center;
 }
 
+
 .aside__title {
   font-size: 3.5rem;
   text-align: center;
@@ -233,14 +234,11 @@
 
 /* DARK THEME */
 .App__aside.false.dark{
-  background-color: #2e3342;
-
-  /* background: #242629; */
+  background: #242629;
+  background: #2b2e31;
 }
 .App__aside.false.dark .dark{
-  background-color: #202536;
-
-  /* background-color: #1b1b1f; */
+  background: #1a1c1e;
 }
 
 .fa-sharp.fa-solid.fa-trash.dark{

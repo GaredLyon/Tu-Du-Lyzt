@@ -49,7 +49,7 @@ export const Card = ({ task }) => {
   }
   //////////////////////////////////
   return (
-    <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`} draggable>
+    <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`}>
 
       {/* CARD MAIN */}
       <main className='card__main'>
@@ -58,7 +58,7 @@ export const Card = ({ task }) => {
           className='card__title'
           defaultValue={title}
           disabled={cardEditable}
-          maxLength={20}
+          maxLength={12}
           rows="1" />
         <textarea
           id={`input2-task${_id}`}

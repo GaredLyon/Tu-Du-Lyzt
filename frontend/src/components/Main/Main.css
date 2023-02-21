@@ -68,15 +68,9 @@
 		gap: 2rem;
 	}
 }
-.container-columns.dark{
-	background-color: #283946;
-
-	/* background: #242629; */
+.container-columns.dark {
+  background: #333639 ;
 }
 .container-columns.dark .dark{
-	background-color: #202536;
-
-	/* background: green; */
-  /* background-color: #1b1b1f; */
-
+  background: #25282b;
 }
