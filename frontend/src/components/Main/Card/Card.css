@@ -224,6 +224,11 @@
   background: radial-gradient(#73767e 50%, transparent 50%);
 }
 
+.card-alert--cargando p{
+  color: white;
+  font-size: 2rem;
+}
+
 @keyframes girar {
   to{
     transform: rotateZ(0deg);

@@ -52,7 +52,7 @@ export const Card = ({ task }) => {
 
   //CONFIRMACION PARA ELIMINAR TAREA********************************* */
   const [ventanaEliminar, setVentanaEliminar] = useState(false)
-  const [ventanaCargando, setVentanaCargando] = useState(false)
+  const [ventanaCargando, setVentanaCargando] = useState(true)
 
 
   //////////////////////////////////
@@ -147,8 +147,8 @@ export const Card = ({ task }) => {
       {
         ventanaCargando && (
           <article className='card-alert card-alert--cargando'>
-            <div className='icono-cargando'>
-            </div>
+            <div className='icono-cargando'></div>
+            <p>Eliminando</p>
           </article>
         )
       }
