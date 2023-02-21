@@ -81,6 +81,9 @@
   border: none;
   resize: none;
 }
+.header__text textarea::-webkit-scrollbar{
+  display: none;
+}
 
 .header__input1{
   font-weight: bold;
@@ -118,13 +121,22 @@
   flex-grow: 1;
 }
 
+.aside__button-delete{
+  max-width: 60px;
+  background: rgb(255, 117, 117);
+}
+
 .aside__button-delete i{
   color: white !important;
 }
 
-.aside__button-create:hover,
-.aside__button-delete:hover{
+.aside__button-create:hover{
   background-color: #4ba26c;
+}
+
+
+.aside__button-delete:hover{
+  background: rgb(214, 93, 93);
 }
 
 

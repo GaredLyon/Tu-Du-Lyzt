@@ -29,16 +29,16 @@ export const Aside = () => {
     let priority = e.target.priority.value 
     let state = e.target.state.value 
 
+    // console.log(title , description , priority , state)
     // console.log(priority, state, title, description)
+    if (title && description && priority && state) {
+      //LIMPIAR EL FORMULARIO
+      e.target.reset()
 
-    if (title || description) {
       await addTask( title, description, priority, state)
-
       getData()
     }
 
-    //LIMPIAR EL FORMULARIO
-    e.target.reset()
   }
 
 
@@ -58,13 +58,13 @@ export const Aside = () => {
         <header className='header__form'>
           <div className='aside__contenedor-selectores'>
             <select name='priority' title='Prioridad'>
-              <option  disabled selected value='low'>Titulo</option>
+              <option  disabled selected value=''>Titulo</option>
               <option value='low'>Bajo</option>
               <option value='middle'>Medio</option>
               <option value='high'>Alto</option>
             </select>
             <select name='state' title='Estado'>
-              <option  disabled selected value='pendient'>Estado</option>
+              <option  disabled selected value=''>Estado</option>
               <option value='pendient'>Pendientes</option>
               <option value='progress'>Proceso</option>
               <option value='completed'>Completados</option>
@@ -73,13 +73,13 @@ export const Aside = () => {
         </header>
 				{/* CONTENEDOR DE TEXTO */}
 				<div className="header__text" data-theme>
-					<textarea className="header__input1" rows="1" placeholder="Titulo..." name="inputTitle" />
+					<textarea className="header__input1" rows="1" placeholder="Titulo..." name="inputTitle" col={1}/>
 					<hr />
 					<textarea className="header__input2" rows="9" placeholder="Descripcion..." name="inputDescription" />
 				</div>
 
         <div className='aside__container-icons'>
-          <button type='submit' className='aside__button-create'>Crear</button>
+          <button type='submit' className='aside__button-create' title='Crear tarea'>Crear</button>
           <button type='reset'  className='aside__button-delete' title='Limpiar formulario'>
             <i className="fa-sharp fa-solid fa-trash" data-theme></i>
           </button>
