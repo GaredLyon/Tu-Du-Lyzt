@@ -43,103 +43,113 @@ export const Card = ({ task }) => {
   }
 
   const solicitarEliminar = async () => {
+    setVentanaCargando(true)
+
     await deleteTasks(_id)
     getData()
     // setCardVisible(!cardVisible)
   }
 
   //CONFIRMACION PARA ELIMINAR TAREA********************************* */
-  const [segundaVentana, setSegundaVentana] = useState(false)
-
-
+  const [ventanaEliminar, setVentanaEliminar] = useState(false)
+  const [ventanaCargando, setVentanaCargando] = useState(false)
 
 
   //////////////////////////////////
   return (
     <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`}>
+      <>
+        {/* CARD MAIN */}
+        <main className='card__main'>
+          <textarea
+            id={`input1-task${_id}`}
+            className='card__title'
+            defaultValue={title}
+            disabled={cardEditable}
+            maxLength={12}
+            rows="1"
+          />
+          <textarea
+            id={`input2-task${_id}`}
+            className='card__container'
+            defaultValue={description}
+            disabled={cardEditable}
+          />
+        </main>
+
+        {/* CARD ASIDE */}
+        <aside className='card__aside'>
+          <section className='card__icon-container'>
+            {/* ICONO TACHO */}
+            <i
+              className="fa-sharp fa-solid fa-trash card__icon"
+              title='Eliminar tarea'
+              // onClick={() => solicitarEliminar(_id)}
+              onClick={() => setVentanaEliminar(true)}
+            ></i>
+            {
+              cardEditable ? (
+                /* ICONO LAPIZ */
+                <i
+                  className="fa-solid fa-pencil card__icon"
+                  title='Editar tarea'
+                  onClick={() => setCardEditable(!cardEditable)}>
+                </i>
+              ) : (
+                /* ICONO GUARDAR */
+                <i
+                  className="fa-solid fa-floppy-disk card__icon"
+                  title='Guardar tarea'
+                  onClick={() => {
+                    solicitarCambio(_id)
+                    setCardEditable(!cardEditable)
+                  }}>
+                </i>
+              )
+            }
+
+            <div className='caja__icon'>
+              {/* ICONO DE RELOJ */}
+              <i className={`fa-solid fa-clock card__icon`} title='Hace cuanto atras fue creado'></i>
+              <div className='card__alert'>{timeElapsed}</div>
+              <div className='card__alert'>{ }</div>
+            </div>
+
+            <div className='caja__icon'>
+              {/* ICONO DE CALENDARIO */}
+              <i className={`fa-solid fa-calendar card__icon`} title='Fecha de creacion'></i>
+              <div className='card__alert'>{formatDate(task.date)}</div>
+            </div>
+
+          </section>
+          <section className='card__icon-container'>
+            {/* ICONO ATRAS */}
+            <i className="fa-solid fa-arrow-left card__icon"></i>
+            {/* ICONO SIGUIENTE */}
+            <i className="fa-solid fa-arrow-right-long card__icon"></i>
+          </section>
+        </aside>
+      </>
+
 
       {
-        !segundaVentana ? (
-          <>
-            {/* CARD MAIN */}
-            <main className='card__main'>
-              <textarea
-                id={`input1-task${_id}`}
-                className='card__title'
-                defaultValue={title}
-                disabled={cardEditable}
-                maxLength={12}
-                rows="1"
-              />
-              <textarea
-                id={`input2-task${_id}`}
-                className='card__container'
-                defaultValue={description}
-                disabled={cardEditable}
-              />
-            </main>
-
-            {/* CARD ASIDE */}
-            <aside className='card__aside'>
-              <section className='card__icon-container'>
-                {/* ICONO TACHO */}
-                <i
-                  className="fa-sharp fa-solid fa-trash card__icon"
-                  title='Eliminar tarea'
-                  // onClick={() => solicitarEliminar(_id)}
-                  onClick={() => setSegundaVentana(true)}
-                  ></i>
-                {
-                  cardEditable ? (
-                    /* ICONO LAPIZ */
-                    <i
-                      className="fa-solid fa-pencil card__icon"
-                      title='Editar tarea'
-                      onClick={() => setCardEditable(!cardEditable)}>
-                    </i>
-                  ) : (
-                    /* ICONO GUARDAR */
-                    <i
-                      className="fa-solid fa-floppy-disk card__icon"
-                      title='Guardar tarea'
-                      onClick={() => {
-                        solicitarCambio(_id)
-                        setCardEditable(!cardEditable)
-                      }}>
-                    </i>
-                  )
-                }
-
-                <div className='caja__icon'>
-                  {/* ICONO DE RELOJ */}
-                  <i className={`fa-solid fa-clock card__icon`} title='Hace cuanto atras fue creado'></i>
-                  <div className='card__alert'>{timeElapsed}</div>
-                  <div className='card__alert'>{ }</div>
-                </div>
-
-                <div className='caja__icon'>
-                  {/* ICONO DE CALENDARIO */}
-                  <i className={`fa-solid fa-calendar card__icon`} title='Fecha de creacion'></i>
-                  <div className='card__alert'>{formatDate(task.date)}</div>
-                </div>
-
-              </section>
-              <section className='card__icon-container'>
-                {/* ICONO ATRAS */}
-                <i className="fa-solid fa-arrow-left card__icon"></i>
-                {/* ICONO SIGUIENTE */}
-                <i className="fa-solid fa-arrow-right-long card__icon"></i>
-              </section>
-            </aside>
-          </>
-        ) : (
-          <div className='card-alert'>
+        ventanaEliminar && (
+          <article className='card-alert'>
             <h4 className='card-alert__title'>¿Estas seguro que quieres Eliminar?</h4>
             <div className='card-alert__container-button'>
               <button onClick={() => solicitarEliminar(_id)}>Confirmar</button>
-              <button onClick={() => setSegundaVentana(false)}>Cancelar</button>
+              <button onClick={() => setVentanaEliminar(false)}>Cancelar</button>
             </div>
-          </div>
+          </article>
+        )
+      }
+
+      {
+        ventanaCargando && (
+          <article className='card-alert card-alert--cargando'>
+            <div className='icono-cargando'>
+            </div>
+          </article>
         )
       }
 

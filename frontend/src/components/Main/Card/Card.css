@@ -143,6 +143,8 @@
   /* background: violet; */
   background: rgba(0, 0, 0, 0.099);
   background: rgba(0, 0, 0, 0.178);
+  background: #488ac2;
+  background: #333;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -192,4 +194,43 @@
 .card-alert__container-button button:last-child:hover{
   background: rgb(222, 64, 96);
   color: white;
+}
+
+/* ////////////////////// */
+.card-alert--cargando{
+  z-index: 10;
+}
+
+.icono-cargando{
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  /* background: radial-gradient(red 50%, blue 50%); */
+  /* background: conic-gradient(white 90%, #333 90%); */
+  /* background: conic-gradient(white 0%, #333 90%); */
+  background: conic-gradient( #333 0%, white 90%);
+  animation: girar 1s infinite reverse;
+  transition: 300ms;
+}
+
+.icono-cargando:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 0, 0.753);
+  position: absolute;
+  border-radius: 100%;
+  background: radial-gradient(#333 50%, transparent 50%);
+}
+
+@keyframes girar {
+  to{
+    transform: rotateZ(0deg);
+    /* background: conic-gradient(white 50%, #333 50%); */
+  }
+  from{
+    transform: rotateZ(360deg);
+    /* background: conic-gradient(white 50%, #333 90%); */
+  }
 }
