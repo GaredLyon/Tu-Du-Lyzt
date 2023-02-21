@@ -38,6 +38,7 @@
   outline: none;
   resize: none;
   font-size: var(--xl);
+
 }
 .card__title:disabled {
   border-bottom: 0.1rem solid var(--gray1);
@@ -129,17 +130,9 @@
   transform: rotateZ(-270deg) scale(0.6);
 }
 
-@media (min-width: 1325px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */
+@media (min-width: 1300px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */
   .card{
-    /* background-color: red; */
     flex-grow: 1;
-
-
-  }
-
-  .card--1column{ /* NO SE ESTA USANDO, PERO DISPONIBLE POR SI LO NECESITO MAS LUEGO */
-    /* PARA CUANDO SOLO HAY UNA COLUMNA */
-    width: 300px; 
   }
 }
 
