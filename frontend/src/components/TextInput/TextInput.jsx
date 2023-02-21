@@ -61,13 +61,13 @@ const TextInput = () => {
       <input
         id='buscador'
         type="text"
-        placeholder={'Buscar por: ' + currentText}
-        // placeholder='Buscar'
+        // placeholder={'Buscar por: ' + currentText}
+        placeholder='Buscar'
         className="buscador"
         title='Buscador'
         onChange={verLargo}
       />
-      {/* <i className="fa-solid fa-magnifying-glass" onClick={buscar}></i> */}
+      <i className="fa-solid fa-magnifying-glass" onClick={buscar}></i>
     </div>
   );
 };
