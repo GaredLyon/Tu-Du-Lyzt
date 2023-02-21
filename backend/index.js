@@ -1,20 +1,29 @@
-import express from 'express';
-import env from './config/envConfig.js';
-import connectDB from './config/db.js';
-import taskRoutes from './routes/taskRoutes.js';
+const {conexion} = require('./data/conexion') //IMPORTAR ARCHIVO - MONGOOSE
+conexion() //EJECUTANDO LA CONEXION -  MONGOOSE
 
-const { PORT} = env;
-const app = express();
+///////////////////////////////////////////////
+const express = require('express') // IMPORTARLO - EXPRESS
+const app = express() //CREAR LA APP - EXPRESS
+app.use(express.json()) //para convertir body a objeto js - EXPRESS
+app.use(express.urlencoded({extended:true})) //para convertir form-urlencoded a json - EXPRESS
+// app.use(express.static('public')) // establecer la carpeta "public" como la raiz - EXPRESS
 
-connectDB();
-app.use(express.json());
-app.use('/api/tasks', taskRoutes);
+///////////////////////////////////////////////
+const cors = require('cors') // IMPORTARLO - CORS
+app.use(cors()) //CONFIGURARLO - CORS
 
+////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////
+//RUTAS
+const rutas_tareas = require('./routes/tareas') //importar el archivo de rutas para el articulo
+app.use('/api/', rutas_tareas) // cargamos las rutas en app
 
-app.get('/', (req, res) => {
-    res.json({msg:'Hello World! '});
-    });
+//////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////
+require('dotenv').config() //para poder usar Variables de Entorno - DOTENV
+const PUERTO = process.env.PORT
 
-const Port =  PORT || 5000;
-
-app.listen(Port, () => console.log(`Server started on port ${Port} 🔥🔥`));
+//CREAR SERVIDOR Y ESCUCHANDO PETICIONES HTTP
+app.listen(PUERTO, () => {
+  console.log(`La servidor está escuchando en el puerto ${PUERTO}`)
+})
