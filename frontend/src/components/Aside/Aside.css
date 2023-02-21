@@ -41,15 +41,22 @@
   gap: 1rem;
 }
 
+.aside__contenedor-selectores{
+  display: flex;
+  width: 100%;
+}
+
 .header__form select{
   padding: .2rem .5rem;
   border-radius: .5rem;
+  flex-grow: 1;
 }
 
 .aside__container-icons{
   border: none;
   background: transparent;
   cursor: pointer;
+  /* background: red; */
 }
 
 .header__form i{
@@ -91,7 +98,15 @@
   border-top: 0.1rem solid #333;
 }
 
-.aside__button-create{
+
+.aside__container-icons{
+  /* background: red; */
+  display: flex;
+  gap: .8rem;
+}
+
+.aside__button-create,
+.aside__button-delete{
   background-color: #5ccd87;
   padding: 1rem;
   border-radius: 1rem;
@@ -100,17 +115,35 @@
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  flex-grow: 1;
 }
 
-.aside__button-create:hover{
+.aside__button-delete i{
+  color: white !important;
+}
+
+.aside__button-create:hover,
+.aside__button-delete:hover{
   background-color: #4ba26c;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* BOTON THEME */
 .fa-sharp.fa-solid.fa-trash{
   color: black;
 }
 
-/* BOTON THEME */
 .l {
   display: block;
   margin-bottom: 1.5em;

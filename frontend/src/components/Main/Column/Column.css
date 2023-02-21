@@ -90,7 +90,8 @@
   }
 }
 
-@media (min-width: 1325px) {
+/* @media (min-width: 1325px) { */
+  @media (min-width: 1460px) {
   .column {
     align-items: initial;
     /* max-width: calc(100% / 3.2); */

@@ -53,8 +53,9 @@ export const Aside = () => {
 
         {/* HEADER DEL FORMULARIO */}
         <header className='header__form'>
-          <div>
-            <select name='priority' title='Prioridad' defaultValue='low'>
+          <div className='aside__contenedor-selectores'>
+            <select name='priority' title='Prioridad'>
+              <option  disabled selected>Titulo</option>
               <option value='low'>Bajo</option>
               <option value='middle'>Medio</option>
               <option value='high'>Alto</option>
@@ -64,15 +65,6 @@ export const Aside = () => {
               <option value='progress'>Proceso</option>
               <option value='completed'>Completados</option>
             </select>
-          </div>
-
-          <div>
-            {/* <button type='button' className='aside__contenedor-iconos'>
-              <i className="fa-regular fa-calendar"></i>
-            </button> */}
-            <button type='reset'  className='aside__container-icons' title='Limpiar formulario'>
-              <i className="fa-sharp fa-solid fa-trash" data-theme></i>
-            </button>
           </div>
 
         </header>
@@ -92,7 +84,13 @@ export const Aside = () => {
             name='inputDescription' />
         </div>
 
-        <button type='submit' className='aside__button-create'>Crear</button>
+
+        <div className='aside__container-icons'>
+          <button type='submit' className='aside__button-create'>Crear</button>
+          <button type='reset'  className='aside__button-delete' title='Limpiar formulario'>
+            <i className="fa-sharp fa-solid fa-trash" data-theme></i>
+          </button>
+          </div>
       </form>
       
       <input type="checkbox" className="l" onChange={handleCheckboxChange} checked={checkedTheme}></input>
