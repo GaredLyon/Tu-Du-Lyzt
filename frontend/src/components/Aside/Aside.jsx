@@ -37,11 +37,13 @@ export const Aside = () => {
 
       await addTask( title, description, priority, state)
       getData()
+    } else{
+      setAlertaVisible(true)
     }
 
   }
 
-
+  const [alertVisible, setAlertaVisible] = useState(false)
   //////////////////////////////
   return (
 		<aside className="aside">
@@ -77,6 +79,12 @@ export const Aside = () => {
 					<hr />
 					<textarea className="header__input2" rows="9" placeholder="Descripcion..." name="inputDescription" />
 				</div>
+
+        {
+          alertVisible && (
+            <p className='aside__aviso'>¡Campos incompletos!</p>
+          )
+        }
 
         <div className='aside__container-icons'>
           <button type='submit' className='aside__button-create' title='Crear tarea'>Crear</button>
