@@ -142,6 +142,7 @@
 .card-alert{
   /* background: violet; */
   background: rgba(0, 0, 0, 0.099);
+  background: rgba(0, 0, 0, 0.178);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -174,18 +175,21 @@
   padding: 1rem 2rem;
   border-radius: .5rem;
   border: none;
-  color: white;
+  color: #333;
+  font-weight: bold;
 }
 
 .card-alert__container-button button:first-child{
-  background: rgb(66, 158, 66);
+  background: rgb(179, 255, 179);
 }
 .card-alert__container-button button:last-child{
-  background: crimson;
+  background: rgb(255, 193, 205);
 }
 .card-alert__container-button button:first-child:hover{
   background: rgb(78, 188, 78);
+  color: white;
 }
 .card-alert__container-button button:last-child:hover{
   background: rgb(222, 64, 96);
+  color: white;
 }
