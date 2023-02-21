@@ -5,6 +5,7 @@ import { formatHour } from '../../../helpers/formatHour'
 import { deleteTasks } from '../../../helpers/deleteTask'
 import { editTask } from '../../../helpers/editTask'
 import { AppContext } from '../../../context/AppContext'
+import { moveTask } from '../../../helpers/movetask'
 
 //obtener el color
 const getColor = (priority) => {
@@ -18,7 +19,7 @@ const getColor = (priority) => {
 ///////////////////////////////////////////////////
 export const Card = ({ task }) => {
 
-  const { _id, priority, title, description , state} = task
+  const { _id, priority, title, description, state } = task
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   // const [cardVisible, setCardVisible] = useState(true)
 
@@ -50,10 +51,23 @@ export const Card = ({ task }) => {
     // setCardVisible(!cardVisible)
   }
 
+  const solicitarMover = async (id, state) => {
+    setVentanaMoviendo(true)
+
+    let respuesta = await moveTask(id, state)
+
+    // console.log(respuesta)
+
+    if (respuesta.status) {
+      getData()
+    }
+  }
+
   //CONFIRMACION PARA ELIMINAR TAREA********************************* */
   const [ventanaEliminar, setVentanaEliminar] = useState(false)
   const [ventanaCargando, setVentanaCargando] = useState(false)
   const [ventanaMover, setVentanaMover] = useState(false)
+  const [ventanaMoviendo, setVentanaMoviendo] = useState(false)
 
   //////////////////////////////////
   return (
@@ -148,9 +162,9 @@ export const Card = ({ task }) => {
             <i className="fa-solid fa-xmark mover__icono-cerrar" onClick={() => setVentanaMover(false)}></i>
             <h4 className='card-alert__title'>¿A donde los quieres mover?</h4>
             <div className='card-alert__container-button'>
-              {state !== 'pendient' && (<button className='button-pendient' onClick={() => console.log('mover a pendient')}>Pendiente</button>)}
-              {state !== 'progress' && (<button className='button-process' onClick={() => console.log('mover a progress')}>Proceso</button>)}
-              {state !== 'completed' && (<button className='button-completed' onClick={() => console.log('mover a completed')}>Completado</button>)}
+              {state !== 'pendient' && (<button className='button-pendient' onClick={() => solicitarMover(_id, 'pendient')}>Pendiente</button>)}
+              {state !== 'progress' && (<button className='button-process' onClick={() => solicitarMover(_id, 'progress')}>Proceso</button>)}
+              {state !== 'completed' && (<button className='button-completed' onClick={() => solicitarMover(_id, 'completed')}>Completado</button>)}
             </div>
           </article>
         )
@@ -161,6 +175,15 @@ export const Card = ({ task }) => {
           <article className='card-alert card-alert--cargando'>
             <div className='icono-cargando'></div>
             <p>Eliminando</p>
+          </article>
+        )
+      }
+
+      {
+        ventanaMoviendo && (
+          <article className='card-alert card-alert--cargando'>
+            <div className='icono-cargando'></div>
+            <p>Moviendo</p>
           </article>
         )
       }
