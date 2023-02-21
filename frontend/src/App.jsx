@@ -9,6 +9,7 @@ export const App = () => {
   const [groups, setGroups] = useState([])
   const [typeColumn, setTypeColumn] = useState('all')
   const [typeCards, setTypeCards] = useState('all')
+  const [busqueda, setBusqueda] = useState('')
 
   //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL ////////////////////////
   const getData = async() => {
@@ -24,7 +25,9 @@ export const App = () => {
     typeColumn,
     setTypeColumn,
     typeCards,
-    setTypeCards
+    setTypeCards,
+    busqueda,
+    setBusqueda
   }
 
 

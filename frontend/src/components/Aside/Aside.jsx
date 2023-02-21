@@ -24,12 +24,12 @@ export const Aside = () => {
   const addNewtask = async(e) => {
 
     //OBTENER TODOS LOS VALORES QUE NECESITO
-    let title = e.target.inputTitle.value 
+    let title = e.target.inputTitle.value
     let description = e.target.inputDescription.value
     let priority = e.target.priority.value 
     let state = e.target.state.value 
 
-    // console.log(title , description , priority , state)
+    console.log(title , description , priority , state)
     // console.log(priority, state, title, description)
     if (title && description && priority && state) {
       //LIMPIAR EL FORMULARIO
@@ -37,6 +37,7 @@ export const Aside = () => {
 
       await addTask( title, description, priority, state)
       getData()
+
     } else{
       setAlertaVisible(true)
     }
@@ -59,14 +60,14 @@ export const Aside = () => {
         {/* HEADER DEL FORMULARIO */}
         <header className='header__form'>
           <div className='aside__contenedor-selectores'>
-            <select name='priority' title='Prioridad'>
-              <option  disabled selected value=''>Titulo</option>
+            <select name='priority' title='Prioridad' defaultValue=''>
+              <option  disabled value=''>Titulo</option>
               <option value='low'>Bajo</option>
               <option value='middle'>Medio</option>
               <option value='high'>Alto</option>
             </select>
-            <select name='state' title='Estado'>
-              <option  disabled selected value=''>Estado</option>
+            <select name='state' title='Estado' defaultValue=''>
+              <option  disabled value=''>Estado</option>
               <option value='pendient'>Pendientes</option>
               <option value='progress'>Proceso</option>
               <option value='completed'>Completados</option>

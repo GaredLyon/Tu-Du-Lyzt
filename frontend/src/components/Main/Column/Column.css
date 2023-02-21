@@ -128,14 +128,11 @@
   }
 
   .column {
-    width: 35rem;
-    width: 30rem;
-    width: 25rem;
     width: 20rem;
   }
 
   .column__container-cards {
-    height: calc(100vh - 19rem);
+    height: calc(100vh - 20rem);
     overflow-y: scroll;
     align-content: start;
   }

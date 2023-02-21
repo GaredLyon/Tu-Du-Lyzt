@@ -34,10 +34,14 @@ const TextInput = () => {
   }, []);
 
   //FUNCIONAMIENTO DEL BUSCADOR/////////////////
-  const {groups, setGroups, getData} = useContext(AppContext)
+  const {groups, setGroups, getData,setBusqueda} = useContext(AppContext)
 
   const buscar = async () => {
     const busqueda = document.getElementById('buscador').value
+
+    //para las negritas
+    setBusqueda(busqueda)
+    
     // console.log(busqueda)
     const resultados = await search(busqueda)
     setGroups(resultados)

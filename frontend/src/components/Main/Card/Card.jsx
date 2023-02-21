@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext,  useState } from 'react'
 import './Card.css'
 import { formatDate } from '../../../helpers/formatDate'
 import { formatHour } from '../../../helpers/formatHour'
@@ -22,7 +22,7 @@ export const Card = ({ task }) => {
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   // const [cardVisible, setCardVisible] = useState(true)
 
-  const {getData, typeCards} = useContext(AppContext)
+  const {getData, typeCards, busqueda, setBusqueda} = useContext(AppContext)
 
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
   const [timeElapsed, setTimeElapsed] = useState(true)
@@ -47,6 +47,8 @@ export const Card = ({ task }) => {
       getData()
       // setCardVisible(!cardVisible)
   }
+
+
   //////////////////////////////////
   return (
     <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`}>
@@ -59,7 +61,8 @@ export const Card = ({ task }) => {
           defaultValue={title}
           disabled={cardEditable}
           maxLength={12}
-          rows="1" />
+          rows="1"
+          />
         <textarea
           id={`input2-task${_id}`}
           className='card__container'
