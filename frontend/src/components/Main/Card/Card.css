@@ -265,6 +265,7 @@
 .button-process,
 .button-completed{
   color: white !important;
+  cursor: pointer;
 }
 
 .card-alert .card-alert__container-button .button-pendient{

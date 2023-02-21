@@ -124,7 +124,7 @@ export const Card = ({ task }) => {
           </section>
           <section className='card__icon-container'>
             {/* ICONO ATRAS */}
-            <i class="fa-solid fa-up-down-left-right card__icon" onClick={() => setVentanaMover(true)}></i>
+            <i className="fa-solid fa-up-down-left-right card__icon" onClick={() => setVentanaMover(true)}></i>
           </section>
         </aside>
       </>
@@ -145,12 +145,12 @@ export const Card = ({ task }) => {
       {
         ventanaMover && (
           <article className='card-alert'>
-            <i class="fa-solid fa-xmark mover__icono-cerrar" onClick={() => setVentanaMover(false)}></i>
+            <i className="fa-solid fa-xmark mover__icono-cerrar" onClick={() => setVentanaMover(false)}></i>
             <h4 className='card-alert__title'>¿A donde los quieres mover?</h4>
             <div className='card-alert__container-button'>
-              {state !== 'pendient' && (<button className='button-pendient'>Pendiente</button>)}
-              {state !== 'progress' && (<button className='button-process'>Proceso</button>)}
-              {state !== 'completed' && (<button className='button-completed'>Completado</button>)}
+              {state !== 'pendient' && (<button className='button-pendient' onClick={() => console.log('mover a pendient')}>Pendiente</button>)}
+              {state !== 'progress' && (<button className='button-process' onClick={() => console.log('mover a progress')}>Proceso</button>)}
+              {state !== 'completed' && (<button className='button-completed' onClick={() => console.log('mover a completed')}>Completado</button>)}
             </div>
           </article>
         )
