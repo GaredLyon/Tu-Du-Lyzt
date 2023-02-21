@@ -1,10 +1,11 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './Card.css'
 import { formatDate } from '../../../helpers/formatDate'
 import { formatHour } from '../../../helpers/formatHour'
 import { deleteTasks } from '../../../helpers/deleteTask'
 import { editTask } from '../../../helpers/editTask'
 import { AppContext } from '../../../context/AppContext'
+import { strongText } from '../../../helpers/strongText'
 
 //obtener el color
 const getColor = (priority) => {
@@ -22,7 +23,7 @@ export const Card = ({ task }) => {
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   // const [cardVisible, setCardVisible] = useState(true)
 
-  const {getData, typeCards} = useContext(AppContext)
+  const {getData, typeCards, busqueda, setBusqueda} = useContext(AppContext)
 
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
   const [timeElapsed, setTimeElapsed] = useState(true)
@@ -37,7 +38,11 @@ export const Card = ({ task }) => {
   const solicitarCambio = (idTask) => {
 
     const title = document.getElementById(`input1-task${idTask}`).value
+    title.replace('<b>', ``)
+    title.replace('</b>', ``)
     const description = document.getElementById(`input2-task${idTask}`).value
+    description.replace('<b>', ``)
+    description.replace('</b>', ``)
 
     editTask(idTask, title, description)
   }
@@ -47,6 +52,18 @@ export const Card = ({ task }) => {
       getData()
       // setCardVisible(!cardVisible)
   }
+
+  //PONER EN NEGRITA LO QUE COINCIDA CON LA BUSQUEDA
+  const [titleCopy, setTitleCopy] = useState(title)
+  const [descriptionCopy, setDescriptionCopy] = useState(description)
+
+  useEffect(() => {
+    let paraDescripcion = strongText(descriptionCopy, busqueda)
+    setDescriptionCopy(paraDescripcion)
+
+  }, [busqueda])
+
+
   //////////////////////////////////
   return (
     <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`}>
@@ -56,14 +73,18 @@ export const Card = ({ task }) => {
         <textarea
           id={`input1-task${_id}`}
           className='card__title'
-          defaultValue={title}
+          defaultValue={titleCopy}
           disabled={cardEditable}
           maxLength={12}
-          rows="1" />
+          rows="1"
+          // onChange={handleInputChange}
+          // dangerouslySetInnerHTML={{ __html: titleCopy }}
+          />
         <textarea
           id={`input2-task${_id}`}
           className='card__container'
-          defaultValue={description}
+          defaultValue={descriptionCopy}
+          // dangerouslySetInnerHTML={{ __html: descriptionCopy }}
           disabled={cardEditable}
         />
       </main>
