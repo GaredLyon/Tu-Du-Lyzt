@@ -44,21 +44,20 @@ const Header = () => {
 
 					{/* SELECTOR 1 */}
 					<select className="header__selector" name="priority" id="priority" title="Prioridad" onChange={filtrarPorPrioridad}>
-							<option disabled selected> Prioridad</option>
-							<option value="all">Todos</option>
-							<option value="high">Alto</option>
-							<option value="middle">Medio</option>
-							<option value="low">Bajo</option>
+						<option  disabled selected>Prioridad</option>
+						<option value="all">Todos</option>
+						<option value="high">Alto</option>
+						<option value="middle">Medio</option>
+						<option value="low">Bajo</option>
 					</select>
 
 					{/* SELECTOR 2 */}
 					<select className="header__selector" name="column" id="column" title='Estado de las tareas' onChange={filtrarPorEstado}>
-							<option disabled selected> Estado</option>
-							<option value="all">Todos</option>
-							<option value="pendients">Pendientes</option>
-							<option value="progress">Proceso</option>
-							<option value="completed">Completados</option>
-						{/* </optgroup> */}
+						<option  disabled selected>Estado</option>
+						<option value="all">Todos</option>
+						<option value="pendients">Pendientes</option>
+						<option value="progress">Proceso</option>
+						<option value="completed">Completados</option>
 					</select>
 
 					{/* SELECTOR 3 */}
