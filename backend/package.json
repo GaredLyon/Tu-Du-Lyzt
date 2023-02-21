@@ -1,5 +1,5 @@
 {
-  "name": "blog-victor-robles",
+  "name": "tudu-lyzt",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Jaen Figueroa",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "2.8.5",
