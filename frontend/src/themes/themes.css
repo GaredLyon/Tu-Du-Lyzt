@@ -1,6 +1,8 @@
 .theme1{
   /* ASIDE */
   --aside: #6c6f77; 
+  --aside-border-right: #33333388; 
+
   --aside-title:  #FFFFFF; 
   --aside-form: #ffffff; 
   --aside-textarea: #e2e2e5; 
@@ -12,7 +14,6 @@
   --aside-selector-border: #767676;  
   --aside-selector-letter: #000;  
 
-  --aside-border-right: #33333388; 
   --aside-button-close: #FFF; 
 
   /* HEADER */
@@ -50,7 +51,9 @@
 
 .theme2{
   /* ASIDE */
-  --aside: #484b51; 
+  --aside: #484b51;
+  --aside-border-right: #33333388; 
+
   --aside-title:  #FFFFFF; 
   --aside-form: #ffffff; 
   --aside-textarea: #9797dd; 
@@ -62,7 +65,6 @@
   --aside-selector-border: #767676;  
   --aside-selector-letter: #000;  
 
-  --aside-border-right: #33333388; 
   --aside-button-close: #FFF; 
 
   /* HEADER */
@@ -87,9 +89,9 @@
   --main-title-2: #8987f3; 
   --main-title-3: #5CCD87; 
 
-  --main-card-1: #fc75b4; 
-  --main-card-2: #F4DB54; 
-  --main-card-3: #9c93ff; 
+  --main-card-1: #9c93ff; 
+  --main-card-2: #fc75b4; 
+  --main-card-3: #F4DB54; 
   --main-card-letter: #4F4E4E; 
   --main-card-icons: #FFF; 
 
@@ -102,6 +104,8 @@
 .theme3{
   /* ASIDE */
   --aside: #000; 
+  --aside-border-right: #2d2d2d; 
+
   --aside-title:  #fff; 
   --aside-form: #333; 
   --aside-textarea: #d6d7ff; 
@@ -114,7 +118,6 @@
   --aside-selector-border: #767676;  
   --aside-selector-letter: #fff;  
 
-  --aside-border-right: #33333388; 
   --aside-button-close: #FFF; 
 
   /* HEADER */
@@ -139,13 +142,65 @@
   --main-title-3: #53c27d; 
   --main-title-letter: #FFF; 
 
-  --main-card-1: #99fc75; 
-  --main-card-2: #54f4f1; 
-  --main-card-3: #9257eb; 
+  --main-card-1: #b889ff; 
+  --main-card-2: #99fc75; 
+  --main-card-3: #54f4f1; 
   --main-card-letter: #4F4E4E; 
   --main-card-icons: #000; 
   
   --main-card-floating: #333; 
+  --main-card-floating-letter: #fff; 
+
+  --main-button-add: #8a8d96; 
+}
+
+
+.theme4{
+  /* ASIDE */
+  --aside: #484b51;
+  --aside-border-right: #33333388; 
+
+  --aside-title:  #FFFFFF; 
+  --aside-form: #ffffff; 
+  --aside-textarea: #e2e2e5; 
+  --aside-textarea-letters: #757575; 
+  --aside-textarea-placeholder: #757575;  
+  --aside-textarea-separator: #333;  
+
+  --aside-selector: #ffffff;  
+  --aside-selector-border: #767676;  
+  --aside-selector-letter: #000;  
+
+  --aside-button-close: #FFF; 
+
+  /* HEADER */
+  --header: #727272; 
+  --header-selector: #ffffff; 
+  --header-selector-letter: black; 
+  --aside-selector-border: #767676; 
+
+  --header-search: #FFF; 
+  --header-search-border: #000; 
+  --header-search-letter: #FFF; 
+  --header-search-place-holder: gray; 
+  --header-search-icon: gray; 
+  --header-search-icon-hover: gray; 
+
+  /* MAIN */
+  --main: #a8a8a8; 
+  --main-column: #ffffff; 
+  --main-title-1: #6c6f77; 
+  --main-title-2: #ae87f3; 
+  --main-title-3: #5ccd87; 
+  --main-title-letter: #FFF; 
+
+  --main-card-1: #fc7575; 
+  --main-card-2: #f4db54; 
+  --main-card-3: #57a8eb; 
+  --main-card-letter: #4F4E4E; 
+  --main-card-icons: #FFF; 
+
+  --main-card-floating: #484b51; 
   --main-card-floating-letter: #fff; 
 
   --main-button-add: #8a8d96; 
