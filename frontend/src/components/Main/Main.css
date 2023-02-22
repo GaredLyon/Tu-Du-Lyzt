@@ -14,8 +14,6 @@
 	font-size: 2rem;
 	font-weight: bold;
 	border-radius: 1rem;
-	border: 0.2rem solid #70b5ee;
-	color: #70b5ee;
 	flex-grow: 1;
 	cursor: pointer;
 
@@ -30,11 +28,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 0 1rem rgba(255, 255, 255, 0.271);
 
-	background: #8a8d96;
 	border: none;
 	transition: 300ms;
+	background: #8a8d96;
+
+	/* THEME */
+	background: var(--main-button-add);
 }
 .main__new-button i{
 	padding: 0;
@@ -67,12 +67,12 @@
 		gap: 2rem;
 	}
 }
-.container-columns.dark {
+/* .container-columns.dark {
   background: #333639 ;
-}
-.container-columns.dark .dark{
+} */
+/* .container-columns.dark .dark{
   background: #1a1c1ec0;
-}
+} */
 
 
 /* ///////////////////////////////// */

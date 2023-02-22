@@ -2,19 +2,29 @@
 .card {
   border-radius: 1.5rem;
   padding: 0.9rem 0 0.9rem 0.9rem;
-  background: var(--red);
   width: 27.2rem;
   height: 16.8rem;
   width: 100%;
   display: none;
   position: relative;
   overflow: hidden;
+
+  background: var(--red);
+
+  /* THEME */
+  background: var(--main-card-1);
 }
 .card--yellow {
   background: var(--yellow);
+
+  /* THEME */
+  background: var(--main-card-2);
 }
 .card--blue {
   background: var(--blue);
+
+  /* THEME */
+  background: var(--main-card-3);
 }
 .card--visible{
   display: flex;
@@ -41,9 +51,14 @@
   resize: none;
   font-size: var(--xl);
 
+  /* THEME */
+  color: var(--main-card-letter);
 }
 .card__title:disabled {
   border-bottom: 0.1rem solid var(--gray1);
+
+  /* THEME */
+  border-bottom: 0.1rem solid var(--main-card-letter);
 }
 
 .card__title::-webkit-scrollbar {
@@ -60,6 +75,9 @@
   outline: none;
   font-size: var(--lg);
   padding: 0.3rem 0.8rem;
+
+  /* THEME */
+  color: var(--main-card-letter);
 }
 
 .card__container::-webkit-scrollbar {
@@ -86,6 +104,9 @@
   padding: 0.4rem;
   margin: 0 0.4rem;
   cursor: pointer;
+
+  /* THEME */
+  color: var(--main-card-icons);
 
 }
 .card__icon:hover {
@@ -119,6 +140,10 @@
   width: max-content;
   top: 0;
   display: none;
+
+  /* THEME */
+  background: var(--main-card-floating);
+  color: var(--main-card-floating-letter);
 }
 
 .card__alert:before {
@@ -130,6 +155,9 @@
   right: -1.5rem;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotateZ(-270deg) scale(0.6);
+
+  /* THEME */
+  background: var(--main-card-floating);
 }
 
 @media (min-width: 1300px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */
