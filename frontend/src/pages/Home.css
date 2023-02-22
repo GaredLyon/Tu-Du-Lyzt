@@ -23,8 +23,11 @@
   transform: translateX(-100%);
   z-index: 3;
   overflow-y: scroll;
-  border-right: 0.1rem solid #33333388;
   align-items: center;
+
+  /* TEMA */
+  border-right: 0.1rem solid var(--aside-border-right);
+  background-color: var(--aside);
 }
 .App__aside::-webkit-scrollbar {
   background: transparent;
@@ -54,12 +57,13 @@
   border: none;
   border-radius: 1rem;
 
-  background: #ffffff;
 	border: none;
 	transition: 300ms;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  background: var(--aside-button-close);
 }
 .Aside__button-close i{
   font-size: 1.8rem;
@@ -99,15 +103,16 @@
 /* MAIN */
 .App__main {
   background-color: var(--gray4);
-  /* background: green; */
   flex-grow: 1;
+
+  /* THEME */
+  background: var(--main);
 }
 
 
 @media (min-width: 1024px) {
   /* @media (min-width: 900px) { */
   .App__aside{
-    /* background-color: rgb(238, 130, 238); */
     transform: translateX(0rem);
     position: relative;
   }

@@ -16,6 +16,8 @@
   /* box-shadow: 0 0 0.5rem rgba(128, 128, 128, 0.4); */ /* PROV */
   min-width: 27rem;
 	display: none;
+
+  background: var(--main-column);
 }
 
 .column--visible{
@@ -40,17 +42,27 @@
   z-index: 100;
   padding: 0.7rem 8rem;
 
-  /* background: red !important; */
+  /* THEME */
+  color: var(--main-title-letter);
 }
 
 .column__title--gray {
   background: var(--gray2);
+
+  /* THEME */
+  background: var(--main-title-1);
 }
 .column__title--purple {
   background: var(--purple);
+
+  /* THEME */
+  background: var(--main-title-2);
 }
 .column__title--green {
   background: var(--green);
+
+  /* THEME */
+  background: var(--main-title-3);
 }
 
 .column__container-cards {

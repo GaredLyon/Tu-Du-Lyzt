@@ -10,22 +10,28 @@
 .aside__title {
   font-size: 3.5rem;
   text-align: center;
-  color: var(--white);
   padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--white);
+
+  /* THEME */
+  color: var(--aside-title);
 }
 
 .aside__form {
   width: 100%;
   min-width: 27.2rem;
-  background: var(--white);
   border-radius: var(--r-lg);
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background: var(--white);
+  
+  /* THEME */
+  background: var(--aside-form);
 }
 
 
@@ -47,17 +53,22 @@
   width: 100%;
 }
 
+
 .header__form select{
   padding: .5rem .5rem;
   border-radius: .5rem;
   flex-grow: 1;
+
+  /* THEME */
+  background: var(--aside-selector);
+  border: 1px solid var(--aside-selector-border);
+  color: var(--aside-selector-letter);
 }
 
 .aside__container-icons{
   border: none;
   background: transparent;
   cursor: pointer;
-  /* background: red; */
 }
 
 .header__form i{
@@ -82,7 +93,18 @@
   background: #e2e2e5;
   border: none;
   resize: none;
+
+
+  /* THEME */
+  background: var(--aside-textarea);
+  color: var(--aside-textarea-letters);
 }
+
+.header__text textarea::placeholder{
+  /* THEME */
+  color: var(--aside-textarea-placeholder);
+}
+
 .header__text textarea::-webkit-scrollbar{
   display: none;
 }
@@ -95,12 +117,14 @@
 .header__input2{
   font-size: 2rem;
 }
-
+.header__text{
+  background: var( --aside-textarea);
+}
 .header__text hr{
   margin: 0rem 1rem;
   background: #333;
   border: none;
-  border-top: 0.1rem solid #333;
+  border-top: 0.1rem solid var(--aside-textarea-separator);
 }
 
 
@@ -144,107 +168,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-/* BOTON THEME */
-.fa-sharp.fa-solid.fa-trash{
-  color: black;
-}
-
-.l {
-  display: block;
-  margin-bottom: 1.5em;
-  font-size: 1em;
-}
-
-.l {
-  background-color: rgba(0,0,0,0.7);
-  border-radius: 0.75em;
-  box-shadow: 0.125em 0.125em 0 0.125em rgba(0,0,0,0.3) inset;
-  color: #fdea7b;
-  display: inline-flex;
-  align-items: center;
-  margin:1em auto;
-  padding: 0.15em;
-  width: 3em;
-  height: 1.5em;
-  transition: background-color 0.1s 0.3s ease-out, box-shadow 0.1s 0.3s ease-out;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  margin: 4rem;
-}
-
-.l:before, .l:after {
-  content: "";
-  display: block;
-}
-
-.l:before {
-  /*  */
-  background-color: currentColor;
-  border-radius: 50%;
-  width: 1.2em;
-  height: 1.2em;
-  transition: background-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
-  z-index: 1;
-}
-
-.l:after {
-  background: linear-gradient(transparent 50%, rgba(0,0,0,0.15) 0) 0 50% / 50% 100%,
-		repeating-linear-gradient(90deg,#bbb 0,#bbb,#bbb 20%,#999 20%,#999 40%) 0 50% / 50% 100%,
-		radial-gradient(circle at 50% 50%,#888 25%, transparent 26%);
-  background-repeat: no-repeat;
-  border: 0.25em solid transparent;
-  border-left: 0.4em solid #d8d8d8;
-  border-right: 0 solid transparent;
-  transition: border-left-color 0.1s 0.3s ease-out, transform 0.3s ease-out;
-  transform: translateX(-22.5%);
-  transform-origin: 25% 50%;
-  width: 1.2em;
-  height: 1em;
-  box-sizing: border-box;
-}
-/* Checked */
-.l:checked {
-  background-color: rgba(0,0,0,0.45);
-  box-shadow: 0.125em 0.125em 0 0.125em rgba(0,0,0,0.1) inset;
-}
-
-.l:checked:before {
-  background-color: #d7d7d7;
-  transform: translateX(125%);
-}
-
-.l:checked:after {
-  border-left-color: currentColor;
-  transform: translateX(-2.5%) rotateY(180deg);
-}
-/* Other States */
-.l:focus {
-	/* Usually an anti-A11Y practice but set to remove an annoyance just for this demo */
-  outline: 0;
-}
-
-/* DARK THEME */
-.App__aside.false.dark{
-  background: #242629;
-  background: #2b2e31;
-}
-.App__aside.false.dark .dark{
-  background: #1a1c1e;
-}
-
-.fa-sharp.fa-solid.fa-trash.dark{
-  color: white;
-}
 
 /* ASIDE AVISO */
 .aside__aviso{
