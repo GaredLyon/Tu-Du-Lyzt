@@ -1,14 +1,14 @@
-const cantidadTemas = 3
-let tema = 1
+const numberThemes = 3
+let number = 1
 
 export const changeTheme2 = () => {
 
-  tema++
+  number++
 
-  if(tema > cantidadTemas) tema = 1
+  if(number > numberThemes) number = 1
 
-  document.getElementById('home').className = `App tema${tema}`
+  document.getElementById('home').className = `App theme${number}`
 
   //GUARDAR EL TEMA EN LOCAL STORAGE
-  localStorage.setItem('theme2', tema)
+  localStorage.setItem('theme2', number)
 }
