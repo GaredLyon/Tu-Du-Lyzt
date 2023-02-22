@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
 import { addTask } from '../../helpers/addTask'
-import { changeTheme } from '../../helpers/changeTheme'
 import { changeTheme2 } from '../../helpers/changeTheme2'
 import './Aside.css'
 
@@ -9,17 +8,6 @@ import './Aside.css'
 export const Aside = () => {
 
   const { getData } = useContext(AppContext)
-
-  //PARA CAMBIAR TEMA ///////////////
-  const [checkedTheme, setCheckedTheme] = useState(localStorage.getItem("IsChecked") == "true" ? true : false)
-
-  useEffect(() => {
-    localStorage.setItem("IsChecked", checkedTheme)
-    changeTheme({ checkedTheme })
-  }, [checkedTheme])
-  function handleCheckboxChange() {
-    setCheckedTheme(!checkedTheme)
-  }
 
   //AGREGAR TAREA *******************
   const addNewtask = async (e) => {
@@ -116,9 +104,6 @@ export const Aside = () => {
         </div>
       </form>
 
-      {/* <input type="checkbox" className="l" onChange={handleCheckboxChange} checked={checkedTheme}></input> */}
-      
-          
       <button onClick={changeTheme2} className='boton-cambiarTema'>Cambiar tema</button>
     </aside>
   )
