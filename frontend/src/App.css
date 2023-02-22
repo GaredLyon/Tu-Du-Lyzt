@@ -14,26 +14,7 @@ ol {
   list-style: none;
 }
 
-/* TEMA 1 */
-
 :root{
-  --blue: #57A8EB;
-  --blue-light: #70B5EE;
-  --red: #FC7575;
-  --red-light: #FC8A8A;
-  --yellow: #F4DB54;
-  --yellow-light: #F6E06D;
-  --green: #5CCD87;
-  --green-light: #85DAA5;
-  --turquesa: #47C9BE;
-  --turquesa-light: #62D1C7;
-  --purple: #AE87F3;
-  --gray1: #4F4E4E;
-  --gray2: #8A8D96;
-  --gray3: #E2E2E5;
-  --gray4: #EEEEEE;
-  --white: #fff;
-  
   --xs: 1.2rem;
   --sm: 1.4rem;
   --md: 1.6rem;
@@ -45,5 +26,3 @@ ol {
   --r-lg: 1rem;
   --r-xl: 2rem;
 }
-
-
