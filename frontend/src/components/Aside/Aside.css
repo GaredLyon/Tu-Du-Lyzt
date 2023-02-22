@@ -276,3 +276,17 @@
   font-size: 2rem;
   color: white;
 }
+
+
+/* BOTON CAMBIAR TEMA */
+.boton-cambiarTema{
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.boton-cambiarTema:hover{
+  background: rgb(223, 223, 223);
+}

@@ -15,7 +15,7 @@ function Home() {
 
   ////////////////////////////////////////////
   return (
-    <main className="App">
+    <main className="App tema3" id='home'>
       {/* ASIDE */}
       <section className={`App__aside ${asideVisible && 'App__aside--visible'}`} data-theme>
         {/* boton cerrar */}

@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import { AppContext } from '../../context/AppContext'
 import { addTask } from '../../helpers/addTask'
 import { changeTheme } from '../../helpers/changeTheme'
+import { changeTheme2 } from '../../helpers/changeTheme2'
 import './Aside.css'
 
 ////////////////////////////////////
@@ -115,8 +116,10 @@ export const Aside = () => {
         </div>
       </form>
 
-      <input type="checkbox" className="l" onChange={handleCheckboxChange} checked={checkedTheme}></input>
-
+      {/* <input type="checkbox" className="l" onChange={handleCheckboxChange} checked={checkedTheme}></input> */}
+      
+          
+      <button onClick={changeTheme2} className='boton-cambiarTema'>Cambiar tema</button>
     </aside>
   )
 }
