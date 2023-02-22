@@ -1,0 +1,68 @@
+
+.theme3{
+  /* ASIDE */
+  --aside: #000; 
+  --aside-border-right: #2d2d2d; 
+
+  --aside-title:  #fff; 
+  --aside-form: #333; 
+
+  --aside-textarea: #d6d7ff; 
+  --aside-textarea-letter: #000; 
+  --aside-textarea-placeholder: #000; 
+  --aside-textarea-separator: #333;  
+
+  --aside-selector: #6c6f77;  
+  --header-selector-letter: black; 
+  --aside-selector-border: #767676;  
+  --aside-selector-letter: #fff;  
+
+  --aside-button-close: #FFF; 
+
+  --aside-button-theme: white;
+  --aside-button-theme-letter: black;
+  --aside-button-theme-hover: gray;
+  --aside-button-theme-hover-letter: white;
+
+  --aside-button-add: rgb(77, 190, 77);
+  --aside-button-add-hover: rgb(68, 162, 68);
+  --aside-button-add-letter: white;
+  --aside-button-clear: rgb(232, 105, 105);
+  --aside-button-clear-hover: rgb(224, 71, 71);
+  --aside-button-clear-icon: white;
+  
+  --alert-bg: #6c6f77;
+
+  /* HEADER */
+  --header: #000; 
+  --header-selector: #6c6f77; 
+  --header-selector-letter: #fff;
+  --aside-selector-border: #767676; 
+  
+  --header-search: #6c6f77; 
+  --header-search-border: #000; 
+  --header-search-letter: #FFF; 
+  --header-search-place-holder: #fff; 
+  --header-search-icon: #fff; 
+  --header-search-icon-hover: #fff; 
+
+  /* MAIN */
+  --main: #000; 
+  --main-column: #333; 
+
+  --main-title-1: #6c6f77; 
+  --main-title-2: #878bf3; 
+  --main-title-3: #53c27d; 
+  --main-title-letter: #FFF; 
+
+  --main-card-1: #b889ff; 
+  --main-card-2: #99fc75; 
+  --main-card-3: #54f4f1; 
+  --main-card-letter: #2a2a2a; 
+  --main-card-icons: #000; 
+  
+  --main-card-floating: #333; 
+  --main-card-floating-letter: #fff; 
+
+  --main-button-add: #8a8d96; 
+}

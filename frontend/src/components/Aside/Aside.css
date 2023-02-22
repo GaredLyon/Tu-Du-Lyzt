@@ -135,33 +135,31 @@
 
 .aside__button-create,
 .aside__button-delete{
-  background-color: #5ccd87;
   padding: 1rem;
   border-radius: 1rem;
   border: none;
-  color: white;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   flex-grow: 1;
+  background-color: var(--aside-button-add);
+  color: var(--aside-button-add-letter);
 }
 
 .aside__button-delete{
   max-width: 60px;
-  background: rgb(255, 117, 117);
+  background-color: var(--aside-button-clear);
 }
 
 .aside__button-delete i{
-  color: white !important;
+  color: var(--aside-button-clear-icon) !important;
 }
 
 .aside__button-create:hover{
-  background-color: #4ba26c;
+  background-color: var(--aside-button-add-hover);
 }
-
-
 .aside__button-delete:hover{
-  background: rgb(214, 93, 93);
+  background-color: var(--aside-button-clear-hover);
 }
 
 
@@ -207,8 +205,14 @@
   border: none;
   margin: 6rem 1rem;
   cursor: pointer;
+
+  /* THEME */
+  background: var(--aside-button-theme);
+  color: var(--aside-button-theme-letter);
 }
 
 .boton-cambiarTema:hover{
-  background: rgb(223, 223, 223);
+  /* THEME */
+  background: var(--aside-button-theme-hover);
+  color: var(--aside-button-theme-hover-letter);
 }
