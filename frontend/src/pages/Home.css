@@ -7,6 +7,10 @@
   min-width: 33.2rem;
 }
 
+.App__container::-webkit-scrollbar{
+  display: none;
+}
+
 /* ASIDE //////////////////////////////////////////// */
 .App__aside {
   background: var(--gray2);
@@ -123,4 +127,5 @@
   .Aside__button-close{
     display: none;
   }
+
 }
