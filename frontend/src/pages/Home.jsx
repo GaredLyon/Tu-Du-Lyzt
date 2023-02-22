@@ -1,8 +1,9 @@
 import { Main } from "../components/Main/Main"
 import { Aside } from "../components/Aside/Aside"
 import Header  from "../components/Header/Header"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import './Home.css'
+import { startTheme } from "../helpers/startTheme"
 
 ////////////////////////////////////////////
 function Home() {
@@ -12,6 +13,10 @@ function Home() {
   const toggleAside = (valor) =>{
     setAsideVisible(valor)
   }
+
+  useEffect(() => {
+    startTheme()
+  },[])
 
   ////////////////////////////////////////////
   return (
