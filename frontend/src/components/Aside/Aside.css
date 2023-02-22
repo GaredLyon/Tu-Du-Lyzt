@@ -97,7 +97,7 @@
 
   /* THEME */
   background: var(--aside-textarea);
-  color: var(--aside-textarea-letters);
+  color: var(--aside-textarea-letter);
 }
 
 .header__text textarea::placeholder{

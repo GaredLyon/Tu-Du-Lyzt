@@ -5,8 +5,9 @@
 
   --aside-title:  #FFFFFF; 
   --aside-form: #ffffff; 
+
   --aside-textarea: #e2e2e5; 
-  --aside-textarea-letters: #757575; 
+  --aside-textarea-letter: #757575; 
   --aside-textarea-placeholder: #757575;  
   --aside-textarea-separator: #333;  
 
@@ -56,10 +57,11 @@
 
   --aside-title:  #FFFFFF; 
   --aside-form: #ffffff; 
-  --aside-textarea: #9797dd; 
-  --aside-textarea-letters: #ffffff; 
-  --aside-textarea-placeholder: #ffffff;
-  --aside-textarea-separator: #ffffff;  
+
+  --aside-textarea: #d6d7ff; 
+  --aside-textarea-letter: #000000; 
+  --aside-textarea-placeholder: #000000;
+  --aside-textarea-separator: #000;  
 
   --aside-selector: #ffffff;  
   --aside-selector-border: #767676;  
@@ -92,10 +94,10 @@
   --main-card-1: #9c93ff; 
   --main-card-2: #fc75b4; 
   --main-card-3: #F4DB54; 
-  --main-card-letter: #4F4E4E; 
+  --main-card-letter: #252525; 
   --main-card-icons: #FFF; 
 
-  --main-card-floating: #AE87F3; 
+  --main-card-floating: #525252; 
   --main-card-floating-letter: #fff; 
 
   --main-button-add: #8a8d96; 
@@ -108,8 +110,9 @@
 
   --aside-title:  #fff; 
   --aside-form: #333; 
+
   --aside-textarea: #d6d7ff; 
-  --aside-textarea-letters: #000; 
+  --aside-textarea-letter: #000; 
   --aside-textarea-placeholder: #000; 
   --aside-textarea-separator: #333;  
 
@@ -163,7 +166,7 @@
   --aside-title:  #FFFFFF; 
   --aside-form: #ffffff; 
   --aside-textarea: #e2e2e5; 
-  --aside-textarea-letters: #757575; 
+  --aside-textarea-letter: #757575; 
   --aside-textarea-placeholder: #757575;  
   --aside-textarea-separator: #333;  
 
