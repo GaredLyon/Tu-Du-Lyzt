@@ -46,21 +46,23 @@
 
   /* MAIN */
   --main: #F5F2E7; 
-  --main-column: #ffffff; 
+  --main-column: #ffffff;
+  --main-column-number-bg: #ffffff; 
+  --main-column-number: #000;  
 
   --main-title-letter: #FFF; 
   --main-title-1: #395B64; 
   --main-title-2: #395B64; 
   --main-title-3: #395B64; 
 
-  --main-card-1: #2666CF; 
-  --main-card-2: #2666CF; 
-  --main-card-3: #2666CF; 
+  --main-card-1: linear-gradient(140deg, #629eff, #4b90ff); 
+  --main-card-2: linear-gradient(140deg, #629eff, #4b90ff); 
+  --main-card-3: linear-gradient(140deg, #629eff, #4b90ff); 
   --main-card-letter: #252525; 
   --main-card-icons: #FFF; 
 
   --main-card-floating: #525252; 
   --main-card-floating-letter: #fff; 
 
-  --main-button-add: #1B2430; 
+  --main-button-add: #2C3333; 
 }

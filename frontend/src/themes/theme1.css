@@ -47,6 +47,9 @@
   /* MAIN */
   --main: #eeeeee; 
   --main-column: #ffffff; 
+  --main-column-number-bg: #ffffff; 
+  --main-column-number: #000; 
+  
   --main-title-1: #6c6f77; 
   --main-title-2: #ae87f3; 
   --main-title-3: #5ccd87; 
