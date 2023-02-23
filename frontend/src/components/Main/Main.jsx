@@ -3,24 +3,22 @@ import './Main.css'
 import { Column } from './Column/Column'
 import { AppContext } from '../../context/AppContext'
 
-export const Main = ({asideVisible, alternarAside}) => {
+export const Main = ({asideVisible, toggleAside}) => {
 
-  const {grupos} = useContext(AppContext)
+  const {groups} = useContext(AppContext)
 
   //////////////////////////////////////
   return (
-    <div className='container-columns'>
+    <div className='container-columns' data-theme>
       {/* RENDERIZADO DE LOS GRUPOS */}
-      {
-        grupos && grupos.length >= 1 && grupos.map(grupo => (
-          <Column key={`columna${grupo.id}`} grupo={grupo}/>
-        ))
-      }
+      { groups[0] && <Column title='Pendiente' color='gray' key={`column${1}`} group={groups[0]} type='pendients'/>}
+      { groups[1] && <Column title='Proceso'  color='purple' key={`column${2}`} group={groups[1]} type='progress'/>}
+      { groups[2] && <Column title='Completados' color='green' key={`column${3}`} group={groups[2]} type='completed'/>}
 
       {/* BOTON PARA AGREGAR NUEVA TAREA Y MOSTRAR EL ASIDE  */}
       {
         !asideVisible && (
-          <button className='main__boton-new' onClick={()=>alternarAside(x => !x)}>
+          <button className='main__new-button' onClick={()=>toggleAside(x => !x)}>
             <i className="fa-solid fa-plus"></i>
           </button>
         )

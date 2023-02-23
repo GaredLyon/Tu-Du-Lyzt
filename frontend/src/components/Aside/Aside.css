@@ -1,122 +1,218 @@
 .aside {
-  width: 90%;
-  height: 85%;
-  /* background: blue; */
+  width: 95%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
 }
+
 
 .aside__title {
   font-size: 3.5rem;
   text-align: center;
-  color: var(--white);
-  /* background: green; */
-  /* height: 160px; */
-  padding: 4rem 0;
+  padding: 3rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--white);
+
+  /* THEME */
+  color: var(--aside-title);
 }
 
 .aside__form {
   width: 100%;
   min-width: 27.2rem;
-  background: var(--white);
-  /* background-color: red; */
   border-radius: var(--r-lg);
-
   padding: 1.5rem;
-
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background: var(--white);
+  
+  /* THEME */
+  background: var(--aside-form);
 }
 
 
-.header__formulario{
+.header__form{
   display: flex;
   gap: .5rem;
-
   justify-content: space-between;
 }
 
-.header__formulario > div{
+.header__form > div{
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 
-.header__formulario select{
-  padding: .2rem .5rem;
-  border-radius: .5rem;
+.aside__contenedor-selectores{
+  display: flex;
+  width: 100%;
 }
 
-.aside__contenedor-iconos{
+
+.header__form select{
+  padding: .5rem .5rem;
+  border-radius: .5rem;
+  flex-grow: 1;
+
+  /* THEME */
+  background: var(--aside-selector);
+  border: 1px solid var(--aside-selector-border);
+  color: var(--aside-selector-letter);
+}
+
+.aside__container-icons{
   border: none;
   background: transparent;
-  /* background: green; */
   cursor: pointer;
 }
 
-.header__formulario i{
+.header__form i{
   font-size: 2rem;
   padding: 0 .2rem;
-  /* background: red; */
 }
 
 /* BLOQUE DE TEXTOS */
-.header__texto{
-  background-color: blue;
+.header__text{
   background: #e2e2e5;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   overflow: hidden;
+  position: relative;
 }
 
-.header__texto textarea{
+.header__text textarea{
   width: 100%;
   padding: 1.5rem;
   outline: none;
   background: #e2e2e5;
   border: none;
   resize: none;
-  /* background: blue; */
-  /* font-size: 2rem; */
+
+
+  /* THEME */
+  background: var(--aside-textarea);
+  color: var(--aside-textarea-letter);
+}
+
+.header__text textarea::placeholder{
+  /* THEME */
+  color: var(--aside-textarea-placeholder);
+}
+
+.header__text textarea::-webkit-scrollbar{
+  display: none;
 }
 
 .header__input1{
-  background-color: red;
   font-weight: bold;
   font-size: 2.6rem;
 }
 
 .header__input2{
-  background-color: red;
   font-size: 2rem;
 }
-
-.header__texto hr{
+.header__text{
+  background: var( --aside-textarea);
+}
+.header__text hr{
   margin: 0rem 1rem;
   background: #333;
   border: none;
-  border-top: 0.1rem solid #333;
+  border-top: 0.1rem solid var(--aside-textarea-separator);
 }
 
-.aside__boton-crear{
-  background-color: #5ccd87;
+
+.aside__container-icons{
+  /* background: red; */
+  display: flex;
+  gap: .8rem;
+}
+
+.aside__button-create,
+.aside__button-delete{
   padding: 1rem;
   border-radius: 1rem;
   border: none;
-  color: white;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
+  flex-grow: 1;
+  background-color: var(--aside-button-add);
+  color: var(--aside-button-add-letter);
 }
 
-.aside__boton-crear:hover{
-  background-color: #4ba26c;
+.aside__button-delete{
+  max-width: 60px;
+  background-color: var(--aside-button-clear);
+}
+
+.aside__button-delete i{
+  color: var(--aside-button-clear-icon) !important;
+}
+
+.aside__button-create:hover{
+  background-color: var(--aside-button-add-hover);
+}
+.aside__button-delete:hover{
+  background-color: var(--aside-button-clear-hover);
+}
+
+
+
+
+
+/* ASIDE AVISO */
+.aside__aviso{
+  text-align: center;
+  color: crimson;
+  /* color: white; */
+  font-weight: bold;
+  font-size: 1.9rem;
+}
+
+
+/* FORMUARIO CARGANDO */
+.form-cargando{
+  background-color: #73767e;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+.form-cargando p{
+  font-size: 2rem;
+  color: white;
+}
+
+
+/* BOTON CAMBIAR TEMA */
+.boton-cambiarTema{
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  margin: 6rem 1rem;
+  cursor: pointer;
+
+  /* THEME */
+  background: var(--aside-button-theme);
+  color: var(--aside-button-theme-letter);
+}
+
+.boton-cambiarTema:hover{
+  /* THEME */
+  background: var(--aside-button-theme-hover);
+  color: var(--aside-button-theme-hover-letter);
 }

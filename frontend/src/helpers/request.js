@@ -1,6 +1,6 @@
 import { global } from "./global"
 
-export const peticiones = async( tipoMetodo, cuerpo) => {
+export const request = async( tipoMetodo, cuerpo) => {
 
   let opciones = {
     method: 'GET'
@@ -24,7 +24,7 @@ export const peticiones = async( tipoMetodo, cuerpo) => {
   }
 
   ///////////////////////////////////
-  let url = `${global.url}tareas`
+  let url = `${global.url}task`
 
   try {
     const peticion =  await fetch(url)

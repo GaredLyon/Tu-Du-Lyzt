@@ -1,0 +1,66 @@
+.theme7{
+  /* ASIDE */
+  --aside: #54436B;
+  --aside-border-right: #33333388; 
+
+  --aside-title:  #fff; 
+  --aside-form: #ffffff; 
+
+  --aside-textarea: #d6d7ff; 
+  --aside-textarea-letter: #000000; 
+  --aside-textarea-placeholder: #000000;
+  --aside-textarea-separator: #000;  
+
+  --aside-selector: #FAF7FC;  
+  --aside-selector-border: #767676;  
+  --aside-selector-letter: #000;  
+
+  --aside-button-close: #FFF; 
+
+  --aside-button-theme: white;
+  --aside-button-theme-letter: black;
+  --aside-button-theme-hover: #FF5959;
+  --aside-button-theme-hover-letter: #fff;
+
+  --aside-button-add: #205E61;
+  --aside-button-add-hover: #286e71;
+  --aside-button-add-letter: white;
+  --aside-button-clear: #D61355;
+  --aside-button-clear-hover: #e82364;
+  --aside-button-clear-icon: white;
+
+  --alert-bg: #37383e;
+
+  /* HEADER */
+  --header: #286e71; 
+  --header-selector: #fff; 
+  --header-selector-letter: black; 
+  --aside-selector-border: #767676; 
+
+  --header-search: #FAF7FC; 
+  --header-search-border: #000; 
+  --header-search-letter: #000; 
+  --header-search-place-holder: #000; 
+  --header-search-icon: #302A40; 
+  --header-search-icon-hover: #302A40; 
+
+  /* MAIN */
+  --main: #286e71; 
+  --main-column: #ffffff; 
+
+  --main-title-letter: #FFF; 
+  --main-title-1: #50CB93; 
+  --main-title-2: #50CB93; 
+  --main-title-3: #50CB93; 
+
+  --main-card-1: #FF5959; 
+  --main-card-2: #FF5959; 
+  --main-card-3: #FF5959; 
+  --main-card-letter: #252525; 
+  --main-card-icons: #FFF; 
+
+  --main-card-floating: #525252; 
+  --main-card-floating-letter: #fff; 
+
+  --main-button-add: #54436B; 
+}

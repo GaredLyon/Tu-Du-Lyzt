@@ -1,24 +1,33 @@
 /* CARD ///////////////////// */
 .card {
   border-radius: 1.5rem;
-  display: flex;
   padding: 0.9rem 0 0.9rem 0.9rem;
-  background: var(--red);
   width: 27.2rem;
   height: 16.8rem;
-
   width: 100%;
-  /* min-width: 250px; */
-  /* max-width: 300px; */
-  /* flex-grow: 1; */
+  display: none;
+  position: relative;
+  overflow: hidden;
 
-  width: 100%;
+  background: var(--red);
+
+  /* THEME */
+  background: var(--main-card-1);
 }
 .card--yellow {
   background: var(--yellow);
+
+  /* THEME */
+  background: var(--main-card-2);
 }
 .card--blue {
   background: var(--blue);
+
+  /* THEME */
+  background: var(--main-card-3);
+}
+.card--visible{
+  display: flex;
 }
 
 /* CARD MAIN ///////////////////// */
@@ -38,14 +47,18 @@
   width: 100%;
 
   border: none;
-  /*border-bottom: 0.2rem dashed var(--gray1);*/
   outline: none;
   resize: none;
-  /* height: 2.4rem; */
   font-size: var(--xl);
+
+  /* THEME */
+  color: var(--main-card-letter);
 }
 .card__title:disabled {
   border-bottom: 0.1rem solid var(--gray1);
+
+  /* THEME */
+  border-bottom: 0.1rem solid var(--main-card-letter);
 }
 
 .card__title::-webkit-scrollbar {
@@ -62,6 +75,9 @@
   outline: none;
   font-size: var(--lg);
   padding: 0.3rem 0.8rem;
+
+  /* THEME */
+  color: var(--main-card-letter);
 }
 
 .card__container::-webkit-scrollbar {
@@ -74,14 +90,11 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 0.6rem;
-  /*   padding: 0 0.6rem; */
-  /* background: green; */
 }
 .card__icon-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  /* background: red; */
 }
 .card__icon {
   border-radius: 0.5rem;
@@ -90,8 +103,10 @@
   font-size: 1.6rem;
   padding: 0.4rem;
   margin: 0 0.4rem;
-  /* background: blue; */
   cursor: pointer;
+
+  /* THEME */
+  color: var(--main-card-icons);
 
 }
 .card__icon:hover {
@@ -112,10 +127,10 @@
   position: relative;
 }
 
-.caja__icon:hover .card__aviso {
+.caja__icon:hover .card__alert {
   display: flex;
 }
-.card__aviso {
+.card__alert {
   position: absolute;
   background: var(--purple);
   color: white;
@@ -125,9 +140,13 @@
   width: max-content;
   top: 0;
   display: none;
+
+  /* THEME */
+  background: var(--main-card-floating);
+  color: var(--main-card-floating-letter);
 }
 
-.card__aviso:before {
+.card__alert:before {
   content: "";
   background: var(--purple);
   position: absolute;
@@ -136,5 +155,167 @@
   right: -1.5rem;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotateZ(-270deg) scale(0.6);
+
+  /* THEME */
+  background: var(--main-card-floating);
 }
 
+@media (min-width: 1300px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */
+  .card{
+    flex-grow: 1;
+  }
+}
+
+/* VENTANA PARA CONFIRMAR ELIMIANR/////////////////////////////////7 */
+.card-alert{
+  /* background: violet; */
+  background: rgba(0, 0, 0, 0.099);
+  background: rgba(0, 0, 0, 0.178);
+  background: #488ac2;
+  background: #333;
+  background: #8a8d96;
+  background: #73767e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  /* margin-right: .8rem; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  background: var(--alert-bg);
+}
+
+.card-alert__title{
+  font-size: 2.3rem;
+  width: 85%;
+  text-align: center;
+  /* background: green; */
+  color: white;
+  line-height: 3rem;
+  /* text-shadow: 0 0 5px rgba(0, 0, 0, 0.242); */
+}
+
+.card-alert__container-button{
+  /* background-color: red; */
+  display: flex;
+  gap: 1rem;
+}
+.card-alert__container-button button{
+  padding: 1rem 1.5rem;
+  border-radius: .5rem;
+  border: none;
+  color: #333;
+  font-weight: bold;
+  transition: 300ms;
+}
+
+.card-alert__container-button button:first-child{
+  background: var(--aside-button-add);
+  color: var(--aside-button-add-letter);
+}
+.card-alert__container-button button:last-child{
+  background: var(--aside-button-clear);
+  color: var(--aside-button-clear-icon);
+}
+.card-alert__container-button button:first-child:hover{
+  background: var(--aside-button-add-hover);
+  color: white;
+}
+.card-alert__container-button button:last-child:hover{
+  background: var(--aside-button-clear-hover);
+  color: white;
+}
+
+/* VENTANA DE CARGANDO////////////////////// */
+.card-alert--cargando{
+  z-index: 10;
+}
+
+.icono-cargando{
+  background-color: red;
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  background: conic-gradient( var(--alert-bg) 0%, white 90%);
+  animation: girar 1s infinite reverse;
+  transition: 300ms;
+}
+
+.icono-cargando:after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 0, 0.753);
+  position: absolute;
+  border-radius: 100%;
+  background: radial-gradient(var(--alert-bg) 50%, transparent 50%);
+}
+
+.card-alert--cargando p{
+  color: white;
+  font-size: 2rem;
+}
+
+/* ICONO CERRA _ MOVER */
+.mover__icono-cerrar{
+  position: absolute;
+  top: 8px;
+  right:8px ;
+  font-size: 2rem;
+  background: white;
+  padding: .8rem 1rem;
+  border-radius: 1.5rem;
+
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.mover__icono-cerrar:hover{
+  background: #333;
+  color: white;
+}
+
+@keyframes girar {
+  to{
+    transform: rotateZ(0deg);
+  }
+  from{
+    transform: rotateZ(360deg);
+  }
+}
+
+/* BOTONES DE MOVER */
+.button-pendient,
+.button-process,
+.button-completed{
+  color: white !important;
+  cursor: pointer;
+}
+
+.card-alert .card-alert__container-button .button-pendient{
+  background: var(--main-title-1) ;
+}
+.card-alert .card-alert__container-button .button-process{
+  background: var(--main-title-2);
+}
+.card-alert .card-alert__container-button .button-completed{
+  background: var(--main-title-3) ;
+}
+
+.card-alert .card-alert__container-button .button-pendient:hover{
+  background: var(--main-title-1) ;
+}
+.card-alert .card-alert__container-button .button-process:hover{
+  background: var(--main-title-2);
+}
+.card-alert  .card-alert__container-button .button-completed:hover{
+  background: var(--main-title-3) ;
+}

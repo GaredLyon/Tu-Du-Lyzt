@@ -1,25 +1,19 @@
+/* ES TO EN */
+
 /* CONTENEDOR DE COLUMNAS */
 .container-columns {
 	display: flex;
-	/* flex-direction: column; */
-	/* background: coral; */
 	overflow: hidden;
 	flex-wrap: wrap;
 	padding: 2rem;
 	gap: 2rem;
+	height: 100%;
 }
 
-.main__boton-new{
+.main__new-button{
 	font-size: 2rem;
 	font-weight: bold;
-	/* padding: 1rem 2rem; */
-	/* padding: .5rem 2rem; */
 	border-radius: 1rem;
-	border: 0.2rem solid #70b5ee;
-	color: #70b5ee;
-	/* width: 250px; */
-	/* margin: auto; */
-	/* width: max-content; */
 	flex-grow: 1;
 	cursor: pointer;
 
@@ -34,34 +28,33 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	box-shadow: 0 0 1rem rgba(255, 255, 255, 0.271);
 
-	background: #8a8d96;
 	border: none;
 	transition: 300ms;
+	background: #8a8d96;
+
+	/* THEME */
+	background: var(--main-button-add);
 }
-.main__boton-new i{
+.main__new-button i{
 	padding: 0;
 	font-size: 2.5rem;
 
 	color: white;
 }
 
-.main__boton-new:hover{
-	/* background: #70b5ee; */
-	/* color: white; */
-
+.main__new-button:hover{
 	transform: scale(1.15);
 }
 
 @media (min-width: 480px) {
-	.main__boton-new{
+	.main__new-button{
 		padding: 1rem 2rem;
 	}
 }
 
 @media (min-width: 1024px) {
-	.main__boton-new{
+	.main__new-button{
 		display: none;
 	}
 }
@@ -69,9 +62,22 @@
 @media (min-width: 1327px) {
 	.container-columns{
 		justify-content: center;
-		/* align-items: center; */
 		flex-direction: row;
 		padding: 2rem;
 		gap: 2rem;
 	}
+}
+/* .container-columns.dark {
+  background: #333639 ;
+} */
+/* .container-columns.dark .dark{
+  background: #1a1c1ec0;
+} */
+
+
+/* ///////////////////////////////// */
+.ventana-modal{
+	background: blue;
+	/* position: absolute; */
+	/* margin: auto; */
 }

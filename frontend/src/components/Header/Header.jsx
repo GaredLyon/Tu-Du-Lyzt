@@ -1,99 +1,98 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../context/AppContext";
-import { traerTags } from "../../helpers/traerTags";
+import { getTags } from "../../helpers/getTags";
 import "./Header.css";
 import TextInput from '../TextInput/TextInput'
 
 ///////////////////////////////////////////
 const Header = () => { 
-  const {grupos} = useContext(AppContext)  
+  const {groups} = useContext(AppContext)  
 
 	const [tags, setTags] = useState([]);
 
 	useEffect(() => {
-		let valores = traerTags(grupos)
-		setTags(valores)
-	},[grupos])
+		let values = getTags(groups)
+		// console.log(values)
+
+		setTags(values)
+	},[groups])
+
+	const {setTypeCards, setTypeColumn} = useContext(AppContext)
+
+	/////////////////////////////
+	const filtrarPorEstado = (e) => {
+		const valor = e.target.value
+		// console.log(valor)
+		setTypeColumn(valor)
+	}
+
+	const filtrarPorPrioridad = (e) => {
+		const valor = e.target.value
+		// console.log(valor)
+		setTypeCards(valor)
+	}
 
 	///////////////////////////////////////////
 	return (
 		<header className="header">
 
 			{/* CONTENEDOR */}
-			<div className="header__contenedor">
+			<div className="header__container" data-theme>
 
 				{/* CAJA DE SELECTORESS */}
-				<section className="header__contenedor-selectores">
+				<section className="header__container-selectors">
 
 					{/* SELECTOR 1 */}
-					<select className="header__selector" name="priority" id="priority" >
-						{/* <optgroup label="priority"> */}
-							<option value="">TODOS</option>
-							<option value="high">High</option>
-							<option value="middle">Middle</option>
-							<option value="low">Low</option>
-						{/* </optgroup> */}
+					<select
+						className="header__selector"
+						name="priority"
+						id="priority"
+						title="Prioridad"
+						defaultValue=''
+						onChange={filtrarPorPrioridad}>
+						<option disabled value=''>Prioridad</option>
+						<option value="all">Todos</option>
+						<option value="high">Alto</option>
+						<option value="middle">Medio</option>
+						<option value="low">Bajo</option>
 					</select>
 
 					{/* SELECTOR 2 */}
-					<select className="header__selector" name="column" id="column">
-						{/* <optgroup label="column"> */}
-							<option value="all">TODOS</option>
-							<option value="todo">Todo</option>
-							<option value="progress">Progress</option>
-							<option value="completed">completed</option>
-						{/* </optgroup> */}
+					<select
+						className="header__selector"
+						name="column"
+						id="column"
+						title='Estado de las tareas'
+						defaultValue=''
+						onChange={filtrarPorEstado}>
+						<option disabled value=''>Estado</option>
+						<option value="all">Todos</option>
+						<option value="pendients">Pendientes</option>
+						<option value="progress">Proceso</option>
+						<option value="completed">Completados</option>
 					</select>
 
 					{/* SELECTOR 3 */}
-					<select className="header__selector" name="tag" id="tag">
-						{/* <optgroup label="tag"> */}
-						<option value="">TODOS</option>
+					{/* <select className="header__selector" name="tag" id="tag" title="Lista de tags">
+						<option value="">Todos</option>
 						{tags.map((tag, index) => (
 							<option key={index} value={tag}> {tag}</option>
 						))}
-						{/*</optgroup> */}
-					</select>
+					</select> */}
 
 					{/* SELECTOR 4 */}
-					<select className="header__selector" name="time" id="time">
-						{/* <optgroup label="time"> */}
-							<option value="all">TODOS</option>
+					{/* <select className="header__selector" name="time" id="time" title="Fecha de creación">
+							<option value="all">Todos</option>
 							<option value="day">1 hora</option>
 							<option value="day">2 horas</option>
 							<option value="day">4 horas</option>
 							<option value="day">8 horas</option>
 							<option value="day">12 horas</option>
-							<option value="day">1 dia</option>
-							<option value="day">2 dias</option>
-							<option value="day">3 dias</option>
-							<option value="day">4 dias</option>
-							<option value="day">5 dias</option>
-							<option value="day">6 dias</option>
-							<option value="week">1 semana</option>
-							<option value="week">2 semanas</option>
-							<option value="week">3 semanas</option>
-							<option value="month">1 mes</option>
-							<option value="month">2 meses</option>
-							<option value="month">3 meses</option>
-							<option value="month">4 meses</option>
-							<option value="month">5 meses</option>
-							<option value="month">6 meses</option>
-							<option value="month">7 meses</option>
-							<option value="month">8 meses</option>
-							<option value="month">9 meses</option>
-							<option value="month">10 meses</option>
-							<option value="month">11 meses</option>
-							<option value="month">12 meses</option>
-						{/* </optgroup> */}
-					</select>
+					</select> */}
 				</section>
 
 				{/* BUSCADOR */}
-				<div className="header__buscador">
-					<TextInput  />
-					<i className="fa-solid fa-magnifying-glass"></i>
-				</div>
+				<TextInput/>
 			</div>
 
 		</header>

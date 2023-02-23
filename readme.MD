@@ -2,7 +2,7 @@
 
 # Tu Du Lyzt
 
-App para llevar un registro de tareas pendientes y completadas.
+App to keep track of pending and completed tasks.
 
 </div>
 
@@ -19,22 +19,22 @@ App para llevar un registro de tareas pendientes y completadas.
 
 <img src="./assets/captura.png" style="width: 100%"  />
 
-## 📌 Los usuarios deberían ser capaces de
+## 📌 Users should be able to
 
 <img src="https://octodex.github.com/images/inspectocat.jpg" style="width: 25%" align="right">
 
-- Crear y administrar una lista de tareas pendientes.
-- Establecer prioridades o niveles de urgencia para cada tarea.
-- Establecer fechas de vencimiento o plazos para las tareas.
-- Marcar tareas como completadas una vez que se hayan terminado.
-- Organizar las tareas por categorías o etiquetas.
-- Recibir recordatorios o notificaciones para las tareas próximas a vencerse.
+- Create and manage a list of pending tasks.
+- Set priorities or urgency levels for each task.
+- Set due dates or deadlines for tasks.
+- Mark tasks as completed once they have been finished.
+- Organize tasks by categories or tags.
+- Receive reminders or notifications for tasks that are about to be due.
 
-## 🔠 Fuente de texto
+## 🔠 Font
 
 - Nunito - https://fonts.google.com/specimen/Nunito?query=nunito
 
-## 🎨 Paleta de colores
+## 🎨 Color palette
 
 <div>
   <img src="https://via.placeholder.com/200x50/57A8EB/000000/?text=57A8EB" style="width: 120px">
@@ -56,22 +56,22 @@ App para llevar un registro de tareas pendientes y completadas.
 
 </div>
 
-## 🚀 Desarrollado con las siguientes tecnologias
+## 🚀 Developed with the following technologies
 
 <div align="left" >
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/React.svg/375px-React.svg.png" height="55px" />  
 <img src="https://camo.githubusercontent.com/d3af5ecb4b28914f8218d22ac2ca9e590e114412918e222392360c27f0039b25/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f362f36322f435353335f6c6f676f2e737667" height="55px" /> &nbsp;
-<img src="https://camo.githubusercontent.com/01d46ef9dff07a9f1065752ec48c5870b71ce9f013741766486ab0c432787fc8/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6e6f64656a732d312e737667" height="65px" />  &nbsp; 
+<img src="https://camo.githubusercontent.com/01d46ef9dff07a9f1065752ec48c5870b71ce9f013741766486ab0c432787fc8/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6e6f64656a732d312e737667" height="60px" />  &nbsp; 
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg" height="70px" />  
 <img src="https://camo.githubusercontent.com/76eef8f3cc351a6227d1ead376a039599f45c06efc48a6da32ec62f5482b34da/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f6d6f6e676f64622d69636f6e2d312e737667" height="65px" />  
 
 
 </div>
 
-## 🌍 Despliegue y sitio web de la aplicacion
+## 🌍 Deployment and website of the application
 
-Puedes probar la aplicacion [aqui](https://github.com/GaredLyon/Tu-Du-Lyzt/).
+You can try the application [here](https://tudu-lyzt.netlify.app/).
 
 <img src="https://octodex.github.com/images/welcometocat.png" style="width: 25%">
 

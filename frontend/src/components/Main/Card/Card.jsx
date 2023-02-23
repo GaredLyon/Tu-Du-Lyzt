@@ -1,179 +1,195 @@
 import React, { useContext, useState } from 'react'
 import './Card.css'
-/* import { editarTarea } from '../../../helpers/editarTarea'
-import { eliminartarea } from '../../../helpers/eliminarTarea' */
+import { formatDate } from '../../../helpers/formatDate'
+import { formatHour } from '../../../helpers/formatHour'
+import { deleteTasks } from '../../../helpers/deleteTask'
+import { editTask } from '../../../helpers/editTask'
 import { AppContext } from '../../../context/AppContext'
-import { formatearFecha } from '../../../helpers/formatearFecha'
-import { formatearHora } from '../../../helpers/formatearHora'
+import { moveTask } from '../../../helpers/movetask'
 
-const obtenerColor = (nivel) => {
-  switch (nivel) {
-    case 'High': return 'red'
-    case 'Middle': return 'yellow'
+//obtener el color
+const getColor = (priority) => {
+  switch (priority) {
+    case 'high': return 'red'
+    case 'middle': return 'yellow'
     default: return 'blue'
   }
 }
 
 ///////////////////////////////////////////////////
-export const Card = ({idGrupo , tarea}) => {
+export const Card = ({ task }) => {
 
-  const {id, nivel, contenido} = tarea
+  const { _id, priority, title, description, state } = task
+  const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
+  // const [cardVisible, setCardVisible] = useState(true)
 
-  const [editable, setEditable] = useState(1) // 1 no editable - 0 editable
-  
+  const { getData, typeCards, busqueda, setBusqueda } = useContext(AppContext)
+
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO
-  const [tiempoTranscurrido, setTiempoTranscurrido] = useState()
+  const [timeElapsed, setTimeElapsed] = useState(true)
 
   setTimeout(() => {
-    let respuesta = formatearHora(tarea.fechayhora)
-    setTiempoTranscurrido(respuesta)
+    let result = formatHour(task.date)
+    setTimeElapsed(result)
   }, 1000);
 
 
   //EDITAR TAREA ******************************************************
-  const editarTareaActual = ( idGrupo) => {
+  const solicitarCambio = (idTask) => {
 
-    const titulo = document.getElementById(`input1-tarea${id}`).value
-    const descripcion = document.getElementById(`input2-tarea${id}`).value
-    
-    setGrupos(estadoActual => {
-      
-      const gruposActualizados = estadoActual.map(grupo => {
-        if (grupo.id === idGrupo) {
+    const title = document.getElementById(`input1-task${idTask}`).value
+    const description = document.getElementById(`input2-task${idTask}`).value
 
-          let tareasActualizadas = grupo.tareas.map(tarea => {
-            tarea.contenido.titulo = titulo
-            tarea.contenido.descripcion = descripcion
-
-            return tarea
-          })
-
-          return {
-            ...grupo,
-            tareas: [...tareasActualizadas]
-          }
-        }
-        return grupo
-      })
-
-      return gruposActualizados
-    })
-
-
-    // //EJECUTAR LA PETICION AL SERVIDOR
-    // editarTarea({
-    //   idGrupo,
-    //   idTarea,
-    //   nuevoContenido: {
-    //     titulo,
-    //     descripcion
-    //   }
-    // })
-
+    editTask(idTask, title, description)
   }
 
-  //ELIMINAR TAREA ****************************************************
-  const {grupos, setGrupos} = useContext(AppContext)
+  const solicitarEliminar = async () => {
+    setVentanaCargando(true)
 
-  const eliminarTareaActual = (idGrupo, idTarea) => {
-
-    setGrupos(estadoActual => {
-      
-      const gruposActualizados = estadoActual.map(grupo => {
-        if (grupo.id === idGrupo) {
-
-          let nuevaLista = grupo.tareas.filter(tarea => tarea.id !== idTarea)
-
-          return {
-            ...grupo,
-            tareas: [...nuevaLista]
-          }
-        }
-        return grupo
-      })
-
-      // console.log(gruposActualizados[idGrupo].tareas)
-      return gruposActualizados
-    })
-
-
-    //EJECUTAR LA PETICION AL SERVIDOR
-    // eliminartarea({
-    //   idGrupo,
-    //   idTarea
-    // })
+    await deleteTasks(_id)
+    getData()
+    // setCardVisible(!cardVisible)
   }
+
+  const solicitarMover = async (id, state) => {
+    setVentanaMoviendo(true)
+
+    let respuesta = await moveTask(id, state)
+
+    // console.log(respuesta)
+
+    if (respuesta.status) {
+      getData()
+    }
+  }
+
+  //CONFIRMACION PARA ELIMINAR TAREA********************************* */
+  const [ventanaEliminar, setVentanaEliminar] = useState(false)
+  const [ventanaCargando, setVentanaCargando] = useState(false)
+  const [ventanaMover, setVentanaMover] = useState(false)
+  const [ventanaMoviendo, setVentanaMoviendo] = useState(false)
 
   //////////////////////////////////
   return (
-    <article className={`card ${`card--${obtenerColor(nivel)}`}`} draggable>
-      
-      {/* CARD MAIN */}
-      <main className='card__main'>
-        <textarea
-          id={`input1-tarea${id}`}
-          className='card__title'
-          defaultValue={contenido.titulo}
-          disabled={editable}
-          maxLength={20}
-          rows="1" />
-        <textarea
-          id={`input2-tarea${id}`}
-          className='card__container'
-          defaultValue={contenido.descripcion}
-          disabled={editable}
+    <article className={`card ${`card--${getColor(priority)}`} ${(typeCards === 'all' || typeCards === priority) && 'card--visible'}`}>
+      <>
+        {/* CARD MAIN */}
+        <main className='card__main'>
+          <textarea
+            id={`input1-task${_id}`}
+            className='card__title'
+            defaultValue={title}
+            disabled={cardEditable}
+            maxLength={12}
+            rows="1"
           />
-      </main>
+          <textarea
+            id={`input2-task${_id}`}
+            className='card__container'
+            defaultValue={description}
+            disabled={cardEditable}
+          />
+        </main>
 
-      {/* CARD ASIDE */}
-      <aside className='card__aside'>
-        <section className='card__icon-container'>
-          {/* ICONO TACHO */}
-          <i
-            className="fa-sharp fa-solid fa-trash card__icon"
-            onClick={() => eliminarTareaActual(idGrupo, id)}></i>
-          {
-            editable ? (
-              /* ICONO LAPIZ */
-              <i
-                className="fa-solid fa-pencil card__icon"
-                onClick={()=>setEditable(!editable)}>
-              </i>
-            ): (
-              /* ICONO GUARDAR */
-              <i
-                className="fa-solid fa-floppy-disk card__icon"
-                onClick={()=>{
-                  editarTareaActual(idGrupo, id)
-                  setEditable(!editable)
-                }}>
-              </i>
-            )
-          }
+        {/* CARD ASIDE */}
+        <aside className='card__aside'>
+          <section className='card__icon-container'>
+            {/* ICONO TACHO */}
+            <i
+              className="fa-sharp fa-solid fa-trash card__icon"
+              title='Eliminar tarea'
+              // onClick={() => solicitarEliminar(_id)}
+              onClick={() => setVentanaEliminar(true)}
+            ></i>
+            {
+              cardEditable ? (
+                /* ICONO LAPIZ */
+                <i
+                  className="fa-solid fa-pencil card__icon"
+                  title='Editar tarea'
+                  onClick={() => setCardEditable(!cardEditable)}>
+                </i>
+              ) : (
+                /* ICONO GUARDAR */
+                <i
+                  className="fa-solid fa-floppy-disk card__icon"
+                  title='Guardar tarea'
+                  onClick={() => {
+                    solicitarCambio(_id)
+                    setCardEditable(!cardEditable)
+                  }}>
+                </i>
+              )
+            }
 
-          <div className='caja__icon'>
-            {/* ICONO DE RELOJ */}
-            <i className={`fa-solid fa-clock card__icon`}></i>
-            <div className='card__aviso'>{tiempoTranscurrido}</div>
-            <div className='card__aviso'>{}</div>
-          </div>
+            <div className='caja__icon'>
+              {/* ICONO DE RELOJ */}
+              <i className={`fa-solid fa-clock card__icon`} title='Hace cuanto atras fue creado'></i>
+              <div className='card__alert'>{timeElapsed}</div>
+              <div className='card__alert'>{ }</div>
+            </div>
 
-          <div className='caja__icon'>
-            {/* ICONO DE CALENDARIO */}
-            <i className={`fa-solid fa-calendar card__icon`}></i>
-            <div className='card__aviso'>{formatearFecha(tarea.fechayhora)}</div>
-          </div>
+            <div className='caja__icon'>
+              {/* ICONO DE CALENDARIO */}
+              <i className={`fa-solid fa-calendar card__icon`} title='Fecha de creacion'></i>
+              <div className='card__alert'>{formatDate(task.date)}</div>
+            </div>
 
-        </section>
-        <section className='card__icon-container'>
-          {/* ICONO ATRAS */}
-          <i className="fa-solid fa-arrow-left card__icon"></i>
-          {/* ICONO SIGUIENTE */}
-          <i className="fa-solid fa-arrow-right-long card__icon"></i>
-        </section>
-      </aside>
+          </section>
+          <section className='card__icon-container'>
+            {/* ICONO ATRAS */}
+            <i className="fa-solid fa-up-down-left-right card__icon" onClick={() => setVentanaMover(true)}></i>
+          </section>
+        </aside>
+      </>
+
+
+      {
+        ventanaEliminar && (
+          <article className='card-alert'>
+            <h4 className='card-alert__title'>¿Estas seguro que quieres Eliminar?</h4>
+            <div className='card-alert__container-button'>
+              <button onClick={() => solicitarEliminar(_id)}>Confirmar</button>
+              <button onClick={() => setVentanaEliminar(false)}>Cancelar</button>
+            </div>
+          </article>
+        )
+      }
+
+      {
+        ventanaMover && (
+          <article className='card-alert'>
+            <i className="fa-solid fa-xmark mover__icono-cerrar" onClick={() => setVentanaMover(false)}></i>
+            <h4 className='card-alert__title'>¿A donde los quieres mover?</h4>
+            <div className='card-alert__container-button'>
+              {state !== 'pendient' && (<button className='button-pendient' onClick={() => solicitarMover(_id, 'pendient')}>Pendiente</button>)}
+              {state !== 'progress' && (<button className='button-process' onClick={() => solicitarMover(_id, 'progress')}>Proceso</button>)}
+              {state !== 'completed' && (<button className='button-completed' onClick={() => solicitarMover(_id, 'completed')}>Completado</button>)}
+            </div>
+          </article>
+        )
+      }
+
+      {
+        ventanaCargando && (
+          <article className='card-alert card-alert--cargando'>
+            <div className='icono-cargando'></div>
+            <p>Eliminando</p>
+          </article>
+        )
+      }
+
+      {
+        ventanaMoviendo && (
+          <article className='card-alert card-alert--cargando'>
+            <div className='icono-cargando'></div>
+            <p>Moviendo</p>
+          </article>
+        )
+      }
 
     </article>
+
   )
 }
 
