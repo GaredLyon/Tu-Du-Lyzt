@@ -1,9 +1,9 @@
 .theme5{
   /* ASIDE */
-  --aside: #fec7d7;
+  --aside: #293241;
   --aside-border-right: #0e172c6e; 
 
-  --aside-title:  #0e172c; 
+  --aside-title:  #fff; 
   --aside-form: #ffffff; 
 
   --aside-textarea: #d9d4e7; 
@@ -17,16 +17,16 @@
 
   --aside-button-close: #FFF;
 
-  --aside-button-theme: #0e172c;
-  --aside-button-theme-letter: white;
-  --aside-button-theme-hover: #272e41;
+  --aside-button-theme: #ffffff;
+  --aside-button-theme-letter: #000;
+  --aside-button-theme-hover: #6c6f77;
   --aside-button-theme-hover-letter: white;
 
-  --aside-button-add: rgb(75, 173, 75);
-  --aside-button-add-hover: rgb(37, 152, 37);
+  --aside-button-add: #205E61;
+  --aside-button-add-hover: #286e71;
   --aside-button-add-letter: white;
-  --aside-button-clear: #f6608a;
-  --aside-button-clear-hover: rgb(205, 54, 85);
+  --aside-button-clear: #D61355;
+  --aside-button-clear-hover: #e82364;
   --aside-button-clear-icon: white;
 
   --alert-bg: #4b4d54;

@@ -1,6 +1,6 @@
-.theme7{
+.theme19{
   /* ASIDE */
-  --aside: #54436B;
+  --aside: #676FA3;
   --aside-border-right: #33333388; 
 
   --aside-title:  #fff; 
@@ -32,7 +32,7 @@
   --alert-bg: #37383e;
 
   /* HEADER */
-  --header: #286e71; 
+  --header: #EEF2FF; 
   --header-selector: #fff; 
   --header-selector-letter: black; 
   --aside-selector-border: #767676; 
@@ -45,13 +45,13 @@
   --header-search-icon-hover: #302A40; 
 
   /* MAIN */
-  --main: #286e71; 
+  --main: #EEF2FF; 
   --main-column: #ffffff; 
 
   --main-title-letter: #FFF; 
-  --main-title-1: #50CB93; 
-  --main-title-2: #50CB93; 
-  --main-title-3: #50CB93; 
+  --main-title-1: #676FA3; 
+  --main-title-2: #676FA3; 
+  --main-title-3: #676FA3; 
 
   --main-card-1: #FF5959; 
   --main-card-2: #FF5959; 
@@ -62,5 +62,5 @@
   --main-card-floating: #525252; 
   --main-card-floating-letter: #fff; 
 
-  --main-button-add: #54436B; 
+  --main-button-add: #1B2430; 
 }
