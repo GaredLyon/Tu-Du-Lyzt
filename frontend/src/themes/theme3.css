@@ -7,37 +7,37 @@
   --aside-title:  #fff; 
   --aside-form: #333; 
 
-  --aside-textarea: #d6d7ff; 
+  --aside-textarea: #EEEEEE; 
   --aside-textarea-letter: #000; 
   --aside-textarea-placeholder: #000; 
   --aside-textarea-separator: #333;  
 
-  --aside-selector: #6c6f77;  
+  --aside-selector: #5d606a;  
   --header-selector-letter: black; 
-  --aside-selector-border: #767676;  
+  --aside-selector-border: #5d606a;  
   --aside-selector-letter: #fff;  
 
   --aside-button-close: #FFF; 
 
   --aside-button-theme: white;
   --aside-button-theme-letter: black;
-  --aside-button-theme-hover: gray;
+  --aside-button-theme-hover: #767676;
   --aside-button-theme-hover-letter: white;
 
-  --aside-button-add: rgb(77, 190, 77);
-  --aside-button-add-hover: rgb(68, 162, 68);
+  --aside-button-add: #205E61;
+  --aside-button-add-hover: #286e71;
   --aside-button-add-letter: white;
-  --aside-button-clear: rgb(232, 105, 105);
-  --aside-button-clear-hover: rgb(224, 71, 71);
+  --aside-button-clear: #D61355;
+  --aside-button-clear-hover: #e82364;
   --aside-button-clear-icon: white;
   
-  --alert-bg: #4b4d54;
+  --alert-bg: #5d606a;
 
   /* HEADER */
   --header: #000; 
-  --header-selector: #6c6f77; 
+  --header-selector: #5d606a; 
   --header-selector-letter: #fff;
-  --aside-selector-border: #767676; 
+  --aside-selector-border: #5d606a; 
   
   --header-search: #6c6f77; 
   --header-search-border: #000; 
