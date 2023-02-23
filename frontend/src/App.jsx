@@ -11,6 +11,8 @@ export const App = () => {
   const [typeColumn, setTypeColumn] = useState('all')
   const [typeCards, setTypeCards] = useState('all')
   const [busqueda, setBusqueda] = useState('')
+  const [numberTheme, setNumberTheme] = useState(1)
+
 
   //PARA TRAER LA DATA Y ASIGNAR AL STADO GLOBAL ////////////////////////
   const getData = async() => {
@@ -28,7 +30,9 @@ export const App = () => {
     typeCards,
     setTypeCards,
     busqueda,
-    setBusqueda
+    setBusqueda,
+    numberTheme,
+    setNumberTheme
   }
 
 

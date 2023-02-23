@@ -1,21 +1,24 @@
 import { Main } from "../components/Main/Main"
 import { Aside } from "../components/Aside/Aside"
 import Header  from "../components/Header/Header"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import './Home.css'
 import { startTheme } from "../helpers/startTheme"
+import { AppContext } from "../context/AppContext"
 
 ////////////////////////////////////////////
 function Home() {
 
   const [asideVisible, setAsideVisible] = useState(false)
+  const {setNumberTheme} = useContext(AppContext)
 
   const toggleAside = (valor) =>{
     setAsideVisible(valor)
   }
 
   useEffect(() => {
-    startTheme()
+    let number = startTheme()
+    setNumberTheme(number)
   },[])
 
   ////////////////////////////////////////////
