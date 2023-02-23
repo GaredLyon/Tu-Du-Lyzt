@@ -1,6 +1,6 @@
 .theme18{
   /* ASIDE */
-  --aside: #C0D8C0;
+  --aside: linear-gradient(45deg, #8fb98f, #C0D8C0);
   --aside-border-right: #33333388; 
 
   --aside-title:  #000; 
@@ -47,6 +47,8 @@
   /* MAIN */
   --main: #F5EEDC; 
   --main-column: #ffffff; 
+  --main-column-number-bg: #ffffff; 
+  --main-column-number: #000; 
 
   --main-title-letter: #FFF; 
   --main-title-1: #DD4A48; 

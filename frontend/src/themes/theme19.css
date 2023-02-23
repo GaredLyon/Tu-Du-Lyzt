@@ -1,6 +1,6 @@
 .theme19{
   /* ASIDE */
-  --aside: #676FA3;
+  --aside: linear-gradient(45deg, #676FA3, #555d90);
   --aside-border-right: #33333388; 
 
   --aside-title:  #fff; 
@@ -47,11 +47,13 @@
   /* MAIN */
   --main: #EEF2FF; 
   --main-column: #ffffff; 
+  --main-column-number-bg: #ffffff; 
+  --main-column-number: #000; 
 
   --main-title-letter: #FFF; 
-  --main-title-1: #676FA3; 
-  --main-title-2: #676FA3; 
-  --main-title-3: #676FA3; 
+  --main-title-1: linear-gradient(45deg, #676FA3, #555d90); 
+  --main-title-2: linear-gradient(45deg, #676FA3, #555d90); 
+  --main-title-3: linear-gradient(45deg, #676FA3, #555d90); 
 
   --main-card-1: #FF5959; 
   --main-card-2: #FF5959; 

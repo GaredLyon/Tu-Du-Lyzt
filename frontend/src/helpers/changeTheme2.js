@@ -1,4 +1,4 @@
-const numberThemes = 20
+const numberThemes = 21
 // let number = 1
 
 export const changeTheme2 = (number) => {

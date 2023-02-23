@@ -83,6 +83,8 @@
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+
+  background: var(--aside-textarea);
 }
 
 .header__text textarea{
@@ -95,8 +97,8 @@
 
 
   /* THEME */
-  background: var(--aside-textarea);
   color: var(--aside-textarea-letter);
+  background: transparent;
 }
 
 .header__text textarea::placeholder{
