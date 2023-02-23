@@ -7,7 +7,7 @@ import './Aside.css'
 ////////////////////////////////////
 export const Aside = () => {
 
-  const { getData } = useContext(AppContext)
+  const { getData, numberTheme, setNumberTheme } = useContext(AppContext)
 
   //AGREGAR TAREA *******************
   const addNewtask = async (e) => {
@@ -104,7 +104,10 @@ export const Aside = () => {
         </div>
       </form>
 
-      <button onClick={changeTheme2} className='boton-cambiarTema'>Cambiar tema</button>
+      <button onClick={() => {
+        let number = changeTheme2(numberTheme)
+        setNumberTheme(number)
+      }} className='boton-cambiarTema'>Cambiar tema: {numberTheme}</button>
     </aside>
   )
 }

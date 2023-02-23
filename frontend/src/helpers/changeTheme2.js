@@ -1,7 +1,7 @@
 const numberThemes = 20
-let number = 1
+// let number = 1
 
-export const changeTheme2 = () => {
+export const changeTheme2 = (number) => {
 
   number++
 
@@ -11,4 +11,6 @@ export const changeTheme2 = () => {
 
   //GUARDAR EL TEMA EN LOCAL STORAGE
   localStorage.setItem('theme2', number)
+
+  return number
 }
