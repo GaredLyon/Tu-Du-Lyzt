@@ -21,7 +21,7 @@
 
   --aside-button-theme: white;
   --aside-button-theme-letter: black;
-  --aside-button-theme-hover: #767676;
+  --aside-button-theme-hover: #205E61;
   --aside-button-theme-hover-letter: white;
 
   --aside-button-add: #205E61;
@@ -50,9 +50,9 @@
   --main: #000; 
   --main-column: #333; 
 
-  --main-title-1: #6c6f77; 
-  --main-title-2: #878bf3; 
-  --main-title-3: #53c27d; 
+  --main-title-1: #205E61; 
+  --main-title-2: #205E61; 
+  --main-title-3: #205E61; 
   --main-title-letter: #FFF; 
 
   --main-card-1: #b889ff; 
