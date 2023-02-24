@@ -22,11 +22,11 @@
   --aside-button-theme-hover: gray;
   --aside-button-theme-hover-letter: white;
 
-  --aside-button-add: rgb(77, 190, 77);
-  --aside-button-add-hover: rgb(68, 162, 68);
+  --aside-button-add: #4ad17e;
+  --aside-button-add-hover: #49b171;
   --aside-button-add-letter: white;
-  --aside-button-clear: rgb(232, 105, 105);
-  --aside-button-clear-hover: rgb(224, 71, 71);
+  --aside-button-clear: #ed6e6e;
+  --aside-button-clear-hover: #e15656;
   --aside-button-clear-icon: white;
 
   --alert-bg: #4b4d54;
@@ -47,6 +47,9 @@
   /* MAIN */
   --main: #eeeeee; 
   --main-column: #ffffff; 
+  --main-column-number-bg: #ffffff; 
+  --main-column-number: #000; 
+  
   --main-title-1: #6c6f77; 
   --main-title-2: #ae87f3; 
   --main-title-3: #5ccd87; 

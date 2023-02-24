@@ -241,7 +241,8 @@
   width: 60px;
   height: 60px;
   border-radius: 100%;
-  background: conic-gradient( var(--alert-bg) 0%, white 90%);
+  /* background: conic-gradient( var(--alert-bg) 0%, white 90%); */
+  background: conic-gradient( transparent 0%, white 90%);
   animation: girar 1s infinite reverse;
   transition: 300ms;
 }

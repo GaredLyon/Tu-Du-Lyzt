@@ -95,7 +95,10 @@
   position: absolute;
   top: 8px;
   right: 10px;
-  background: white;
+  
+  /* THEME */
+  background: var(--main-column-number-bg);
+  color: var(--main-column-number);
 }
 
 @media (min-width: 650px) {
