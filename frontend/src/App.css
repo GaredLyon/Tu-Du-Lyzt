@@ -1,4 +1,4 @@
-@import url(./themes/themes1.css);
+@import url(./themes/theme1/theme1.css);
 
 :root{
 
@@ -135,33 +135,6 @@
   --cyan-dark-2: #086F83;
   --cyan-dark-3: #065666;
 
-}
-.scheme{
-	
-    --primary-d: var(--purple-light-3);  /* cualquier combinacion con el segundo*/
-    --primary: var(--purple-light-2) ;
-
-    --secondary-d: var(--pink-1);  /* cualquier ombinacion con el primero*/
-    --secondary: var(--pink-light-3);
-
-    --third-d: var(--green-1);  /* un neutro que combine con primero y segundo*/
-    --third: var(--green-light-3);
-
-    --light: var(--pink-0);   /* blanco*/
-    --neutro: var(--gray-1);
-    --dark: var(--purple-dark-3);    /* negro*/
-
-    --success-d: var(--green-light-3); /* verde*/
-    --success: var(--green-light-2);
-
-    --danger-d: var(--red-1);  /* rojo*/
-    --danger: var(--red-light-3);
-
-    --warning-d: var(--yellow-1); /* amarillo*/
-    --warning: var(--yelow-light-3);
-
-    --info-d: var(--cyan-1);    /* azul*/
-    --info: var(--cyan-light-3);
 }
 
 * {

@@ -1,41 +1,41 @@
-@import url(./scheme.css);
+@import url(./scheme1.css);
 
-.themes1 {
-	--aside-bg: var(--purple-dark-3); /* (w) */
-	--aside-bdr: var(--dark); /* (w) */
-	--aside-title: var(--light); /* (w) */
+.theme1 {
 
-	--header-bg: var(--dark); /* (w) */
-	--header-bdr: var(--dark); /* (w) */
+	--aside-bg: var(--dark); /*  */
+	--aside-bdr: var(--dark); /*  */
+	--aside-title: var(--light); /*  */
 
-	--main-bg: var(--neutro); /* (w) */
-	--main-bdr: var(--neutro); /* (w) */
+	--header-bg: var(--dark); /*  */
+	--header-bdr: var(--dark); /*  */
 
-	/* -------------------------------------------------------------------------------- */
+	--main-bg: var(--neutro); /*  */
+	--main-bdr: var(--neutro);/*  */
 
-	--form-bg: var(--dark);
-	--form-bg: var(--dark);
+    /* -------------------------------------------------------------------------------- */
+
+	--form-bg: var(--dark); /**/
 	--form-bdr: var(--info);
 	--form-ltr: var(--light);
 	--form-p_holder: var(--neutro);
-	--form-t_area-bg: var(--neutro);
-	--form-t_area-bdr: var(--info-d);
+	--form-t_area-bg: var(--neutro); /*  */
+    --form-t_area-bdr: var(--info-d); /*  */
 
-	/* -------------------------------------------------------------------------------- */
-	/* globales */
+    /* -------------------------------------------------------------------------------- */
+    /* globales */
 
-	--stack-bg: var(--light);
+	--stack-bg: var(--light); 
 	--stack-bdr: var(--light);
 
 	--stack-title-bg: var(--primary);
 	--stack-title-bdr: var(--primary);
-	--stack-title-ltr: var(--primary);
+	--stack-title-ltr: var(--light);
 
 	--stack-num-bg: var(--light);
 	--stack-num-bdr: var(--light);
 	--stack-num-ltr: var(--primary);
 
-	/*  individuales */
+    /*  individuales */
 
 	--stack-todo-bg: var(--light);
 	--stack-todo-bdr: var(--light);
@@ -70,8 +70,8 @@
 	--stack-completed-num-bdr: var(--light);
 	--stack-completed-num-ltr: var(--dark);
 
-	/* ------------------------------------------------------------------------------------- */
-	/* globales */
+    /* ------------------------------------------------------------------------------------- */
+    /* globales */
 
 	--card-bg: var(--neutro);
 	--card-bdr: var(--neutro);
@@ -79,17 +79,17 @@
 	--card-icons: var(--light);
 	--card-icons-hov: var(--dark);
 
-	/* individuales */
+    /* individuales */
 
 	--card-high-bg: var(--danger-d);
 	--card-high-bdr: var(--danger-d);
 	--card-high-ltr: var(--dark);
 
-	--card-mid-bg: var(--warning-d);
+	--card-mid-bg: var(--warning-d); 
 	--card-mid-bdr: var(--warning-d);
 	--card-mid-ltr: var(--dark);
 
-	--card-low-bg: var(--info-d);
+	--card-low-bg: var(--info-d); 
 	--card-low-bdr: var(--info-d);
 	--card-low-ltr: var(--dark);
 
@@ -102,13 +102,13 @@
 	--card-t_area-low-bg: var(--info);
 	--card-t_area-low-bdr: var(--info);
 
-	/* --------------------------------------------------------------------------------- */
-	/* globales */
+    /* --------------------------------------------------------------------------------- */
+    /* globales */
 
 	--btn-ltr: var(--dark);
 	--btn-ltr-hov: var(--dark);
 
-	/* individuales */
+    /* individuales */
 
 	--btn-add-bg: var(--success);
 	--btn-add-bdr: var(--success);
@@ -126,8 +126,8 @@
 
 	--btn-theme-bg: var(--info);
 	--btn-theme-bdr: var(--info);
-	--btn-theme-ltr: var(--dark);
-	--btn-theme-bg-hov: var(--info-d);
+	--btn-theme-ltr: var(--dark); 
+	--btn-theme-bg-hov: var(--info-d); 
 	--btn-theme-bdr-hov: var(--info-d);
 	--btn-theme-ltr-hov: var(--dark);
 
@@ -138,14 +138,14 @@
 	--btn-create-bdr-hov: var(--success-d);
 	--btn-create-ltr-hov: var(--dark);
 
-	--btn-delete-bg: var(--danger);
+    --btn-delete-bg: var(--danger);
 	--btn-delete-bdr: var(--danger);
 	--btn-delete-ltr: var(--dark);
 	--btn-delete-bg-hov: var(--danger-d);
 	--btn-delete-bdr-hov: var(--danger-d);
 	--btn-delete-ltr-hov: var(--dark);
 
-	/* ----------------------------------------------------------------------------------- */
+    /* ----------------------------------------------------------------------------------- */
 
 	--search-bg: var(--light);
 	--search-bdr: var(--dark);
@@ -154,11 +154,11 @@
 	--search-icon: var(--neutro);
 	--search-icon-hov: var(--neutro);
 
-	/* ------------------------------------------------------------------------------------ */
+    /* ------------------------------------------------------------------------------------ */
 
-	--select-bg: var(--light);
-	--select-bdr: var(--dark);
-	--select-ltr: var(--dark);
+	--select-bg: var(--light); /*  */
+	--select-bdr: var(--dark); /*  */
+	--select-ltr: var(--dark); /*  */
 
 	--float-bg: var(--neutro);
 	--float-bdr: var(--neutro);

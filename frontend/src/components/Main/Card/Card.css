@@ -9,22 +9,17 @@
   position: relative;
   overflow: hidden;
 
-  background: var(--red);
-
-  /* THEME */
-  background: var(--main-card-1);
+  /*new THEME */
+  background: var(--card-high-bg);
 }
 .card--yellow {
-  background: var(--yellow);
 
-  /* THEME */
-  background: var(--main-card-2);
+  /* new THEME */
+  background: var(--card-mid-bg);
 }
 .card--blue {
-  background: var(--blue);
-
-  /* THEME */
-  background: var(--main-card-3);
+  /* new theme */
+  background: var(--card-low-bg);
 }
 .card--visible{
   display: flex;
@@ -42,7 +37,6 @@
 .card__title {
   text-align: center;
   font-weight: bold;
-  color: var(--gray1);
   background: transparent;
   width: 100%;
 
@@ -76,8 +70,8 @@
   font-size: var(--lg);
   padding: 0.3rem 0.8rem;
 
-  /* THEME */
-  color: var(--main-card-letter);
+  /* new -THEME */
+  color: var(--card-ltr);
 }
 
 .card__container::-webkit-scrollbar {
@@ -99,18 +93,17 @@
 .card__icon {
   border-radius: 0.5rem;
   font-size: 1.2rem !important;
-  color: var(--white);
   font-size: 1.6rem;
   padding: 0.4rem;
   margin: 0 0.4rem;
   cursor: pointer;
 
   /* THEME */
-  color: var(--main-card-icons);
+  color: var(--card-icons);
 
 }
 .card__icon:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--card-icons-hov);
 }
 
 .card__icon-container:last-child .card__icon:first-child:hover {
@@ -142,8 +135,9 @@
   display: none;
 
   /* THEME */
-  background: var(--main-card-floating);
-  color: var(--main-card-floating-letter);
+  background: var(--float-bg);
+  border: 1px solid var(--float-bdr);
+  color: var(--float-ltr);
 }
 
 .card__alert:before {
@@ -157,7 +151,7 @@
   transform: rotateZ(-270deg) scale(0.6);
 
   /* THEME */
-  background: var(--main-card-floating);
+  background: var(--float-bg);
 }
 
 @media (min-width: 1300px) { /* PROVVVVVVVVVVVVVVVVVVVVVVVVV */

@@ -1,4 +1,4 @@
-@import url(../themes/themes1.css);
+@import url(../themes/theme1/theme1.css);
 
 .App {
 	display: flex;
@@ -34,7 +34,8 @@
 
 	/* new-themes */
 	border-right: var(--aside-bdr);
-	background: var(--aside-title);
+	background: var(--aside-bg);
+
 }
 .App__aside::-webkit-scrollbar {
 	background: transparent;

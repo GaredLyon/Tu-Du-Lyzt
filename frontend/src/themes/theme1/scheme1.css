@@ -1,6 +1,5 @@
-@import url(./colors.css);
 
-.scheme{
+.scheme1{
 	
     --primary-d: var(--purple-light-3);  /* cualquier combinacion con el segundo*/
     --primary: var(--purple-light-2) ;
@@ -18,12 +17,13 @@
     --success-d: var(--green-light-3); /* verde*/
     --success: var(--green-light-2);
 
-    --danger-d: var(--red-1);  /* rojo*/
-    --danger: var(--red-light-3);
+    --danger-d: var(--red-light-3);  /* rojo*/
+    --danger: var(--red-light-2);
 
-    --warning-d: var(--yellow-1); /* amarillo*/
-    --warning: var(--yelow-light-3);
+    --warning-d: var(--yellow-light-3); /* amarillo*/
+    --warning: var(--yelow-light-2);
 
-    --info-d: var(--cyan-1);    /* azul*/
-    --info: var(--cyan-light-3);
+    --info-d: var(--cyan-light-3);    /* azul*/
+    --info: var(--cyan-light-2);
 }
+

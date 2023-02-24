@@ -34,7 +34,9 @@
 	background: #8a8d96;
 
 	/* THEME */
-	background: var(--main-button-add);
+
+	/* new-theme */
+	background: var(--btn-add-bg);
 }
 .main__new-button i{
 	padding: 0;

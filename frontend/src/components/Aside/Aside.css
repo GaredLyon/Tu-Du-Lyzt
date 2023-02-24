@@ -3,6 +3,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  /* new-theme */
 }
 
 
@@ -33,6 +35,9 @@
   
   /* THEME */
   background: var(--form-bg);
+
+  /* new-theme */
+  color: var(--fomr-ltr);
 }
 
 
@@ -61,9 +66,15 @@
   flex-grow: 1;
 
   /* THEME */
+  /* background: var(--select-bg);
+  border: 1px solid var(--select-bdr);
+  color: var(--select-ltr); */
+
+  /* new-theme */
   background: var(--select-bg);
   border: 1px solid var(--select-bdr);
   color: var(--select-ltr);
+
 }
 
 .aside__container-icons{
@@ -79,7 +90,6 @@
 
 /* BLOQUE DE TEXTOS */
 .header__text{
-  background: #e2e2e5;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
@@ -93,14 +103,13 @@
   width: 100%;
   padding: 1.5rem;
   outline: none;
-  background: #e2e2e5;
-  border: none;
   resize: none;
 
 
   /* THEME */
   color: var(--form-t_area-ltr);
-  background: transparent;
+  background: var(--form-t_area-bg);
+  border: 1px solid var(--form-t_area-bdr);
 }
 
 .header__text textarea::placeholder{
@@ -115,28 +124,28 @@
 .header__input1{
   font-weight: bold;
   font-size: 2.6rem;
+
+  /* new-theme */
+  background: var(--btn-create-bg);
 }
 
 .header__input2{
   font-size: 2rem;
 }
 .header__text{
-  background: var( --aside-textarea);
+  background: var( --form-t_area-bg);
 }
 .header__text hr{
   margin: 0rem 1rem;
-  background: #333;
   border: none;
-  border-top: 0.1rem solid var(--t_areas-separator);
+  border-top: 1px solid var(--separator);
 }
 
 
 .aside__container-icons{
-  /* background: red; */
   display: flex;
   gap: .8rem;
 }
-
 .aside__button-create,
 .aside__button-delete{
   padding: 1rem;
@@ -146,24 +155,35 @@
   font-weight: bold;
   cursor: pointer;
   flex-grow: 1;
-  background-color: var(--aside-button-add);
-  color: var(--aside-button-add-letter);
+  /* new-theme */
+  background-color: var(--btn-create-bg);
+  color: var(--btn-create-ltr);
 }
 
 .aside__button-delete{
   max-width: 60px;
-  background-color: var(--aside-button-clear);
+  /* new-theme */
+  background-color: var(--btn-delete-bg);
+  border: 1px solid var(--btn-delete-bdr);
+
 }
 
 .aside__button-delete i{
-  color: var(--aside-button-clear-icon) !important;
+  /* new-theme */
+  color: var(--btn-delete-ltr); 
 }
 
 .aside__button-create:hover{
-  background-color: var(--aside-button-add-hover);
+  /* new-theme */
+  background-color: var(--btn-create-bg-hov);
+  border: 1px solid var(--btn-create-bdr-hov);
+  color: var(--btn-create-ltr-hov);
 }
 .aside__button-delete:hover{
-  background-color: var(--aside-button-clear-hover);
+  /* new-theme */
+  background-color: var(--btn-delete-bg-hov);
+  border: 1px solid var(--btn-delete-bdr-hov);
+  color: var(--btn-delete-ltr-hov);
 }
 
 
@@ -211,12 +231,23 @@
   cursor: pointer;
 
   /* THEME */
-  background: var(--aside-button-theme);
-  color: var(--aside-button-theme-letter);
+  /* background: var(--aside-button-theme);
+  color: var(--aside-button-theme-letter); */
+
+  /* new-theme */
+  background: var(--btn-theme-bg);
+  border: 1px solid var(--btn-theme-bdr);
+  color: var(--btn-theme-ltr);
+
 }
 
 .boton-cambiarTema:hover{
   /* THEME */
-  background: var(--aside-button-theme-hover);
-  color: var(--aside-button-theme-hover-letter);
+ /*  background: var(--aside-button-theme-hover);
+  color: var(--aside-button-theme-hover-letter); */
+
+  /* new-theme */
+  background: var(--btn-theme-bg-hov);
+  border: 1px solid var(--btn-theme-bdr-hov);
+  color: var(--btn-theme-ltr-hov);
 }
