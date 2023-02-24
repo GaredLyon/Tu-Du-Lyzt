@@ -11,6 +11,7 @@ router.post('/task', TareaControlador.crear) //RUTA 2 - para crear una nueva tar
 router.delete('/task/:id', TareaControlador.borrar) //RUTA 3 - para eliminar una tarea 
 router.put('/task/:id', TareaControlador.actualizar) //RUTA 4 - para modificar/actualizar una tarea
 router.get('/search/:busqueda', TareaControlador.buscador) //RUTA 5 - para devolver tareas en base a una busqueda por titulo o descripcion
+router.put('/move/:id', TareaControlador.mover) //RUTA 5 - para devolver tareas en base a una busqueda por titulo o descripcion
 
 
 //RUTA 6

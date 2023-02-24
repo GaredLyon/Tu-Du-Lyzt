@@ -19,11 +19,13 @@ const TareaSchema = Schema({
   priority: {
     type: String,
     default: "Middle",
+    enum: ['high', 'middle', 'low'],
     required: true
   },
   state: {
     type: String,
     default: 'Progress',
+    enum: ['progress', 'completed', 'pendient'],
     required: true
   },
   date: {
