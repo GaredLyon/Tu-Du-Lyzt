@@ -53,7 +53,7 @@
   --main-title-1: #6c6f77; 
   --main-title-2: #ae87f3; 
   --main-title-3: #5ccd87; 
-  --main-title-letter: #FFF; 
+  --main-title-letter: #FFF; /*  */
 
   --main-card-1: #fc7575; 
   --main-card-2: #f4db54; 
@@ -65,4 +65,55 @@
   --main-card-floating-letter: #fff; 
 
   --main-button-add: #8a8d96; 
+
+
+
+  /* --------------NUEVAS VARIABLES ----------\/ */
+
+  --btn-ltr-hov: #fff;  /*  aside-form-col */
+  
+	--todo-bg: #fff;   /* main-col */
+	--todo-bdr: #fff;
+
+	--progress-bg: #fff;
+	--progress-bdr: #fff;
+
+	--completed-bg: #fff;
+	--completed-bdr: #fff;
+
+  --todo-title-bdr: #6c6f77;
+	--progress-title-bdr: #ae87f3;
+	--completed-title-bdr: #5ccd87;
+
+	--todo-num-bg: #ae87f3;
+	--todo-num-bdr: #fff;
+	--todo-num-ltr: #fff;
+
+	--progress-num-bg: #ae87f3;
+	--progress-num-bdr: #fff;
+	--progress-num-ltr: #fff;
+
+	--completed-num-bg: #ae87f3;
+	--completed-num-bdr: #fff;
+	--completed-num-ltr: #fff;
+
+  --card-high-bdr: #fc7575;
+	--card-mid-bdr: #f4db54;
+	--card-low-bdr: #57a8eb;
+	--card-t_area-high-bg: #fc7575;
+	--card-t_area-mid-bg: #f4db54;
+	--card-t_area-low-bg: #57a8eb;
+	--card-t_area-high-bdr: #fc7575;
+	--card-t_area-mid-bdr: #f4db54;
+	--card-t_area-low-bdr: #57a8eb;
+
+  --btn-add-ltr: #fff;
+	--btn-add-bdr: #fff;
+	--btn-add-bg-hov: #fff;
+	--btn-add-ltr-hov: #fff;
+	--btn-add-bdr-hov: #fff;
+
+  --col-bdr: #fff;  /* generales */
+	--num-bdr: #fff;
+
 }
