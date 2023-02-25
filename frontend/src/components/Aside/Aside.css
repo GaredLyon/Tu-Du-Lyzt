@@ -1,253 +1,235 @@
 .aside {
-  width: 95%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  /* new-theme */
+	width: 95%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* height: 100%; */
 }
 
-
 .aside__title {
-  font-size: 3.5rem;
-  text-align: center;
-  padding: 3rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--white);
+	font-size: 3.5rem;
+	text-align: center;
+	padding: 3rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 
-  /* THEME */
-  /* color: var(--aside-title); */
-
-  /* new-theme */
-  color: var(--aside-title)
+	/* new-theme */
+	color: var(--aside-title);
 }
 
 .aside__form {
-  width: 100%;
-  min-width: 27.2rem;
-  border-radius: var(--r-lg);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  
-  /* THEME */
-  background: var(--form-bg);
+	width: 100%;
+	min-width: 27.2rem;
+	border-radius: var(--r-lg);
+	padding: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 
-  /* new-theme */
-  color: var(--fomr-ltr);
+	/* new-theme */
+	background: var(--form-bg);
+	color: var(--form-ltr);
+	/* border:1px solid var(--form-bdr); */
 }
 
-
-.header__form{
-  display: flex;
-  gap: .5rem;
-  justify-content: space-between;
+.header__form {
+	display: flex;
+	gap: 0.5rem;
+	justify-content: space-between;
 }
 
-.header__form > div{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
+.header__form > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
 }
 
-.aside__contenedor-selectores{
-  display: flex;
-  width: 100%;
+.aside__contenedor-selectores {
+	display: flex;
+	width: 100%;
 }
 
+.header__form select {
+	padding: 0.5rem 0.5rem;
+	border-radius: 0.5rem;
+	flex-grow: 1;
 
-.header__form select{
-  padding: .5rem .5rem;
-  border-radius: .5rem;
-  flex-grow: 1;
-
-  /* THEME */
-  /* background: var(--select-bg);
+	/* THEME */
+	/* background: var(--select-bg);
   border: 1px solid var(--select-bdr);
   color: var(--select-ltr); */
 
-  /* new-theme */
-  background: var(--select-bg);
-  border: 1px solid var(--select-bdr);
-  color: var(--select-ltr);
-
+	/* new-theme */
+	background: var(--select-bg);
+	color: var(--select-ltr);
 }
 
-.aside__container-icons{
-  border: none;
-  background: transparent;
-  cursor: pointer;
+.aside__container-icons {
+	border: none;
+	background: transparent;
+	cursor: pointer;
 }
 
-.header__form i{
-  font-size: 2rem;
-  padding: 0 .2rem;
+.header__form i {
+	font-size: 2rem;
+	padding: 0 0.2rem;
 }
 
 /* BLOQUE DE TEXTOS */
-.header__text{
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  overflow: hidden;
-  position: relative;
-
-  background: var(--form-t_area-bg);
+.header__text {
+	display: flex;
+	flex-direction: column;
+	border-radius: 1rem;
+	overflow: hidden;
+	position: relative;
+	background: red !important;
+	border: 2px solid blue;
 }
 
-.header__text textarea{
-  width: 100%;
-  padding: 1.5rem;
-  outline: none;
-  resize: none;
+.header__text textarea {
+	width: 100%;
+	padding: 1.5rem;
+	outline: none;
+	resize: none;
 
-
-  /* THEME */
-  color: var(--form-t_area-ltr);
-  background: var(--form-t_area-bg);
-  border: 1px solid var(--form-t_area-bdr);
+	/* THEME */
+	color: var(--form-ltr);
+	/* background: var(--form-t_area-bg) */
 }
 
-.header__text textarea::placeholder{
-  /* THEME */
-  color: var(--form-t_area-p_holder);
+.header__text textarea::placeholder {
+	/* THEME */
+	color: var(--form-p_holder);
 }
 
-.header__text textarea::-webkit-scrollbar{
-  display: none;
+.header__text textarea::-webkit-scrollbar {
+	display: none;
 }
 
-.header__input1{
-  font-weight: bold;
-  font-size: 2.6rem;
+.header__input1 {
+	font-weight: bold;
+	font-size: 2.6rem;
 
-  /* new-theme */
-  background: var(--btn-create-bg);
+	/* new-theme */
+	background: transparent;
+	border: none;
 }
 
-.header__input2{
-  font-size: 2rem;
+.header__input2 {
+	font-size: 2rem;
+	background: transparent;
+	border: none;
 }
-.header__text{
-  background: var( --form-t_area-bg);
+.header__text {
+	/* background: var( --form-t_area-bg); */
+	/* border:1px solid blue; */
 }
-.header__text hr{
-  margin: 0rem 1rem;
-  border: none;
-  border-top: 1px solid var(--separator);
+.header__text hr {
+	margin: 0rem 1rem;
+	border: none;
+	border-top: 1px solid var(--separator);
 }
 
-
-.aside__container-icons{
-  display: flex;
-  gap: .8rem;
+.aside__container-icons {
+	display: flex;
+	gap: 0.8rem;
 }
 .aside__button-create,
-.aside__button-delete{
-  padding: 1rem;
-  border-radius: 1rem;
-  border: none;
-  font-size: 2rem;
-  font-weight: bold;
-  cursor: pointer;
-  flex-grow: 1;
-  /* new-theme */
-  background-color: var(--btn-create-bg);
-  color: var(--btn-create-ltr);
+.aside__button-delete {
+	padding: 1rem;
+	border-radius: 1rem;
+	border: none;
+	font-size: 2rem;
+	font-weight: bold;
+	cursor: pointer;
+	flex-grow: 1;
+	/* new-theme */
+	background-color: var(--btn-create-bg);
+	color: var(--btn-create-ltr);
 }
 
-.aside__button-delete{
-  max-width: 60px;
-  /* new-theme */
-  background-color: var(--btn-delete-bg);
-  border: 1px solid var(--btn-delete-bdr);
-
+.aside__button-delete {
+	max-width: 60px;
+	/* new-theme */
+	background-color: var(--btn-delete-bg);
+	border: 1px solid var(--btn-delete-bdr);
 }
 
-.aside__button-delete i{
-  /* new-theme */
-  color: var(--btn-delete-ltr); 
+.aside__button-delete i {
+	/* new-theme */
+	color: var(--btn-delete-ltr);
 }
 
-.aside__button-create:hover{
-  /* new-theme */
-  background-color: var(--btn-create-bg-hov);
-  border: 1px solid var(--btn-create-bdr-hov);
-  color: var(--btn-create-ltr-hov);
+.aside__button-create:hover {
+	/* new-theme */
+	background-color: var(--btn-create-bg-hov);
+	border: 1px solid var(--btn-create-bdr-hov);
+	color: var(--btn-create-ltr-hov);
 }
-.aside__button-delete:hover{
-  /* new-theme */
-  background-color: var(--btn-delete-bg-hov);
-  border: 1px solid var(--btn-delete-bdr-hov);
-  color: var(--btn-delete-ltr-hov);
+.aside__button-delete:hover {
+	/* new-theme */
+	background-color: var(--btn-delete-bg-hov);
+	border: 1px solid var(--btn-delete-bdr-hov);
+	color: var(--btn-delete-ltr-hov);
 }
-
-
-
-
 
 /* ASIDE AVISO */
-.aside__aviso{
-  text-align: center;
-  color: crimson;
-  /* color: white; */
-  font-weight: bold;
-  font-size: 1.9rem;
+.aside__aviso {
+	text-align: center;
+	color: crimson;
+	/* color: white; */
+	font-weight: bold;
+	font-size: 1.9rem;
 }
-
 
 /* FORMUARIO CARGANDO */
-.form-cargando{
-  background-color: var(--alert-bg);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
+.form-cargando {
+	background-color: var(--alert-bg);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
 }
-.form-cargando p{
-  font-size: 2rem;
-  color: white;
+.form-cargando p {
+	font-size: 2rem;
+	color: white;
 }
-
 
 /* BOTON CAMBIAR TEMA */
-.boton-cambiarTema{
-  padding: 1rem 2rem;
-  border-radius: .5rem;
-  border: none;
-  margin: 6rem 1rem;
-  cursor: pointer;
+.boton-cambiarTema {
+	padding: 1rem 2rem;
+	border-radius: 0.5rem;
+	border: none;
+	margin: 6rem 1rem;
+	cursor: pointer;
 
-  /* THEME */
-  /* background: var(--aside-button-theme);
+	/* THEME */
+	/* background: var(--aside-button-theme);
   color: var(--aside-button-theme-letter); */
 
-  /* new-theme */
-  background: var(--btn-theme-bg);
-  border: 1px solid var(--btn-theme-bdr);
-  color: var(--btn-theme-ltr);
-
+	/* new-theme */
+	background: var(--btn-theme-bg);
+	border: 1px solid var(--btn-theme-bdr);
+	color: var(--btn-theme-ltr);
 }
 
-.boton-cambiarTema:hover{
-  /* THEME */
- /*  background: var(--aside-button-theme-hover);
+.boton-cambiarTema:hover {
+	/* THEME */
+	/*  background: var(--aside-button-theme-hover);
   color: var(--aside-button-theme-hover-letter); */
 
-  /* new-theme */
-  background: var(--btn-theme-bg-hov);
-  border: 1px solid var(--btn-theme-bdr-hov);
-  color: var(--btn-theme-ltr-hov);
+	/* new-theme */
+	background: var(--btn-theme-bg-hov);
+	border: 1px solid var(--btn-theme-bdr-hov);
+	color: var(--btn-theme-ltr-hov);
 }

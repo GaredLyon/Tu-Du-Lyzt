@@ -5,6 +5,7 @@
 	max-height: 100vh;
 	overflow: hidden;
 	min-width: 33.2rem;
+	flex-direction: row-reverse;
 }
 
 .App__container::-webkit-scrollbar {
@@ -23,20 +24,17 @@
 	height: 100vh;
 	top: 0;
 	left: 0;
-	transform: translateX(-100%);
-	z-index: 3;
+	/* transform: translateX(-100%);  */
+	display: none;
+	z-index: 30;
 	overflow-y: scroll;
 	align-items: center;
-
-	/* TEMA */
-	/* border-right: 0.1rem solid var(--aside-bdr);
-	background: var(--aside-bg); */
 
 	/* new-themes */
 	border-right: var(--aside-bdr);
 	background: var(--aside-bg);
-
 }
+
 .App__aside::-webkit-scrollbar {
 	background: transparent;
 	width: 0.5rem;
@@ -47,8 +45,46 @@
 }
 
 .App__aside--visible {
-	transform: translateX(0);
+	/* transform: translateX(0); */
+	display: flex;
 }
+
+.App__aside--visible:before {
+	content: "";
+	/* width: 100vw;
+	height: 100%; */
+	background: rgba(0, 0, 0, 0.708);
+	/* background: blue; */
+	position: fixed;
+	z-index: -200;
+	backdrop-filter: blur(5px);
+
+	right: 0;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.App__aside--visible:after {
+	content: "";
+	width: 100%;
+	height: 100vh;
+	/* background: red; */
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -10;
+
+	/* THEME */
+	border-right: var(--aside-bdr);
+	background: var(--aside-bg);
+}
+
+/* /////////////////////////// */
+
+/* /////////////////////////// */
 
 .Aside__button-close {
 	position: absolute;
@@ -136,6 +172,7 @@
 	.App__aside {
 		transform: translateX(0rem);
 		position: relative;
+		display: flex;
 	}
 	/* .Aside__button-close,
   .Header__boton-abrir{

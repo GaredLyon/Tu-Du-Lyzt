@@ -2,9 +2,9 @@
 
 .theme1 {
 
-	--aside-bg: var(--dark); /*  */
-	--aside-bdr: var(--dark); /*  */
-	--aside-title: var(--light); /*  */
+	--aside-bg: var(--dark); /* added */
+	--aside-bdr: var(--dark); /* added  */
+	--aside-title: var(--light); /* added  */
 
 	--header-bg: var(--dark); /*  */
 	--header-bdr: var(--dark); /*  */
@@ -16,9 +16,9 @@
 
 	--form-bg: var(--dark); /**/
 	--form-bdr: var(--info);
-	--form-ltr: var(--light);
-	--form-p_holder: var(--neutro);
-	--form-t_area-bg: var(--neutro); /*  */
+	--form-ltr: var(--light); /* added */
+	--form-p_holder: var(--dark); /* added */
+	--form-t_area-bg: var(--neutro); /* added */
     --form-t_area-bdr: var(--info-d); /*  */
 
     /* -------------------------------------------------------------------------------- */
