@@ -1,5 +1,6 @@
 const {validarParametros} = require('../helpers/validar')
 const Tarea = require('../models/tarea')
+const {validarState} = require('../helpers/validarState')
 
 //CONTROLADOR NUMERO 1 ///////////////////////////////////////////////////////
 //CONTROLADOR NUMERO 1 - PARA TRAER UNA LISTA COMPLETA DE TODAS LAS TAREAS ///
@@ -209,6 +210,48 @@ const buscador = (req, res)=>{
 
 
 //CONTROLADOR NUMERO 6
+const mover = (req, res) => {
+  const id = req.params.id
+  const parametros = req.body
+
+  console.log(id)
+  console.log(parametros)
+
+
+  // //1. validamos los datos que me envia el usuario
+  try {
+    validarState(parametros)
+    console.log('paso el test')
+
+  } catch (error) {
+    return res.status(400).json({
+      status: 'Error',
+      message: 'Faltan datos a enviar'
+    })
+  }
+
+
+  // //2. si pasa validacion, entonces ahora actualizamos la tarea en la base de datos
+  const consulta = Tarea.findOneAndUpdate({_id: id}, parametros, {new: true})
+
+  consulta.exec((error, tareaActualizada) => {
+    //3. si ocurre un error o no existe la tarea, devolvemos esto
+    if (error || !tareaActualizada) {
+      return res.status(404).json({
+        status: 'Error',
+        message: 'Ha habido un error al mover la tarea'
+      })
+    }
+
+    //4. en caso que no ocurra error alguno y se elimino correctamente la tarea, devolvemos esto
+    return res.status(200).json({
+      status: 'success',
+      task: tareaActualizada,
+      message: 'Tarea movida con exito!!'
+    })
+  })
+}
+
 //CONTROLADOR NUMERO 7
 //CONTROLADOR NUMERO 8
 //CONTROLADOR NUMERO 9
@@ -221,7 +264,8 @@ module.exports = {
   conseguirTareas,
   borrar,
   actualizar,
-  buscador
+  buscador,
+  mover
 }
 
 

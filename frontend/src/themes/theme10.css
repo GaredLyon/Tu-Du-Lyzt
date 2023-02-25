@@ -32,7 +32,7 @@
   --alert-bg: #37383e;
 
   /* HEADER */
-  --header: #FB2576; 
+  --header: #fc3b84; 
   --header-selector: #fff; 
   --header-selector-letter: black; 
   --aside-selector-border: #767676; 
@@ -45,7 +45,7 @@
   --header-search-icon-hover: #302A40; 
 
   /* MAIN */
-  --main: #FB2576; 
+  --main: linear-gradient(45deg, #FB2576, #ff629e, #FB2576); 
   --main-column: #ffffff; 
   --main-column-number-bg: #ffffff; 
   --main-column-number: #000; 
