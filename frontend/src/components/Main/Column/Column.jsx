@@ -42,10 +42,13 @@ export const Column = ({ title, color, group = [], type }) => {
                   index={index}
                 >
                   {(draggableProvided) => (
-					<div {...draggableProvided.draggableProps}
-					ref={draggableProvided.innerRef}
-					{...draggableProvided.dragHandleProps}><Card task={task}/></div>
-                    
+                    <div
+                      {...draggableProvided.draggableProps}
+                      ref={draggableProvided.innerRef}
+                      {...draggableProvided.dragHandleProps}
+                    >
+                      <Card task={task} />
+                    </div>
                   )}
                 </Draggable>
               ))}
