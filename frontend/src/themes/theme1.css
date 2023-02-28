@@ -39,7 +39,7 @@
 
   --header-search: #FFF; 
   --header-search-border: #000; 
-  --header-search-letter: #FFF; 
+  --header-search-letter: #000000; 
   --header-search-place-holder: gray; 
   --header-search-icon: gray; 
   --header-search-icon-hover: gray; 

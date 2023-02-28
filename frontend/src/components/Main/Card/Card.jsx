@@ -23,6 +23,7 @@ export const Card = ({ task }) => {
   const [cardEditable, setCardEditable] = useState(1) // 1 no editable - 0 editable
   // const [cardVisible, setCardVisible] = useState(true)
 
+
   const { getData, typeCards, busqueda, setBusqueda } = useContext(AppContext)
 
   //PARA MOSTARA EL TIEMPO TRANSCURRIDO

@@ -57,7 +57,7 @@ export const Aside = () => {
         <header className='header__form'>
           <div className='aside__contenedor-selectores'>
             <select name='priority' title='Prioridad' defaultValue=''>
-              <option disabled value=''>Titulo</option>
+              <option disabled value=''>Prioridad</option>
               <option value='low'>Bajo</option>
               <option value='middle'>Medio</option>
               <option value='high'>Alto</option>
@@ -66,7 +66,6 @@ export const Aside = () => {
               <option disabled value=''>Estado</option>
               <option value='pendient'>Pendiente</option>
               <option value='progress'>Proceso</option>
-              {/* <option value='completed'>Completados</option> */}
             </select>
           </div>
         </header>
@@ -98,7 +97,7 @@ export const Aside = () => {
 
         <div className='aside__container-icons'>
           <button type='submit' className='aside__button-create' title='Crear tarea'>Crear</button>
-          <button type='reset' className='aside__button-delete' title='Limpiar formulario' onClick={() => setAlertaVisible(!alertVisible)}>
+          <button type='reset' className='aside__button-delete' title='Limpiar formulario' onClick={() => setAlertaVisible(false)}>
             <i className="fa-sharp fa-solid fa-trash" data-theme></i>
           </button>
         </div>
